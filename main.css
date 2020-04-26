@@ -1,0 +1,46 @@
+/* html구조와 유사하게 코드를 진행해야 함 */
+
+body{
+    margin:0;
+    padding:0;
+}
+
+.header{
+    background: white;
+    border-bottom:1px solid lightgrey;
+}
+
+.container{
+    width:980px;
+    margin:auto;
+}
+
+.container-left{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.logo{
+    float:left;
+    margin-right:5px;
+}
+
+.logo img{
+    display:block;
+}
+
+.menu{
+    float:left;
+}
+/* padding : 단축속성 , padding-top:, padding-bottom: 개별 속성 */
+.menu-item{
+    float:left;
+    padding:8px 10px;
+}
+
+/* :: 가상요소 선택자 */
+.clearfix::after{
+    content:"";
+    display:block;
+    clear:both;
+}
