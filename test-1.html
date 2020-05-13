@@ -307,6 +307,44 @@
         }
     </script> -->
 
-    <textarea rows="5" placeholder="dd"></textarea>
+    <!-- <textarea rows="5" placeholder="dd"></textarea> -->
+
+    <!-- <select name="Fruits" size="3" multiple disabled> -->
+    <select name="fruits">
+        <optgroup label="내가 좋아하는 과일">
+            <!-- <option label="Apple" value="Apple">Apple</option> -->
+            <option>Apple</option>
+            <option selected>Orange</option>
+            <option>Banana</option>
+        </optgroup>
+        <optgroup label="내가 싫어하는 과일">
+            <option>Mango</option>
+            <option>Fineapple</option>
+        </optgroup>
+        <!-- <optgroup label="Coffee">
+            <option>Americano</option>
+            <option>Caffe Mocha</option>
+            <option label="Cappuccino" value="Cappuccino"></option>
+        </optgroup>
+        <optgroup label="Latte" disabled>
+            <option>Caffe Latte</option>
+            <option>Vanilla Latte</option>
+        </optgroup>
+        <optgroup label="Smoothie">
+            <option>Plain</option>
+            <option>Strawberry</option>
+            <option>Banana</option>
+            <option>Mango</option>
+        </optgroup> -->
+    </select>
+    <input type="text" list="fruits">
+
+    <datalist id="fruits">
+      <option>Apple</option>
+      <option>Orange</option>
+      <option>Banana</option>
+      <option>Mango</option>
+      <option>Fineapple</option>
+    </datalist>
 </body>
 </html>
