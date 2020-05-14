@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -332,9 +332,9 @@
     </form> -->
 
     <!-- <select name="Fruits" size="3" multiple disabled> -->
-    <select name="fruits">
+    <!-- <select name="fruits">
         <optgroup label="내가 좋아하는 과일">
-            <!-- <option label="Apple" value="Apple">Apple</option> -->
+            <option label="Apple" value="Apple">Apple</option>
             <option>Apple</option>
             <option selected>Orange</option>
             <option>Banana</option>
@@ -343,21 +343,6 @@
             <option>Mango</option>
             <option>Fineapple</option>
         </optgroup>
-        <!-- <optgroup label="Coffee">
-            <option>Americano</option>
-            <option>Caffe Mocha</option>
-            <option label="Cappuccino" value="Cappuccino"></option>
-        </optgroup>
-        <optgroup label="Latte" disabled>
-            <option>Caffe Latte</option>
-            <option>Vanilla Latte</option>
-        </optgroup>
-        <optgroup label="Smoothie">
-            <option>Plain</option>
-            <option>Strawberry</option>
-            <option>Banana</option>
-            <option>Mango</option>
-        </optgroup> -->
     </select>
     <input type="text" list="fruits">
 
@@ -367,6 +352,34 @@
       <option>Banana</option>
       <option>Mango</option>
       <option>Fineapple</option>
-    </datalist>
+    </datalist> -->
+    
+    <!-- <progress value="0" max="100"></progress>
+    <script>
+        const progress = document.querySelector('progress');
+        const interval = setInterval(function (){
+            progress.value +=10;
+            if(progress.value >= 100) clearInterval(interval);
+        },1000);
+    </script> -->
+
+    <!-- 
+        class : 별명(중복 사용 가능)
+        id : 고유하다(이름)
+     -->
+    <!-- <div draggable="true">The element to drag.</div> -->
+    <!-- <h1 tabindex="0">Sign In</h1>
+    <label>Username: <input type="text"></label>
+    <label>Password: <input type="password"></label>
+    <label>PS: <input type="text" tabindex="-1"></label>
+    <input type="submit" value="Sign In"> -->
+
+    <!-- 
+        data-my-name : 대시 표기법
+        myName : 카멜표기법(구분을 대문자로)
+     -->
+     <!-- <form id="hidden-form" action="/form-action" hidden>
+     </form>
+     <button form="hidden-form" type="submit">전송</button> -->
 </body>
 </html>
