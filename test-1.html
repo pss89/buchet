@@ -395,6 +395,24 @@
       &gt; >
       &lt; < -->
 
-      
+    <!-- 
+        CSS 적용방식 
+        - inline : html 태그에 style 전역속성에 속성값을 적용하는 방식
+        - link : <link rel="stylesheet" href="링크"> 외부에서 css 파일 가져오기 (병렬방식)
+        - @import : @import url(링크) css파일에서 외부 css파일을 로드한다 (직렬방식)
+    -->
+    
+    <!-- 
+        CSS 선택자
+        전체선택자 : * ex) * {~~}
+        태그선택자 : li , div 등 ex) li {~~}
+        클래스선택자 : .클래스명 ex) .dd {~~}
+        아이디선택자 : #아이디명 ex) #dd {~~}
+        일치선택자 : EF를 동시에 만족하는 선택자 ex) span.orange
+        자식선택자 : E > F ex) dev > .orange
+        후손(하위) 선택자 : E F ex) div .orange
+        인접 형제 선택자 : E + F ex) .dd + li {~~} - 다음 형제(태그)를 찾는다
+        일반 형제 선택자 : E ~ F ex) .dd ~ li {~~} - 다음 형제(태그)를 찾는다
+     -->
 </body>
 </html>
