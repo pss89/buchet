@@ -413,6 +413,12 @@
         후손(하위) 선택자 : E F ex) div .orange
         인접 형제 선택자 : E + F ex) .dd + li {~~} - 다음 형제(태그)를 찾는다
         일반 형제 선택자 : E ~ F ex) .dd ~ li {~~} - 다음 형제(태그)를 찾는다
+        가상 클래스 선택자 : 
+        ex) a:hover - 선택자 위에 마우스를 오버 하였을 때 
+        ex) a:active - 마우스로 클릭하는 동안에만 선택(왼쪽 클릭 때면 없어짐)
+        ex) E:focus - 포커스 된 동안에만 선택 (대화형 태그에만 - input text, textarea 등)
+        ex) E:first-child or last-child - 형제 요소 중 첫번째 요소라면 선택
+        ex) E:nth-child(n or 2n(곱하기) or n+3) - 형제요소 중 n번째 요소라면 선택 (n키워드 사용 시 0부태 해석(Zero-base))
      -->
 </body>
 </html>
