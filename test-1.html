@@ -419,6 +419,13 @@
         ex) E:focus - 포커스 된 동안에만 선택 (대화형 태그에만 - input text, textarea 등)
         ex) E:first-child or last-child - 형제 요소 중 첫번째 요소라면 선택
         ex) E:nth-child(n or 2n(곱하기) or n+3) - 형제요소 중 n번째 요소라면 선택 (n키워드 사용 시 0부태 해석(Zero-base))
+        ex) E:nth-of-type(n) - 타입(태그이름 ex)div, p 등 클래스,아이디는 안됨) 과 동일한 타입인 형제 요소중 E가 n번째 요소라면 선택(n키워드 사용시 0부터 해석(Zero-base))
+        ex) E:not(s) - s가 아닌 E선택 (부정선택자 라고도 함) ex) E:not(선택자 (클래스명, 아이디 등) )
+        
+        가상 요소 선택자 :
+        BEFORE - E요소 내부의 내용 앞에 내용(content)을 삽입(content속성은 무조건 사용해야 함) ex)E::before , <div><span>이거임</span><p></p></div>
+
+        ul>li tab 클릭하면 자동 완성 ex)ul>li{5$}*20
      -->
 </body>
 </html>
