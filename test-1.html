@@ -422,10 +422,28 @@
         ex) E:nth-of-type(n) - 타입(태그이름 ex)div, p 등 클래스,아이디는 안됨) 과 동일한 타입인 형제 요소중 E가 n번째 요소라면 선택(n키워드 사용시 0부터 해석(Zero-base))
         ex) E:not(s) - s가 아닌 E선택 (부정선택자 라고도 함) ex) E:not(선택자 (클래스명, 아이디 등) )
         
-        가상 요소 선택자 :
-        BEFORE - E요소 내부의 내용 앞에 내용(content)을 삽입(content속성은 무조건 사용해야 함) ex)E::before , <div><span>이거임</span><p></p></div>
-
         ul>li tab 클릭하면 자동 완성 ex)ul>li{5$}*20
+
+        가상 요소 선택자 :
+        BEFORE - E요소 내부의 내용 앞에 내용(content)을 삽입(content속성은 무조건 사용해야 함) ex)E::before , <div><p>이거임!얍</p></div>
+        AFTER - E요소 내부의 뒤에 내용을 삽입 ex) E::after, <div><p>얍이거임!</p></div>
+
+        속성 선택자 : 
+        attr - 속성 attr을 포함한 요소 선택 ex) [attr]
+        attr=value - 속성 attr을 포함하며 속성값이 value인 요소 선택 ex) [attr=value]
+        attr^=value - 속성 attr을 포함하며 속성값이 value로 시작하는 요소 선택 ex) [attr^=value]
+        attr$=value - 속성 attr을 포함하며 속성값이 value로 끝나는 요소 선택 ex) [attr$=value]
      -->
+
+     <!-- 
+        글자를 다루는 속성들은 대부분 상속 : inherit
+        가장중요 : !important (점수 : 무한대)
+        인라인태그 : (점수 : 1000) - 유지보수 힘듬
+        아이디 선택자 : (점수 : 100)
+        클래스 선택자 : (점수 : 10)
+        태그 선택자 : (점수 : 1)
+        전체선택자 : (점수 : 0) ex) * {속성값}
+        상속 : (점수 : 계산하지 않음)
+    -->
 </body>
 </html>
