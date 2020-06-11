@@ -39,8 +39,11 @@
 
      transform : 요소의 변환 효과(변형)를 지정
      -- transform-origin : 요소 변환의 기준점을 설정
-     -- transform-style : 3D변환 요소의 자식 요소도 3D 변환을 사용할지 설정
-     -- perspective : 하위 요소를 관찰하는 원근 거리를 설정
+     -- transform-style : 3D변환 요소의 자식 요소도 3D 변환을 사용할지 설정 - 기본값은 flat(적용 안됨) preserve-3d 속성값을 줘야 적용 됨
+     -- perspective : 하위 요소를 관찰하는 원근 거리를 설정 (px,cm,em 등)
+     ---- perspective : 관찰 대상의 부모 요소 , transform : perspective() 관찰 대상
      -- perspective-origin : 원근 거리의 기준점을 설정
      -- backface-visibility : 3D 변환으로 회전된 요소의 뒷면 숨김을 설정
+     -- matrix(a,b,c,d,e,f) : 요소의 2차원 변화(Transforms) 효과를 지정 - 싸인,코싸인,탄젠트 등..
+     ---- scale(), skew(), translate(), rotate() 등을 더 사용 함
     -->
