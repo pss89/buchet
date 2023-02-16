@@ -10,8 +10,7 @@ const routes = [
     {
         path:'/buchet_vue/Info',
         name:'Info',
-        component:()=>import('@/views/Info.vue'),
-        props:true
+        component:()=>import('@/views/Info.vue')
     },
     {
         path: "/:pathMatch(.*)*",

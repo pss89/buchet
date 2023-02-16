@@ -3,7 +3,8 @@
 		<h1><a href="#" class="logo"><img alt="Vue logo" src="../../assets/logo.png" width="80"></a></h1>
 		<div class="menuWrap">
 			<ul class="menu">
-				<li><router-link to="/buchet_vue/Info">Info</router-link></li>
+				<!-- <li><router-link to="/buchet_vue/Info">Info</router-link></li> -->
+				<router-link :to="{name: 'Info', query: {test: 'test1'}}">Info</router-link>
 			</ul>
 		</div>
 	</header>
