@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkbuchet_vue_project"]=self["webpackChunkbuchet_vue_project"]||[]).push([[471],{9471:function(e,u,n){n.r(u),n.d(u,{default:function(){return l}});var t=n(3396),r=n(7139);function c(e,u,n,c,o,a){return(0,t.wg)(),(0,t.iD)("div",null,[(0,t._)("h1",null,(0,r.zw)(e.$route.query.test),1)])}var o={name:"Info"},a=n(89);const f=(0,a.Z)(o,[["render",c]]);var l=f}}]);
+//# sourceMappingURL=471.26354d04.js.map
