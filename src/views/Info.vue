@@ -12,16 +12,6 @@ export default {
     name: 'Info',
     setup () {
         useMeta({ title: 'Some Page' })
-    },
-    props: {
-        name: {
-            type: String,
-            default : ''
-        },
-        age: {
-            type: Number,
-            default: 0
-        }
     }
 }
 </script>

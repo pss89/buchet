@@ -3,7 +3,8 @@
 		<h1><a href="#" class="logo"><img alt="Vue logo" src="../../assets/logo.png" width="80"></a> {{msg}} </h1>
 		<div class="menuWrap">
 			<ul class="menu">
-				<router-link :to="{name: 'Info', query: {name: 'test', age: 4}}">Info</router-link>
+				<!-- <router-link :to="{name: 'Info', params: {name: 'test', age: 4}}">Info</router-link> -->
+                <router-link :to="{name: 'Info', query: {name: 'test', age: 4}}">Info</router-link>
 			</ul>
 		</div>
 	</header>

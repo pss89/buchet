@@ -8,6 +8,7 @@ const routes = [
         component:()=>import('@/views/Main.vue')
     },
     {
+        // path:'/buchet_vue/Info/:name/:age',
         path:'/buchet_vue/Info',
         name:'Info',
         component:()=>import('@/views/Info.vue'),
@@ -21,6 +22,7 @@ const routes = [
 ];
 
 const router = createRouter({
+    // mode:'hash',
     history:createWebHistory(),
     routes,
 })

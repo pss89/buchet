@@ -40,9 +40,10 @@
         {
           "ignores": [
             "default",
-            "Info",
             "Header",
-            "Main"
+            "Footer",
+            "Main",
+            "Info"
           ]
         }
       ]
