@@ -10,7 +10,8 @@ const routes = [
     {
         path:'/buchet_vue/Info',
         name:'Info',
-        component:()=>import('@/views/Info.vue')
+        component:()=>import('@/views/Info.vue'),
+        props:true
     },
     {
         path: "/:pathMatch(.*)*",
@@ -25,34 +26,3 @@ const router = createRouter({
 })
 
 export default router;
-
-// import vue from 'vue'
-// import VueRouter from 'vue-router'
-
-// vue.use(VueRouter)
-
-// import Main from '@/views/Main.vue'
-// import Info from '@/views/Info.vue'
-
-// const router = new VueRouter({
-//     mode: 'hash',
-//     router: [
-//         {
-//             path:'/buchet_vue',
-//             name:'Main',
-//             component:Main
-//         },
-//         {
-//             path:'/buchet_vue/Info',
-//             name:'Info',
-//             component:Info
-//         },
-//         {
-//             path: "/:pathMatch(.*)*",
-//             name: "NotFound",
-//             component:()=>import("@/views/NotFound.vue")
-//         }
-//     ]
-// })
-
-// export { router }

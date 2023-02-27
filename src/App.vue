@@ -1,11 +1,8 @@
 <template>
-  <!-- 
-    - 각 컴포넌트 실제 호출?
-    - msg 변수는 각 컴포넌트에서 사용 가능
-   -->
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <!-- <SubPage msg="두번째 단락임"/> -->
   <div class="app">
+    <metainfo>
+        <template v-slot:title="{ content }">{{ content ? `${content} | SITE_NAME` : `SITE_NAME` }}</template>
+    </metainfo>
     <Header msg="헤더임" />
     <main class="app-main">
       <!-- 컴포넌트가 렌더링되는 영역 -->
@@ -19,28 +16,31 @@
 // 컴포넌트 import
 import Header from './components/common/Header.vue'
 import Footer from './components/common/Footer.vue'
-// import HelloWorld from './components/HelloWorld.vue'
-// import SubPage from './components/SubPage.vue'
+import { useMeta } from 'vue-meta'
 
 // 컴포넌트 정의
 export default {
-  name: 'App',
-  components: {
-    Header,
-    Footer
-    // HelloWorld,
-    // SubPage
-}
+    name: 'App',
+    components: {
+        Header,
+        Footer
+    },
+    setup () {
+        useMeta({
+            title: 'buchet_blog',
+            htmlAttrs: { lang: 'en', amp: true }
+        })
+    }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
 }
 </style>
