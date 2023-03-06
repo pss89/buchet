@@ -43,7 +43,8 @@
             "Header",
             "Footer",
             "Main",
-            "Info"
+            "Info",
+            "Intro"
           ]
         }
       ]

@@ -4,10 +4,11 @@
         <template v-slot:title="{ content }">{{ content ? `${content} | SITE_NAME` : `SITE_NAME` }}</template>
     </metainfo>
     <Header msg="헤더임" />
-    <main class="app-main">
+    <!-- <main class="app-main"> -->
       <!-- 컴포넌트가 렌더링되는 영역 -->
-      <router-view msg="페이지 로드"></router-view>
-    </main>
+      <!-- <router-view msg="페이지 로드"></router-view> -->
+    <!-- </main> -->
+    <Intro msg="소개영역" />
     <Footer msg="풋터임" />
   </div>
 </template>
@@ -15,6 +16,7 @@
 <script>
 // 컴포넌트 import
 import Header from './components/common/Header.vue'
+import Intro from './components/Intro.vue'
 import Footer from './components/common/Footer.vue'
 import { useMeta } from 'vue-meta'
 
@@ -23,7 +25,8 @@ export default {
     name: 'App',
     components: {
         Header,
-        Footer
+        Footer,
+        Intro
     },
     setup () {
         useMeta({
