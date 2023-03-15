@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <metainfo>
-        <template v-slot:title="{ content }">{{ content ? `${content} | SITE_NAME` : `SITE_NAME` }}</template>
+        <template v-slot:title="{ content }">{{ content ? `${content}` : `buchet_blog` }}</template>
     </metainfo>
     <Header msg="헤더임" />
     <!-- <main class="app-main"> -->
