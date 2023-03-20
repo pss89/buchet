@@ -1,5 +1,6 @@
 <template>
-	<footer>
+	<footer class="footer">
+        <font-awesome-icon icon="fa-solid fa-rotate-right" />
 		<p>{{msg}}</p>
 	</footer>
 </template>
