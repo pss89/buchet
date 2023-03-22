@@ -6,8 +6,9 @@ import { createMetaManager } from 'vue-meta' // vue meta load
 // fontawesome import
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
+import { faAccusoft, faFacebook,faTwitter,faInstagram  } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-library.add(fas)
+library.add(fas,faFacebook,faTwitter,faInstagram,faAccusoft )
 
 const app = createApp(App)
 
