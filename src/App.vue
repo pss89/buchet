@@ -16,7 +16,7 @@
 <script>
 // 컴포넌트 import
 import Header from './components/common/Header.vue'
-import Intro from './components/Intro.vue'
+import Intro from './components/section/Intro.vue'
 import Footer from './components/common/Footer.vue'
 import { useMeta } from 'vue-meta'
 
