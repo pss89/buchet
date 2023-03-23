@@ -5,10 +5,11 @@
             <a href="">Buchet Space</a>
         </div>
 		<ul class="nav-menus" v-bind:class="{active:isActive}">
-            <li><a href="">Intro</a></li>
-            <li><a href="">Tech Stack</a></li>
-            <li><a href="">Reference</a></li>
-            <li><a href="">Hobby</a></li>
+            <li><a href="#">Intro</a></li>
+            <!-- v-smooth-scroll -->
+            <li><a href="#">Tech Stack</a></li>
+            <li><a href="#">Reference</a></li>
+            <li><a href="#">Hobby</a></li>
         </ul>
 		<ul class="nav-icons" v-bind:class="{active:isActive}">
             <li><font-awesome-icon icon="fa-brands fa-twitter" /></li>
@@ -20,6 +21,14 @@
             <font-awesome-icon icon="fa-solid fa-bars" />
         </a>
 	</nav>
+
+    <!-- <section ref="intro" style="height:900px;">
+        <h1>소개영역</h1>
+    </section>
+
+    <section ref="tech_stack" style="height:300px;">
+        <h1>기술영역</h1>
+    </section> -->
 </template>
 
 <script>
@@ -38,7 +47,10 @@ export default {
     methods:{
         toggle: function(){ // 해당 함수를 클릭하면 isActive 변수를 변경
             this.isActive=!this.isActive;
-        }
+        },
+        // move_section: function(){
+        //     this.$refs.tech_stack.scrollIntoView({behavior:"smooth"});
+        // }
     }
 }
 </script>

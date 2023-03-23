@@ -1,12 +1,12 @@
 <template>
-    <div ref="intro" style="height:900px;">
+    <section  ref="tech_stack" style="height:300px;">
         <h1>{{msg}}</h1>
-    </div>
+    </section>
 </template>
 
 <script>
 export default {
-    name: 'Intro',
+    name: 'Tech_Stack',
     props: {
         msg: String
     }

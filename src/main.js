@@ -10,6 +10,8 @@ import { faAccusoft, faFacebook,faTwitter,faInstagram  } from '@fortawesome/free
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(fas,faFacebook,faTwitter,faInstagram,faAccusoft,faBars )
 
+import VueSmoothScroll from 'vue3-smooth-scroll'
+
 const app = createApp(App)
 
 // css 파일 로드
@@ -17,4 +19,4 @@ import '@/assets/css/reset.css'
 import '@/assets/css/main.css'
 
 // instance add
-app.use(router).use(createMetaManager()).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
+app.use(router).use(createMetaManager()).component('font-awesome-icon', FontAwesomeIcon).use(VueSmoothScroll).mount('#app')

@@ -9,6 +9,7 @@
       <!-- <router-view msg="페이지 로드"></router-view> -->
     <!-- </main> -->
     <Intro msg="소개영역" />
+    <Tech_Stack msg="tech stack 영역" />
     <Footer msg="풋터임" />
   </div>
 </template>
@@ -17,6 +18,7 @@
 // 컴포넌트 import
 import Header from './components/common/Header.vue'
 import Intro from './components/section/Intro.vue'
+import Tech_Stack from './components/section/Tech_Stack.vue'
 import Footer from './components/common/Footer.vue'
 import { useMeta } from 'vue-meta'
 
@@ -26,7 +28,8 @@ export default {
     components: {
         Header,
         Footer,
-        Intro
+        Intro,
+        Tech_Stack
     },
     setup () {
         useMeta({
