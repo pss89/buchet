@@ -36,9 +36,9 @@ export default {
             title: 'Buchet Space',
             htmlAttrs: { lang: 'ko', amp: true },
             bodyAttrs: { 
-              class: ['dark-mode','mobile']
-            },
-            base: { target: '_blank', href: '/'}
+              class: ['dark-mode','mobile'],
+              tabIndex: 0
+            }
         })
     }
 }

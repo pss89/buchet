@@ -1,5 +1,5 @@
 <template>
-	<nav class="nav">
+	<nav class="nav" style="position:sticky;top:0;">
 		<div class="nav-title">
             <font-awesome-icon icon="fa-brands fa-accusoft" id="mainIcon"/>
             <a href="">Buchet Space</a>
