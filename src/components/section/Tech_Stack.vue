@@ -1,5 +1,5 @@
 <template>
-    <section  ref="tech_stack" style="height:300px;">
+    <section id="tech_stack" style="height:300px;">
         <h1>{{msg}}</h1>
     </section>
 </template>

@@ -7,7 +7,7 @@
 		<ul class="nav-menus" v-bind:class="{active:isActive}">
             <li><a href="#">Intro</a></li>
             <!-- v-smooth-scroll -->
-            <li><a href="#">Tech Stack</a></li>
+            <li><a href="#tech_stack" v-smooth-scroll>Tech Stack</a></li>
             <li><a href="#">Reference</a></li>
             <li><a href="#">Hobby</a></li>
         </ul>
@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import { inject, ref } from 'vue'
 export default {
     name: 'Header',
     props: {
@@ -51,6 +52,16 @@ export default {
         // move_section: function(){
         //     this.$refs.tech_stack.scrollIntoView({behavior:"smooth"});
         // }
+    },
+    setup () {
+        const myEl = ref(null)
+        const smoothScroll = inject('smoothScroll')
+        const scrollToMyEl = () => {
+            smoothScroll({
+                scrollTo: myEl.value,
+                hash: '#sampleHash'
+            })
+        }
     }
 }
 </script>

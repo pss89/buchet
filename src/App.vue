@@ -33,8 +33,12 @@ export default {
     },
     setup () {
         useMeta({
-            title: 'buchet_blog',
-            htmlAttrs: { lang: 'en', amp: true }
+            title: 'Buchet Space',
+            htmlAttrs: { lang: 'ko', amp: true },
+            bodyAttrs: { 
+              class: ['dark-mode','mobile']
+            },
+            base: { target: '_blank', href: '/'}
         })
     }
 }
