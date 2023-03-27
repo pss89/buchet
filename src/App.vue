@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <metainfo>
-        <template v-slot:title="{ content }">{{ content ? `${content}` : `buchet_blog` }}</template>
+        <template v-slot:title="{ content }">{{ content ? `${content}` : `Buchet Intro` }}</template>
     </metainfo>
     <Header msg="헤더임" />
     <!-- <main class="app-main"> -->
@@ -9,7 +9,7 @@
       <!-- <router-view msg="페이지 로드"></router-view> -->
     <!-- </main> -->
     <Intro msg="소개영역" />
-    <Tech_Stack msg="tech stack 영역" />
+    <!-- <Tech_Stack msg="tech stack 영역" /> -->
     <Footer msg="풋터임" />
   </div>
 </template>
@@ -18,7 +18,7 @@
 // 컴포넌트 import
 import Header from './components/common/Header.vue'
 import Intro from './components/section/Intro.vue'
-import Tech_Stack from './components/section/Tech_Stack.vue'
+// import Tech_Stack from './components/section/Tech_Stack.vue'
 import Footer from './components/common/Footer.vue'
 import { useMeta } from 'vue-meta'
 
@@ -29,11 +29,11 @@ export default {
         Header,
         Footer,
         Intro,
-        Tech_Stack
+        // Tech_Stack
     },
     setup () {
         useMeta({
-            title: 'Buchet Space',
+            title: 'Buchet Intro',
             htmlAttrs: { lang: 'ko', amp: true },
             bodyAttrs: { 
               class: ['dark-mode','mobile'],

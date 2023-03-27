@@ -7,9 +7,11 @@
 		<ul class="nav-menus" v-bind:class="{active:isActive}">
             <li><a href="#">Intro</a></li>
             <!-- v-smooth-scroll -->
-            <li><a href="#tech_stack" v-smooth-scroll>Tech Stack</a></li>
-            <li><a href="#">Reference</a></li>
-            <li><a href="#">Hobby</a></li>
+            <li><a href="#profile" v-smooth-scroll>Profile</a></li>
+            <li><a href="#">커리어</a></li>
+            <li><a href="#">프로젝트</a></li>
+            <li><a href="#">스킬</a></li>
+            <li><a href="#">취미</a></li>
         </ul>
 		<ul class="nav-icons" v-bind:class="{active:isActive}">
             <li><font-awesome-icon icon="fa-brands fa-twitter" /></li>
@@ -21,14 +23,6 @@
             <font-awesome-icon icon="fa-solid fa-bars" />
         </a>
 	</nav>
-
-    <!-- <section ref="intro" style="height:900px;">
-        <h1>소개영역</h1>
-    </section>
-
-    <section ref="tech_stack" style="height:300px;">
-        <h1>기술영역</h1>
-    </section> -->
 </template>
 
 <script>
