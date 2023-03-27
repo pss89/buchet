@@ -56,6 +56,7 @@ export default {
                 hash: '#sampleHash'
             })
         }
+        console.log(scrollToMyEl);
     }
 }
 </script>
