@@ -51,7 +51,12 @@
             "Footer",
             "Main",
             "Info",
-            "Intro"
+            "Intro",
+            "Profile",
+            "Career",
+            "Project",
+            "Tech",
+            "Hobby"
           ]
         }
       ]

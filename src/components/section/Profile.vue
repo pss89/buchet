@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'Tech_Stack',
+    name: 'Profile',
     props: {
         msg: String
     }

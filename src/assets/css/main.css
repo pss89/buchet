@@ -39,6 +39,7 @@
 
 .nav-icons li{
     padding:8px 12px;
+    cursor:pointer;
 }
 
 .nav-toggle-btn{

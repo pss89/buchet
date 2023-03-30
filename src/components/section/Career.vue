@@ -1,13 +1,13 @@
 <!-- 경력 -->
 <template>
-    <section id="profile" style="height:300px;">
+    <section id="career" style="height:300px;">
         <h1>{{msg}}</h1>
     </section>
 </template>
 
 <script>
 export default {
-    name: 'Tech_Stack',
+    name: 'Career',
     props: {
         msg: String
     }

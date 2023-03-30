@@ -1,7 +1,7 @@
 <template>
-    <div ref="intro" style="height:900px;">
+    <section id="intro" style="height:300px;">
         <h1>{{msg}}</h1>
-    </div>
+    </section>
 </template>
 
 <script>

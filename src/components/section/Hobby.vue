@@ -1,13 +1,13 @@
 <!-- 취미 -->
 <template>
-    <section id="profile" style="height:300px;">
+    <section id="hobby" style="height:300px;">
         <h1>{{msg}}</h1>
     </section>
 </template>
 
 <script>
 export default {
-    name: 'Tech_Stack',
+    name: 'Hobby',
     props: {
         msg: String
     }

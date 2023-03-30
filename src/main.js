@@ -6,9 +6,9 @@ import { createMetaManager } from 'vue-meta' // vue meta load
 // fontawesome import
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas,faBars } from '@fortawesome/free-solid-svg-icons'
-import { faAccusoft, faFacebook,faTwitter,faInstagram  } from '@fortawesome/free-brands-svg-icons'
+import { faAccusoft, faFacebook,faGithub,faInstagram  } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-library.add(fas,faFacebook,faTwitter,faInstagram,faAccusoft,faBars )
+library.add(fas,faFacebook,faGithub,faInstagram,faAccusoft,faBars )
 
 import VueSmoothScroll from 'vue3-smooth-scroll'
 

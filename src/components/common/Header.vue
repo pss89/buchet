@@ -5,18 +5,18 @@
             <a href="">Buchet Space</a>
         </div>
 		<ul class="nav-menus" v-bind:class="{active:isActive}">
-            <li><a href="#">Intro</a></li>
+            <li><a href="#intro" v-smooth-scroll>소개</a></li>
             <!-- v-smooth-scroll -->
-            <li><a href="#profile" v-smooth-scroll>Profile</a></li>
-            <li><a href="#">커리어</a></li>
-            <li><a href="#">프로젝트</a></li>
-            <li><a href="#">스킬</a></li>
-            <li><a href="#">취미</a></li>
+            <li><a href="#profile" v-smooth-scroll>프로필</a></li>
+            <li><a href="#career" v-smooth-scroll>경력</a></li>
+            <li><a href="#project" v-smooth-scroll>참여 프로젝트</a></li>
+            <li><a href="#tech" v-smooth-scroll>기술</a></li>
+            <li><a href="#hobby" v-smooth-scroll>취미</a></li>
         </ul>
 		<ul class="nav-icons" v-bind:class="{active:isActive}">
-            <li><font-awesome-icon icon="fa-brands fa-twitter" /></li>
-            <li><font-awesome-icon icon="fa-brands fa-facebook" /></li>
-            <li><font-awesome-icon icon="fa-brands fa-instagram" /></li>
+            <li @click="pageMove('github')"><font-awesome-icon icon="fa-brands fa-github" /></li>
+            <li @click="pageMove('facebook')"><font-awesome-icon icon="fa-brands fa-facebook" /></li>
+            <li @click="pageMove('instagram')"><font-awesome-icon icon="fa-brands fa-instagram" /></li>
         </ul>
 
         <a href="#" class="nav-toggle-btn" v-on:click="toggle">
@@ -43,6 +43,21 @@ export default {
         toggle: function(){ // 해당 함수를 클릭하면 isActive 변수를 변경
             this.isActive=!this.isActive;
         },
+        pageMove: function(moveType){
+            if (!moveType) {
+                alert('페이지 이동에 대한 인자값이 없습니다');
+                return false;
+            }
+            
+            switch(moveType){
+                case 'github': window.open('https://github.com/pss89/buchet_vue'); break;
+                case 'facebook': window.open('https://www.facebook.com/reqpebd'); break;
+                case 'instagram': window.open('https://www.instagram.com/buchet89/'); break;
+                default :
+                    alert('허용하지 않는 유형입니다.');
+                    return false;
+            }
+        }
         // move_section: function(){
         //     this.$refs.tech_stack.scrollIntoView({behavior:"smooth"});
         // }
@@ -53,6 +68,8 @@ export default {
         const scrollToMyEl = () => {
             smoothScroll({
                 scrollTo: myEl.value,
+                duration: 1000,
+                offset: 0,
                 hash: '#sampleHash'
             })
         }
