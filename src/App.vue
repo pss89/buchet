@@ -12,7 +12,6 @@
     <Intro msg="소개" />
     <Profile msg="프로필" />
     <Career msg="경력" />
-    <Project msg="참여 프로젝트" />
     <Tech msg="기술" />
     <Hobby msg="취미" />
     <Footer msg="풋터임" />
@@ -25,7 +24,6 @@ import Header from './components/common/Header.vue'
 import Intro from './components/section/Intro.vue'
 import Profile from './components/section/Profile.vue'
 import Career from './components/section/Career.vue'
-import Project from './components/section/Project.vue'
 import Tech from './components/section/Tech.vue'
 import Hobby from './components/section/Hobby.vue'
 import Footer from './components/common/Footer.vue'
@@ -40,7 +38,6 @@ export default {
         Intro,
         Profile,
         Career,
-        Project,
         Tech,
         Hobby
     },

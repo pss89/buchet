@@ -10,7 +10,6 @@
             <!-- v-smooth-scroll -->
             <li><a href="#profile" v-smooth-scroll>프로필</a></li>
             <li><a href="#career" v-smooth-scroll>경력</a></li>
-            <li><a href="#project" v-smooth-scroll>참여 프로젝트</a></li>
             <li><a href="#tech" v-smooth-scroll>기술</a></li>
             <li><a href="#hobby" v-smooth-scroll>취미</a></li>
         </ul>
