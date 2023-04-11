@@ -1,8 +1,9 @@
 <template>
 	<nav class="nav" style="position:sticky;top:0;">
 		<div class="nav-title">
-            <font-awesome-icon icon="fa-brands fa-accusoft" id="mainIcon"/>
-            <a href="">Buchet Space</a>
+            <!-- <font-awesome-icon icon="fa-solid fa-code" id="mainIcon"/> -->
+            <!-- <font-awesome-icon icon="fa-solid fa-bars-progress" id="mainIcon"/> -->
+            <a href="">Buchet Intro</a>
         </div>
 		<ul class="nav-menus" v-bind:class="{active:isActive}">
             <li><a href="#intro" v-smooth-scroll>소개</a></li>
@@ -15,7 +16,8 @@
         </ul>
 		<ul class="nav-icons" v-bind:class="{active:isActive}">
             <li @click="pageMove('github')"><font-awesome-icon icon="fa-brands fa-github" /></li>
-            <li @click="pageMove('facebook')"><font-awesome-icon icon="fa-brands fa-facebook" /></li>
+            <!-- <li @click="pageMove('facebook')"><font-awesome-icon icon="fa-brands fa-facebook" /></li> -->
+            <li @click="pageMove('blog')"><font-awesome-icon icon="fa-solid fa-blog" /></li>
             <li @click="pageMove('instagram')"><font-awesome-icon icon="fa-brands fa-instagram" /></li>
         </ul>
 
@@ -51,7 +53,8 @@ export default {
             
             switch(moveType){
                 case 'github': window.open('https://github.com/pss89/buchet_vue'); break;
-                case 'facebook': window.open('https://www.facebook.com/reqpebd'); break;
+                // case 'facebook': window.open('https://www.facebook.com/reqpebd'); break;
+                case 'blog': window.open('https://buchet.tistory.com/'); break;
                 case 'instagram': window.open('https://www.instagram.com/buchet89/'); break;
                 default :
                     alert('허용하지 않는 유형입니다.');
@@ -63,13 +66,13 @@ export default {
         // }
     },
     setup () {
-        const myEl = ref(null)
+        const myEl = ref("intro")
         const smoothScroll = inject('smoothScroll')
         const scrollToMyEl = () => {
             smoothScroll({
                 scrollTo: myEl.value,
                 duration: 1000,
-                offset: 0,
+                offset: 100,
                 hash: '#sampleHash'
             })
         }

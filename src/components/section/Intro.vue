@@ -1,5 +1,5 @@
 <template>
-    <section id="intro" style="height:300px;">
+    <section ref="intro" id="intro" style="height:300px;background-image:url('./bg-masthead.jpg')">
         <h1>{{msg}}</h1>
     </section>
 </template>
