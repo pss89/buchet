@@ -8,16 +8,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 
 /* 기본 style 설정 */
-#app{
-    font-family: 'Source Sans Pro';
-    display:contents;
-}
+#app{font-family: 'Source Sans Pro';display:contents;}
 
-body {
-    margin:0;
-}
+body {margin:0;}
 
-a{
-    text-decoration: none;
-    color:var(--text-color);
-}
+a{text-decoration: none;color:var(--text-color);}
+
+h1{margin-block:0}
