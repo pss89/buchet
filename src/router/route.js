@@ -3,13 +3,13 @@ import { createWebHistory,createRouter } from "vue-router";
 
 const routes = [
     {
-        path:'/buchet_vue',
+        path:'/buchet',
         name:'Main',
         component:()=>import('@/views/Main.vue')
     },
     {
-        // path:'/buchet_vue/Info/:name/:age',
-        path:'/buchet_vue/Info',
+        // path:'/buchet/Info/:name/:age',
+        path:'/buchet/Info',
         name:'Info',
         component:()=>import('@/views/Info.vue'),
         props:true
