@@ -51,7 +51,7 @@ export default {
             }
             
             switch(moveType){
-                case 'github': window.open('https://github.com/pss89/buchet_vue'); break;
+                case 'github': window.open('https://github.com/pss89'); break;
                 // case 'facebook': window.open('https://www.facebook.com/reqpebd'); break;
                 case 'blog': window.open('https://buchet.tistory.com/'); break;
                 case 'instagram': window.open('https://www.instagram.com/buchet89/'); break;
