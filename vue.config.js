@@ -1,7 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
     outputDir:'docs',
-    publicPath:'/buchet',
+    publicPath:'/buchet_vue',
     transpileDependencies: ['vue-meta'],
     lintOnSave:false
 })
