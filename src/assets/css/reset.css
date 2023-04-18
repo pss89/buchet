@@ -8,7 +8,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 
 /* 기본 style 설정 */
-#app{font-family: 'Source Sans Pro';display:contents;}
+#app{
+    font-family: 'Source Sans Pro';
+    display:contents;
+}
+.app{
+    height:90vh;
+    /* width:100vw; */
+}
 
 body {margin:0;}
 

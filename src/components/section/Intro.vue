@@ -23,9 +23,12 @@ header ul.menu li{float:left; padding:10px 20px; list-style:none;}
 a{text-decoration:none; color:#333;}
 
 #intro{
-height:900px;
-background: no-repeat url('../../assets/img/main/pss_caricature.png');
-background-position: left top;
-background-size: 100%;
+    width:100%;
+    height:100%;
+    margin:0 auto;
+    background-image: url('../../assets/img/main/bg-masthead.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
 }
 </style>
