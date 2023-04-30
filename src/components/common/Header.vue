@@ -6,12 +6,12 @@
             <a href="">Buchet Intro</a>
         </div>
 		<ul class="nav-menus" v-bind:class="{active:isActive}">
-            <li><a href="#intro" v-smooth-scroll>소개</a></li>
+            <li><a href="#intro" v-smooth-scroll>프로필</a></li>
             <!-- v-smooth-scroll -->
-            <li><a href="#profile" v-smooth-scroll>프로필</a></li>
+            <li><a href="#hobby" v-smooth-scroll>취미</a></li>
+            <!-- <li><a href="#profile" v-smooth-scroll>프로필</a></li> -->
             <li><a href="#career" v-smooth-scroll>경력</a></li>
             <li><a href="#tech" v-smooth-scroll>기술</a></li>
-            <li><a href="#hobby" v-smooth-scroll>취미</a></li>
         </ul>
 		<ul class="nav-icons" v-bind:class="{active:isActive}">
             <li @click="pageMove('github')"><font-awesome-icon icon="fa-brands fa-github" /></li>

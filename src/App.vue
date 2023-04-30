@@ -10,10 +10,10 @@
       <!-- <router-view msg="페이지 로드"></router-view> -->
     <!-- </main> -->
     <Intro msg="소개" />
-    <Profile msg="프로필" />
+    <!-- <Profile msg="프로필" /> -->
+    <Hobby msg="취미" />
     <Career msg="경력" />
     <Tech msg="기술" />
-    <Hobby msg="취미" />
     <Footer msg="풋터" />
   </div>
 </template>
@@ -22,7 +22,7 @@
 // 컴포넌트 import
 import Header from './components/common/Header.vue'
 import Intro from './components/section/Intro.vue'
-import Profile from './components/section/Profile.vue'
+// import Profile from './components/section/Profile.vue'
 import Career from './components/section/Career.vue'
 import Tech from './components/section/Tech.vue'
 import Hobby from './components/section/Hobby.vue'
@@ -36,7 +36,7 @@ export default {
         Header,
         Footer,
         Intro,
-        Profile,
+        // Profile,
         Career,
         Tech,
         Hobby

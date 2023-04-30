@@ -2,14 +2,20 @@
     <section id="intro">
         <!-- <h1>{{msg}}</h1> -->
         <!-- <h1>제 이름은 박성식입니다.</h1> -->
+        <!-- <img :src="profile.profileUrl" alt="profileImg"/>
         <h1>Hello, I am</h1>
-        <h2>안녕하세요. 저는 박성식입니다.</h2>
-        <img :src="profile.profileUrl" alt="profileImg"/>
+        <h2>안녕하세요. 저는 박성식입니다.</h2> -->
         <!-- <ul class="nav-icons" v-bind:class="{active:isActive}">
             <li @click="pageMove('github')"><font-awesome-icon icon="fa-brands fa-github" /></li>
             <li @click="pageMove('blog')"><font-awesome-icon icon="fa-solid fa-blog" /></li>
             <li @click="pageMove('instagram')"><font-awesome-icon icon="fa-brands fa-instagram" /></li>
         </ul> -->
+        <div>
+            <p>프로필 이미지</p>
+        </div>
+        <div>
+            <p>내용</p>
+        </div>
     </section>
 </template>
 
@@ -46,8 +52,20 @@ a{text-decoration:none; color:#333;}
     background-size: 100% 100%;
 } */
 #intro{
-    width:100%;
+    /* width:100%;
     height:50%;
+    margin:0 auto; */
     margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+    width:769px;
+    height:300px;
+}
+
+@media screen and (max-width: 768px){
+    #intro{
+        width:80%;
+        height:100%;
+    }
 }
 </style>
