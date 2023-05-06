@@ -6,8 +6,8 @@
     <Header msg="헤더" />
     <!-- router 처리 할 때 사용 -->
     <!-- <main class="app-main"> -->
-      <!-- 컴포넌트가 렌더링되는 영역 -->
-      <!-- <router-view msg="페이지 로드"></router-view> -->
+    <!-- 컴포넌트가 렌더링되는 영역 -->
+    <!-- <router-view msg="페이지 로드"></router-view> -->
     <!-- </main> -->
     <Intro msg="소개" />
     <!-- <Profile msg="프로필" /> -->
