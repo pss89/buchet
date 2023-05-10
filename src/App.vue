@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <metainfo>
-        <template v-slot:title="{ content }">{{ content ? `${content}` : `Buchet Intro` }}</template>
+        <template v-slot:title="{ content }">{{ content ? `${content}` : `Buchet About` }}</template>
     </metainfo>
     <Header msg="헤더" />
     <!-- router 처리 할 때 사용 -->
@@ -11,7 +11,7 @@
     <!-- </main> -->
     <Intro msg="소개" />
     <!-- <Profile msg="프로필" /> -->
-    <Hobby msg="취미" />
+    <!-- <Hobby msg="취미" /> -->
     <Career msg="경력" />
     <Tech msg="기술" />
     <Footer msg="풋터" />
@@ -43,7 +43,7 @@ export default {
     },
     setup () {
         useMeta({
-            title: 'Buchet Intro',
+            title: 'Buchet About',
             htmlAttrs: { lang: 'ko', amp: true },
             bodyAttrs: { 
               class: ['dark-mode','mobile'],

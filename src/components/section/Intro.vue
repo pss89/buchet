@@ -65,7 +65,7 @@ a{text-decoration:none; color:#333;}
 @media screen and (max-width: 768px){
     #intro{
         width:80%;
-        height:100%;
+        /* height:100%; */
     }
 }
 </style>
