@@ -12,7 +12,6 @@
                 <span v-for="(desc,idx) in career" v-bind:key="idx">
                     <p v-for="dt in desc['desc']" v-bind:key="dt">{{ dt.title }}</p>
                 </span>
-                <!-- <p v-for="(desc,c) in career" v-bind:key="c"></p> -->
             </div>
         </div>
     </section>
@@ -28,8 +27,8 @@ export default {
     },
     data(){
         return{
-            test:constants.TEST,
-            career:constants.CAREER
+            test:constants.CAREER.subject,
+            career:constants.CAREER.list
         }
     }
 }

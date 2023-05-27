@@ -8,10 +8,11 @@
 
 .nav-title{
     font-size:24px;
-    color:var(--text-color);
+    font-weight: bold;
+    color:var(--accent-color);
 }
 
-.nav-title #mainIcon {
+.nav-title p {
     color:var(--accent-color);
 }
 
