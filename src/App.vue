@@ -3,31 +3,31 @@
     <metainfo>
         <template v-slot:title="{ content }">{{ content ? `${content}` : `Buchet About` }}</template>
     </metainfo>
-    <Header msg="헤더" />
+    <Header />
     <!-- router 처리 할 때 사용 -->
     <!-- <main class="app-main"> -->
     <!-- 컴포넌트가 렌더링되는 영역 -->
     <!-- <router-view msg="페이지 로드"></router-view> -->
     <!-- </main> -->
-    <Intro msg="프로필" />
+    <!-- <Intro msg="프로필" /> -->
     <!-- <Profile msg="프로필" /> -->
     <!-- <Hobby msg="취미" /> -->
-    <Career msg="경력" />
+    <!-- <Career msg="경력" />
     <Tech msg="기술" />
-    <About msg="소개"/>
-    <Footer msg="풋터" />
+    <About msg="소개" />
+    <Footer msg="풋터" /> -->
   </div>
 </template>
 
 <script>
 // 컴포넌트 import
 import Header from './components/common/Header.vue'
-import Intro from './components/section/Intro.vue'
-import About from './components/section/About.vue'
-import Career from './components/section/Career.vue'
-import Tech from './components/section/Tech.vue'
-// import Hobby from './components/section/Hobby.vue'
-import Footer from './components/common/Footer.vue'
+// import Intro from './components/section/Intro.vue'
+// import About from './components/section/About.vue'
+// import Career from './components/section/Career.vue'
+// import Tech from './components/section/Tech.vue'
+// // import Hobby from './components/section/Hobby.vue'
+// import Footer from './components/common/Footer.vue'
 import { useMeta } from 'vue-meta'
 
 // 컴포넌트 정의
@@ -35,11 +35,11 @@ export default {
     name: 'App',
     components: {
         Header,
-        Footer,
-        Intro,
-        About,
-        Career,
-        Tech,
+        // Footer,
+        // Intro,
+        // About,
+        // Career,
+        // Tech,
         // Hobby
     },
     setup () {

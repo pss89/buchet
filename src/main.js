@@ -16,7 +16,8 @@ const app = createApp(App)
 
 // css 파일 로드
 import '@/assets/css/reset.css'
-import '@/assets/css/main.css'
+// import '@/assets/css/main.css'
+import '@/assets/css/tailwind.css';
 
 // instance add
 app.use(router).use(createMetaManager()).component('font-awesome-icon', FontAwesomeIcon).use(VueSmoothScroll).mount('#app')
