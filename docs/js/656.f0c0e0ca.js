@@ -1,2 +1,2 @@
 "use strict";(self["webpackChunkbuchet_vue_project"]=self["webpackChunkbuchet_vue_project"]||[]).push([[656],{9656:function(e,u,t){t.r(u),t.d(u,{default:function(){return i}});var n=t(6252),r=t(3577);function c(e,u,t,c,a,o){return(0,n.wg)(),(0,n.iD)("div",null,[(0,n._)("h1",null,(0,r.zw)(e.$route.query.name)+" / "+(0,r.zw)(e.$route.query.age),1)])}var a=t(7929),o={name:"Info",setup(){(0,a.jq)({title:"Some Page"})}},l=t(3744);const f=(0,l.Z)(o,[["render",c]]);var i=f}}]);
-//# sourceMappingURL=656.a0e4d4ee.js.map
+//# sourceMappingURL=656.f0c0e0ca.js.map
