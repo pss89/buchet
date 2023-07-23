@@ -18,6 +18,15 @@ const app = createApp(App)
 import '@/assets/css/reset.css'
 // import '@/assets/css/main.css'
 import '@/assets/css/tailwind.css';
+// 상수 js 로드
+import constants from "@/constants.js"
+
+app.provide('constants', constants);
 
 // instance add
-app.use(router).use(createMetaManager()).component('font-awesome-icon', FontAwesomeIcon).use(VueSmoothScroll).mount('#app')
+app
+.use(router)
+.use(createMetaManager())
+.component('font-awesome-icon', FontAwesomeIcon)
+.use(VueSmoothScroll)
+.mount('#app')

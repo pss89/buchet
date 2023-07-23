@@ -1,14 +1,17 @@
 <template>
   <header class="bg-blue-500 flex items-center justify-between p-4 text-white">
     <!-- 왼쪽 상단 로고 -->
-    <div class="font-bold text-lg">Logo</div>
+    <a class="font-bold text-lg" href="/buchet">
+      <img :src="logoImage" alt="Logo" class="w-14" />
+    </a>
 
     <!-- 가운데 상단 메뉴 (작은 화면에서는 숨김) -->
-    <div class="hidden md:flex space-x-4">
-      <a href="#" class="hover:text-gray-300">Menu 1</a>
-      <a href="#" class="hover:text-gray-300">Menu 2</a>
-      <a href="#" class="hover:text-gray-300">Menu 3</a>
-      <a href="#" class="hover:text-gray-300">Menu 4</a>
+    <div class="hidden md:flex space-x-8">
+      <!-- <a href="#" class="hover:text-gray-300" v-for="(menu, index) in constants.MENU.list" :key="menu.key"> -->
+      <a href="#" class="hover:text-gray-300" v-for="menu in constants.MENU.list" :key="menu.key">
+        <!-- {{ index }} - {{ menu.title }} -->
+        {{ menu.title }}
+      </a>
     </div>
 
     <!-- 오른쪽 상단 아이콘 (작은 화면에서는 숨김) -->
@@ -66,13 +69,15 @@ export default {
   data() {
     return {
       showMenu: false,
+      logoImage: require('@/assets/img/icon/buchet_icon.png')
     };
   },
   methods: {
     toggleMenu() {
       this.showMenu = !this.showMenu;
-    },
+    }
   },
+  inject: ['constants']
 };
 </script>
 
