@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-blue-500 flex items-center justify-between p-4 text-white">
+  <header class="bg-cyan-600 flex items-center justify-between p-4 text-white">
     <!-- 왼쪽 상단 로고 -->
     <a class="font-bold text-lg" href="/buchet">
       <img :src="logoImage" alt="Logo" class="w-14" />
@@ -13,19 +13,12 @@
         {{ menu.title }}
       </a>
     </div>
-
-    <!-- 오른쪽 상단 아이콘 (작은 화면에서는 숨김) -->
-    <div class="hidden md:flex space-x-4">
-      <button class="text-white">
-        깃허브
-      </button>
-      <button class="text-white">
-        인스타
-      </button>
-      <button class="text-white">
-        티스토리
-      </button>
-    </div>
+    
+    <ul class="hidden md:flex space-x-4">
+      <li @click="pageMove(social.key)" v-for="social in constants.SOCIAL.list" :key="social.key" class="cursor-pointer">
+        <font-awesome-icon :icon="social.fa" />
+      </li>
+    </ul>
 
     <!-- 햄버거 아이콘 (작은 화면에서만 보임) -->
     <button class="md:hidden text-white" @click="toggleMenu">
@@ -48,21 +41,18 @@
     <!-- 모바일 메뉴 (작은 화면에서만 보임) -->
     <div
       v-show="showMenu"
-      class="md:hidden absolute top-16 right-4 bg-blue-500 rounded shadow-md p-2 space-y-2"
+      class="md:hidden absolute top-16 right-0 bg-cyan-600 rounded shadow-md p-6 space-y-2"
     >
       <a href="#" class="hover:text-gray-300 block" v-for="menu in constants.MENU.list" :key="menu.key">
         {{ menu.title }}
       </a>
-      <!-- <a href="#" class="hover:text-gray-300 block">Menu 1</a> -->
-      <!-- <a href="#" class="hover:text-gray-300 block">Menu 2</a>
-      <a href="#" class="hover:text-gray-300 block">Menu 3</a>
-      <a href="#" class="hover:text-gray-300 block">Menu 4</a> -->
+      
+      <ul class="flex space-x-6 pt-4">
+        <li @click="pageMove(social.key)" v-for="social in constants.SOCIAL.list" :key="social.key">
+          <font-awesome-icon :icon="social.fa" />
+        </li>
+      </ul>
 
-      <div>
-        <p>인스타</p>
-        <p>깃허브</p>
-        <p>티스토리</p>
-      </div>
     </div>
   </header>
 </template>
@@ -78,6 +68,21 @@ export default {
   methods: {
     toggleMenu() {
       this.showMenu = !this.showMenu;
+    },
+    pageMove: function(moveType){
+      if (!moveType) {
+          alert('페이지 이동에 대한 인자값이 없습니다');
+          return false;
+      }
+      
+      switch(moveType){
+        case 'github': window.open('https://github.com/pss89'); break;
+        case 'blog': window.open('https://buchet.tistory.com/'); break;
+        case 'insta': window.open('https://www.instagram.com/buchet89/'); break;
+        default :
+          alert('허용하지 않는 유형입니다.');
+          return false;
+      }
     }
   },
   inject: ['constants']

@@ -14,8 +14,8 @@
     <!-- <Hobby msg="취미" /> -->
     <!-- <Career msg="경력" />
     <Tech msg="기술" />
-    <About msg="소개" />
-    <Footer msg="풋터" /> -->
+    <About msg="소개" /> -->
+    <Footer />
   </div>
 </template>
 
@@ -27,7 +27,7 @@ import Header from './components/common/Header.vue'
 // import Career from './components/section/Career.vue'
 // import Tech from './components/section/Tech.vue'
 // // import Hobby from './components/section/Hobby.vue'
-// import Footer from './components/common/Footer.vue'
+import Footer from './components/common/Footer.vue'
 import { useMeta } from 'vue-meta'
 
 // 컴포넌트 정의
@@ -35,7 +35,7 @@ export default {
     name: 'App',
     components: {
         Header,
-        // Footer,
+        Footer,
         // Intro,
         // About,
         // Career,

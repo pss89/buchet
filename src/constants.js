@@ -14,5 +14,12 @@ export default Object.freeze({
             {key:"project",title:'프로젝트'},
             {key:"hobby",title:'취미'}
         ]
+    },
+    SOCIAL:{
+        list:[
+            {key:"github",fa:"fa-brands fa-github"},
+            {key:"blog",fa:"fa-solid fa-blog"},
+            {key:"insta",fa:"fa-brands fa-instagram"}
+        ]
     }
 })
