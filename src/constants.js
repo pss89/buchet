@@ -8,7 +8,7 @@ export default Object.freeze({
     },
     MENU:{
         list:[
-            {key:"about",title:'소개'},
+            {key:"intro",title:'소개'},
             {key:"career",title:'경력'},
             {key:"tech",title:'기술'},
             {key:"project",title:'프로젝트'},
