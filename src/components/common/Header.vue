@@ -50,10 +50,13 @@
       v-show="showMenu"
       class="md:hidden absolute top-16 right-4 bg-blue-500 rounded shadow-md p-2 space-y-2"
     >
-      <a href="#" class="hover:text-gray-300 block">Menu 1</a>
-      <a href="#" class="hover:text-gray-300 block">Menu 2</a>
+      <a href="#" class="hover:text-gray-300 block" v-for="menu in constants.MENU.list" :key="menu.key">
+        {{ menu.title }}
+      </a>
+      <!-- <a href="#" class="hover:text-gray-300 block">Menu 1</a> -->
+      <!-- <a href="#" class="hover:text-gray-300 block">Menu 2</a>
       <a href="#" class="hover:text-gray-300 block">Menu 3</a>
-      <a href="#" class="hover:text-gray-300 block">Menu 4</a>
+      <a href="#" class="hover:text-gray-300 block">Menu 4</a> -->
 
       <div>
         <p>인스타</p>
