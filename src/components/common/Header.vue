@@ -8,7 +8,7 @@
     <!-- 가운데 상단 메뉴 (작은 화면에서는 숨김) -->
     <div class="hidden md:flex space-x-8">
       <!-- <a href="#" class="hover:text-gray-300" v-for="(menu, index) in constants.MENU.list" :key="menu.key"> -->
-      <a href="#" class="hover:text-gray-300" v-for="menu in constants.MENU.list" :key="menu.key">
+      <a :href="'#'+menu.key" class="hover:text-gray-300" v-for="menu in constants.MENU.list" :key="menu.key">
         <!-- {{ index }} - {{ menu.title }} -->
         {{ menu.title }}
       </a>

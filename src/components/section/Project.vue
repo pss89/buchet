@@ -1,12 +1,12 @@
 <template>
-    <section id="about" style="height:300px;">
+    <section id="project" style="height:300px;">
         <h1>{{msg}}</h1>
     </section>
 </template>
 
 <script>
 export default {
-    name: 'About',
+    name: 'Project',
     props: {
         msg: String
     }

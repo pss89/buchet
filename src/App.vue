@@ -9,12 +9,11 @@
     <!-- 컴포넌트가 렌더링되는 영역 -->
     <!-- <router-view msg="페이지 로드"></router-view> -->
     <!-- </main> -->
-    <!-- <Intro msg="프로필" /> -->
-    <!-- <Profile msg="프로필" /> -->
-    <!-- <Hobby msg="취미" /> -->
-    <!-- <Career msg="경력" />
+    <Intro msg="소개" />
+    <Career msg="경력" />
     <Tech msg="기술" />
-    <About msg="소개" /> -->
+    <Project msg="프로젝트" />
+    <Hobby msg="취미" />
     <Footer />
   </div>
 </template>
@@ -22,11 +21,11 @@
 <script>
 // 컴포넌트 import
 import Header from './components/common/Header.vue'
-// import Intro from './components/section/Intro.vue'
-// import About from './components/section/About.vue'
-// import Career from './components/section/Career.vue'
-// import Tech from './components/section/Tech.vue'
-// // import Hobby from './components/section/Hobby.vue'
+import Intro from './components/section/Intro.vue'
+import Career from './components/section/Career.vue'
+import Tech from './components/section/Tech.vue'
+import Project from './components/section/Project.vue'
+import Hobby from './components/section/Hobby.vue'
 import Footer from './components/common/Footer.vue'
 import { useMeta } from 'vue-meta'
 
@@ -36,11 +35,11 @@ export default {
     components: {
         Header,
         Footer,
-        // Intro,
-        // About,
-        // Career,
-        // Tech,
-        // Hobby
+        Intro,
+        Career,
+        Tech,
+        Project,
+        Hobby
     },
     setup () {
         useMeta({
