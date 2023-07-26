@@ -22,20 +22,7 @@
 
     <!-- 햄버거 아이콘 (작은 화면에서만 보임) -->
     <button class="md:hidden text-white" @click="toggleMenu">
-      <svg
-        class="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16m-7 6h7"
-        ></path>
-      </svg>
+      <font-awesome-icon icon="fa-solid fa-bars" />
     </button>
 
     <!-- 모바일 메뉴 (작은 화면에서만 보임) -->

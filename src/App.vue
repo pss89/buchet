@@ -10,10 +10,10 @@
     <!-- <router-view msg="페이지 로드"></router-view> -->
     <!-- </main> -->
     <Intro msg="소개" />
-    <Career msg="경력" />
+    <!-- <Career msg="경력" />
     <Tech msg="기술" />
     <Project msg="프로젝트" />
-    <Hobby msg="취미" />
+    <Hobby msg="취미" /> -->
     <Footer />
   </div>
 </template>
@@ -22,10 +22,10 @@
 // 컴포넌트 import
 import Header from './components/common/Header.vue'
 import Intro from './components/section/Intro.vue'
-import Career from './components/section/Career.vue'
-import Tech from './components/section/Tech.vue'
-import Project from './components/section/Project.vue'
-import Hobby from './components/section/Hobby.vue'
+// import Career from './components/section/Career.vue'
+// import Tech from './components/section/Tech.vue'
+// import Project from './components/section/Project.vue'
+// import Hobby from './components/section/Hobby.vue'
 import Footer from './components/common/Footer.vue'
 import { useMeta } from 'vue-meta'
 
@@ -36,10 +36,10 @@ export default {
         Header,
         Footer,
         Intro,
-        Career,
-        Tech,
-        Project,
-        Hobby
+        // Career,
+        // Tech,
+        // Project,
+        // Hobby
     },
     setup () {
         useMeta({
