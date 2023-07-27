@@ -5,11 +5,11 @@
     --accent-color:#d49466;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
 /* 기본 style 설정 */
 #app{
-    font-family: 'Source Sans Pro';
+    font-family: 'Noto Sans KR', sans-serif;
     display:contents;
 }
 .app{

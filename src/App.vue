@@ -10,8 +10,8 @@
     <!-- <router-view msg="페이지 로드"></router-view> -->
     <!-- </main> -->
     <Intro msg="소개" />
-    <!-- <Career msg="경력" />
-    <Tech msg="기술" />
+    <Career msg="경력" />
+    <!-- <Tech msg="기술" />
     <Project msg="프로젝트" />
     <Hobby msg="취미" /> -->
     <Footer />
@@ -22,7 +22,7 @@
 // 컴포넌트 import
 import Header from './components/common/Header.vue'
 import Intro from './components/section/Intro.vue'
-// import Career from './components/section/Career.vue'
+import Career from './components/section/Career.vue'
 // import Tech from './components/section/Tech.vue'
 // import Project from './components/section/Project.vue'
 // import Hobby from './components/section/Hobby.vue'
@@ -36,14 +36,14 @@ export default {
         Header,
         Footer,
         Intro,
-        // Career,
+        Career,
         // Tech,
         // Project,
         // Hobby
     },
     setup () {
         useMeta({
-            title: 'Buchet About',
+            title: 'Buchet Introduction',
             htmlAttrs: { lang: 'ko', amp: true },
             bodyAttrs: { 
               class: ['dark-mode','mobile'],
@@ -59,7 +59,7 @@ export default {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
+    /* text-align: center; */
     color: #2c3e50;
     margin-top: 60px;
 }

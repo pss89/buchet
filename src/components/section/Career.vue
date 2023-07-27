@@ -1,20 +1,23 @@
 <!-- 경력 -->
 <template>
-    <section id="career">
-        <!-- <h1>{{msg}}</h1> -->
-        <!-- <p id="career_title">education - work experience</p> -->
-        <p id="career_title">{{test}}</p>
-        <div id="career_desc">
-            <div>
-                <p v-for="c in career" v-bind:key="c">{{ c.title }}</p>
-            </div>
-            <div>
-                <span v-for="(desc,idx) in career" v-bind:key="idx">
-                    <p v-for="dt in desc['desc']" v-bind:key="dt">{{ dt.title }}</p>
-                </span>
-            </div>
-        </div>
-    </section>
+    <div id="career" class="container mx-auto p-4 flex flex-col md:flex-row items-center mt-5">
+      <!-- 경력 부분 -->
+      <div class="w-full md:ml-8 mt-4 md:mt-0">
+        <p>{{ msg }}</p>
+        <!-- <h2 class="text-2xl font-bold mb-4">안녕하세요! 박성식입니다.</h2>
+        <p class="text-stone-900">
+          웹프로그래머로 경력을 쌓고있습니다.<br>
+          FrontEnd는 기본적으로 html,css,javascript/jquery 사용 경험이 있으며 추가적으로 bootstrap, angularjs 와 같은 FrontEnd FrameWork 사용 경험이 있습니다.
+          <br><br>
+          주업무인 BackEnd는 PHP 언어를 사용하였으며 Codeigniter3.x , Laravel 5.x 사용 경험이 있습니다. 주로 Codeigniter 환경에서 개발을 진행하였습니다.
+          <br><br>
+          이 외 간단한 linux(centos, ubuntu) , db (mysql, mariadb) , DevOps (slack, jira/confluence, redmine) , git/github/bitbucket 등을 업무에서 사용 한 경험이 있습니다.
+        </p>
+        <p class="mt-4 text-stone-900">
+          이메일 : seongsigbag2@gmail.com<br>
+        </p> -->
+      </div>
+    </div>
 </template>
 
 <script>
@@ -35,36 +38,4 @@ export default {
 </script>
 
 <style scoped>
-header{width:100%; text-align:center; position:relative; height:120px; border-bottom:1px solid #35495e}
-header h1{position:absolute; top:0; left:100px;}
-header ul.menu:after{display:block; clear:both; content:'';}
-header ul.menu{position:absolute; top:20px; right:50px;}
-header ul.menu li{float:left; padding:10px 20px; list-style:none;}
-
-a{text-decoration:none; color:#333;}
-
-#career{
-    /* width:100%;
-    height:50%;
-    margin:0 auto; */
-    margin:0 auto;
-    width:769px;
-    height:500px;
-}
-
-#career_desc{
-    display:flex;
-    justify-content: space-between;
-}
-
-#career_title{
-    margin:0 auto;
-}
-
-@media screen and (max-width: 768px){
-    #career{
-        width:80%;
-        /* height:100%; */
-    }
-}
 </style>
