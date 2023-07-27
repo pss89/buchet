@@ -1,17 +1,31 @@
 <template>
   <div class="container mx-auto p-4 mt-10">
     <!-- 제목 -->
-    <h1 class="text-4xl font-bold mb-6">경력 소개</h1>
+    <h1 class="text-4xl font-bold mb-6">{{ constants.S_CAREER.subject }}</h1>
+
+    <!-- 반응형 그리드 레이아웃 -->
+    <div class="grid grid-cols-1 mb-10 md:grid-cols-2 gap-6">
+      <!-- 학력 소개 영역 -->
+      <div v-for="s_career in constants.S_CAREER.list" :key="s_career.key" class="p-4 border rounded shadow-md">
+        <h2 class="text-2xl font-bold">{{ s_career.name }}</h2>
+        <p class="text-gray-600">{{ s_career.major }}</p>
+        <p class="text-gray-600">{{ s_career.period.startDate }} ~ {{ s_career.period.endDate }}</p>
+      </div>
+      <!-- 경력 정보 -->
+    </div>
+
+    <!-- 제목 -->
+    <h1 class="text-4xl font-bold mb-6">{{ constants.C_CAREER.subject }}</h1>
 
     <!-- 반응형 그리드 레이아웃 -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- 학력/경력 소개 영역 -->
-      <!-- 경력 정보 -->
-      <div v-for="career in careers" :key="career.id" class="p-4 border rounded shadow-md">
-        <h2 class="text-2xl font-bold">{{ career.company }}</h2>
-        <p class="text-gray-600">{{ career.position }}</p>
-        <p class="text-gray-600">{{ career.duration }}</p>
+      <!-- 학력 소개 영역 -->
+      <div v-for="c_career in constants.C_CAREER.list" :key="c_career.key" class="p-4 border rounded shadow-md">
+        <h2 class="text-2xl font-bold">{{ c_career.name }}</h2>
+        <p class="text-gray-600">{{ c_career.belong }} - {{ c_career.position }}</p>
+        <p class="text-gray-600">{{ c_career.period.startDate }} ~ {{ c_career.period.endDate }}</p>
       </div>
+      <!-- 경력 정보 -->
     </div>
   </div>
 </template>
@@ -20,23 +34,9 @@
 export default {
   data() {
     return {
-      careers: [
-        {
-          id: 1,
-          company: "ABC Company",
-          position: "Front-end Developer",
-          duration: "2020 - 현재",
-        },
-        {
-          id: 2,
-          company: "XYZ Agency",
-          position: "Web Designer",
-          duration: "2018 - 2020",
-        },
-        // 추가 경력 항목을 원하는 만큼 추가할 수 있습니다.
-      ],
     };
   },
+  inject: ['constants']
 };
 </script>
 
