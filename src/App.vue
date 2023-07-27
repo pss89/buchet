@@ -11,9 +11,9 @@
     <!-- </main> -->
     <Intro msg="소개" />
     <Career msg="경력" />
-    <!-- <Tech msg="기술" />
+    <Tech msg="기술" />
     <Project msg="프로젝트" />
-    <Hobby msg="취미" /> -->
+    <Hobby msg="취미" />
     <Footer />
   </div>
 </template>
@@ -23,9 +23,9 @@
 import Header from './components/common/Header.vue'
 import Intro from './components/section/Intro.vue'
 import Career from './components/section/Career.vue'
-// import Tech from './components/section/Tech.vue'
-// import Project from './components/section/Project.vue'
-// import Hobby from './components/section/Hobby.vue'
+import Tech from './components/section/Tech.vue'
+import Project from './components/section/Project.vue'
+import Hobby from './components/section/Hobby.vue'
 import Footer from './components/common/Footer.vue'
 import { useMeta } from 'vue-meta'
 
@@ -37,9 +37,9 @@ export default {
         Footer,
         Intro,
         Career,
-        // Tech,
-        // Project,
-        // Hobby
+        Tech,
+        Project,
+        Hobby
     },
     setup () {
         useMeta({
@@ -59,7 +59,6 @@ export default {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* text-align: center; */
     color: #2c3e50;
     margin-top: 60px;
 }

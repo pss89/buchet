@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto p-4 mt-10">
+  <div class="container mx-auto p-4 mt-10" id="career">
     <!-- 제목 -->
     <h1 class="text-4xl font-bold mb-6">{{ constants.S_CAREER.subject }}</h1>
 
