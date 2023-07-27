@@ -17,23 +17,44 @@
           이메일 : seongsigbag2@gmail.com<br>
         </p> -->
       </div>
+
+      <!-- 버튼을 클릭하면 레이어 팝업을 열기 위한 버튼 -->
+      <button @click="openModal" class="bg-blue-500 text-white px-4 py-2 rounded">Open Modal</button>
+
+      <!-- 레이어 팝업 (조건부 렌더링) -->
+      <div v-if="isModalOpen" class="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-4 rounded-lg">
+          <h2 class="text-xl font-bold mb-2">Modal Content</h2>
+          <p>This is the modal content.</p>
+          <!-- 닫기 버튼을 클릭하면 레이어 팝업이 닫힙니다 -->
+          <button @click="closeModal" class="bg-red-500 text-white px-4 py-2 rounded mt-4">Close</button>
+        </div>
+      </div>
     </div>
 </template>
 
 <script>
-import constants from "/src/constants.js"
-
 export default {
     name: 'Career',
+    inject: ['constants'],
     props: {
         msg: String
     },
     data(){
         return{
-            test:constants.CAREER.subject,
-            career:constants.CAREER.list
+            // test:constants.CAREER.subject,
+            // career:constants.CAREER.list,
+            isModalOpen: false, // 레이어 팝업 열림 여부를 저장하는 변수
         }
-    }
+    },
+      methods: {
+        openModal() {
+          this.isModalOpen = true; // 레이어 팝업을 열기 위한 메서드
+        },
+        closeModal() {
+          this.isModalOpen = false; // 레이어 팝업을 닫기 위한 메서드
+        },
+    },
 }
 </script>
 
