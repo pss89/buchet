@@ -16,7 +16,7 @@ export default {
     return {
       items: [
         {
-          title: "Vue.js",
+          title: "PHP",
           description: "프론트엔드 개발에 사용되는 JavaScript 프레임워크",
         },
         {
@@ -24,11 +24,11 @@ export default {
           description: "가볍고 유연한 CSS 프레임워크로 디자인하기 쉬움",
         },
         {
-          title: "Node.js",
+          title: "AngularJs",
           description: "서버 사이드 애플리케이션 개발에 사용되는 JavaScript 런타임",
         },
         {
-          title: "React",
+          title: "VueJs",
           description: "Facebook에서 만든 JavaScript 라이브러리로 사용자 인터페이스를 구축하기 위해 사용됨",
         },
         // 추가적인 항목을 원하는 만큼 추가할 수 있습니다.

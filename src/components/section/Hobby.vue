@@ -1,7 +1,7 @@
 <!-- 취미 -->
 <template>
   <div>
-    {{  msg }}
+    {{ msg }}
   </div>
 </template>
 
