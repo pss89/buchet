@@ -1,16 +1,13 @@
 <!-- 취미 -->
 <template>
   <div>
-    {{ msg }}
+    취미
   </div>
 </template>
 
 <script>
 export default {
-    name: 'Hobby',
-    props: {
-        msg: String
-    }
+    name: 'Hobby'
 }
 </script>
 

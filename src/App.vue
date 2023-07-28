@@ -9,11 +9,11 @@
     <!-- 컴포넌트가 렌더링되는 영역 -->
     <!-- <router-view msg="페이지 로드"></router-view> -->
     <!-- </main> -->
-    <Intro msg="소개" />
-    <Career msg="경력" />
-    <Tech msg="기술" />
-    <Project msg="프로젝트" />
-    <Hobby msg="취미" />
+    <Intro/>
+    <Career/>
+    <Tech/>
+    <Project/>
+    <Hobby/>
     <Footer />
   </div>
 </template>

@@ -8,9 +8,30 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas,faBars } from '@fortawesome/free-solid-svg-icons'
 import { faGithub,faInstagram  } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-library.add(fas,faBars ,faGithub,faInstagram )
-
 import VueSmoothScroll from 'vue3-smooth-scroll'
+
+import { createVuetify } from "vuetify";
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
+import '@mdi/font/css/materialdesignicons.css';
+import 'vuetify/styles';
+
+const vuetify = createVuetify({
+    components,
+    directives,
+    ssr:true,
+    defaults: {
+        global: {
+        /**
+         * 클릭 시 번짐 효과 제거
+         * @refer https://vuetifyjs.com/en/features/global-configuration/
+         */
+        ripple: false,
+        },
+    },
+});
+
+library.add(fas,faBars ,faGithub,faInstagram )
 
 const app = createApp(App)
 
@@ -29,4 +50,5 @@ app
 .use(createMetaManager())
 .component('font-awesome-icon', FontAwesomeIcon)
 .use(VueSmoothScroll)
+.use(vuetify)
 .mount('#app')
