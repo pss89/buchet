@@ -17,7 +17,7 @@ export default {
       items: [
         {
           title: "PHP",
-          description: "프론트엔드 개발에 사용되는 JavaScript 프레임워크",
+          description: "웹개발에 최적화 된 서버사이드 언어",
         },
         {
           title: "Tailwind CSS",
