@@ -27,7 +27,7 @@ import Tech from './components/section/Tech.vue'
 import Project from './components/section/Project.vue'
 import Hobby from './components/section/Hobby.vue'
 import Footer from './components/common/Footer.vue'
-import { useMeta } from 'vue-meta';
+// import { useMeta } from 'vue-meta';
 
 // import iconImage from "@/assets/img/icon/icon-image.png";
 
@@ -44,24 +44,47 @@ export default {
         Hobby
     },
     setup () {
-      useMeta({
-        title: 'Buchet Introduction',
-        htmlAttrs: { lang: 'ko', amp: true },
-        bodyAttrs: {
-          class: ['dark-mode', 'mobile'],
-          tabIndex: 0
-        },
-        meta: [
-          // { charset: 'utf-8'},
-          { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no' },
-          { name: 'description', content: 'Buchet Introduction WebSite.' },
-          // Open Graph meta 설정
-          { property: 'og:title', content: 'Buchet Introduction' },
-          { property: 'og:description', content: 'Buchet Introduction WebSite.' },
-          { property: 'og:image', content: require('@/assets/img/icon/buchet_icon.png') },
-          { property: 'og:url', content: window.location.href },
-        ]
-      });
+      // useMeta({
+      //   meta: [
+      //     // if no subcomponents specify a metaInfo.title, this title will be used
+      //     {title: 'Default Title', name: 'title'}
+      //     // all titles will be injected into this template
+      //   ],
+      // })
+      // useMeta({
+      //   title: 'Buchet Introduction.',
+      //   htmlAttrs: { lang: 'ko', amp: true },
+      //   bodyAttrs: {
+      //     class: ['dark-mode', 'mobile'],
+      //     tabIndex: 0
+      //   },
+      //   metaInfo: {
+      //     meta: [
+      //       { charset: 'utf-8' },
+      //       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+      //     ]
+      //   }
+        
+      //   // meta :[
+      //     // { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no' },
+      //     // { name: 'description', content: 'Buchet Introduction WebSite.' },
+      //     // // Open Graph meta 설정
+      //     // { property: 'og:title', content: 'Buchet Introduction.' },
+      //     // { property: 'og:description', content: 'Buchet Introduction WebSite.' },
+      //     // { property: 'og:image', content: require('@/assets/img/icon/buchet_icon.png') },
+      //     // { property: 'og:url', content: window.location.href },
+      //   // ]
+      //   // meta: [
+      //   //   // { charset: 'utf-8'},
+      //   //   { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no' },
+      //   //   { name: 'description', content: 'Buchet Introduction WebSite.' },
+      //   //   // Open Graph meta 설정
+      //   //   { property: 'og:title', content: 'Buchet Introduction.' },
+      //   //   { property: 'og:description', content: 'Buchet Introduction WebSite.' },
+      //   //   { property: 'og:image', content: require('@/assets/img/icon/buchet_icon.png') },
+      //   //   { property: 'og:url', content: window.location.href },
+      //   // ]
+      // });
     }
 }
 </script>
