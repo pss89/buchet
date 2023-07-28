@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import { useMeta } from 'vue-meta'
+// import { useMeta } from 'vue-meta'
 
 export default {
     name: 'Info',
     setup () {
-        useMeta({ title: 'Some Page' })
+        // useMeta({ title: 'Some Page' })
     }
 }
 </script>
