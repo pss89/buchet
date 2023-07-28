@@ -3,7 +3,7 @@
     <metainfo>
         <template v-slot:title="{ content }">{{ content ? `${content}` : `Buchet About` }}</template>
     </metainfo>
-    <Header />
+    <Header/>
     <!-- router 처리 할 때 사용 -->
     <!-- <main class="app-main"> -->
     <!-- 컴포넌트가 렌더링되는 영역 -->
@@ -14,7 +14,7 @@
     <Tech/>
     <Project/>
     <Hobby/>
-    <Footer />
+    <Footer/>
   </div>
 </template>
 
