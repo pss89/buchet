@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import LanguageItem from "./LanguageItem.vue";
+import LanguageItem from "@/components/sections/directive/tech/LanguageItem.vue";
 
 export default {
   components: {
@@ -26,14 +26,14 @@ export default {
     return {
       languages: [
         {
-          name: "JavaScript",
-          description: "웹 프론트엔드 개발 언어",
-          icon: "/img/icons/javascript.png",
+          name: "PHP",
+          description: "웹개발에 주로 사용되는 인터프리터 서버언어.",
+          icon: require('@/assets/img/main/php.png')
         },
         {
-          name: "Python",
-          description: "다목적 프로그래밍 언어",
-          icon: "/img/icons/python.png",
+          name: "Angular",
+          description: "구글에서 개발한 자바스크립트 프론트엔드 프레임워크, 사용자와 상호작용하며 데이터를 효과적으로 제어하고 표시하는 데에 강력한 기능을 제공.",
+          icon: require('@/assets/img/main/angular.png')
         },
         // 다른 언어 및 기술들도 추가해주세요
       ],
