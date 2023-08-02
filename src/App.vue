@@ -14,6 +14,7 @@
     <Tech />
     <Project />
     <Hobby />
+    <CodeHighlight :code="code" language="javascript" />
     <Footer />
   </div>
 </template>
@@ -26,6 +27,7 @@ import Career from './components/sections/Career.vue'
 import Tech from './components/sections/Tech.vue'
 import Project from './components/sections/Project.vue'
 import Hobby from './components/sections/Hobby.vue'
+import CodeHighlight from '@/components/sections/Test.vue';
 import Footer from './components/layout/Footer.vue'
 // import { useMeta } from 'vue-meta';
 
@@ -41,7 +43,17 @@ export default {
         Career,
         Tech,
         Project,
-        Hobby
+        Hobby,
+        CodeHighlight
+    },
+    data() {
+      return {
+        code: `
+        function greet() {
+          return 'Hello, world!';
+        }
+        console.log(greet());`,
+      };
     },
     setup () {
       // useMeta({
@@ -90,11 +102,4 @@ export default {
 </script>
 
 <style>
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
-    margin-top: 60px;
-}
 </style>

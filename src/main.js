@@ -10,11 +10,16 @@ import { faGithub,faInstagram  } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueSmoothScroll from 'vue3-smooth-scroll'
 
+// 슬라이드 구현을 위한 라이브러리
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 import '@mdi/font/css/materialdesignicons.css';
 import 'vuetify/styles';
+
+// 코드 하이라이트를 위함
+import hljs from 'highlight.js/lib/core';
+import 'highlight.js/styles/github.css';
 
 const vuetify = createVuetify({
     components,
@@ -51,4 +56,5 @@ app
 .component('font-awesome-icon', FontAwesomeIcon)
 .use(VueSmoothScroll)
 .use(vuetify)
+.use(hljs)
 .mount('#app')
