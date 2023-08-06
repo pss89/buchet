@@ -1,7 +1,7 @@
 <template>
   <section class="py-12">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-left mb-8">실무 경험 기술</h2>
+      <h2 class="text-3xl font-bold text-left mb-8">실무 경험</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <LanguageItem
           v-for="tech in constants.TECH.list"
