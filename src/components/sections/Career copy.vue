@@ -47,7 +47,7 @@ export default {
             isModalOpen: false, // 레이어 팝업 열림 여부를 저장하는 변수
         }
     },
-      methods: {
+    methods: {
         openModal() {
           this.isModalOpen = true; // 레이어 팝업을 열기 위한 메서드
         },
