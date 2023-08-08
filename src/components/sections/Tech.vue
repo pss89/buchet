@@ -1,7 +1,7 @@
 <template>
   <section class="py-12">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-left mb-8">실무 경험</h2>
+      <h2 class="text-3xl font-bold text-left mb-8">사용 경험 기술</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <LanguageItem
           v-for="tech in constants.TECH.list"
@@ -20,7 +20,7 @@
     
     <Modal :is-open="isModalOpen" @close="isModalOpen = false">
       <h3>{{ modalContent.name }}</h3>
-      <p>{{ modalContent.description }}</p>
+      <p v-html="formattedDescription"></p>
     </Modal>
   </div>
 </template>
@@ -33,6 +33,11 @@ export default {
   components: {
     LanguageItem,
     Modal
+  },
+  computed: {
+    formattedDescription(){
+      return this.modalContent.description.replace(/\n/g, '<br>');
+    }
   },
   data() {
     return {
