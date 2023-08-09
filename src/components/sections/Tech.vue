@@ -17,7 +17,7 @@
 
   <div>
     <!-- <button @click="openModal">Open Modal</button> -->
-    
+    <!-- <CodeHighlight :code="code" language="javascript" /> -->
     <Modal :is-open="isModalOpen" @close="isModalOpen = false">
       <h3>{{ modalContent.name }}</h3>
       <p v-html="formattedDescription"></p>
@@ -28,11 +28,13 @@
 <script>
 import LanguageItem from "@/components/sections/directive/tech/LanguageItem.vue";
 import Modal from "@/components/sections/directive/common/ModalPopup.vue";
+import CodeHighlight from "@/components/sections/directive/common/CodeHighlight.vue";
 
 export default {
   components: {
     LanguageItem,
-    Modal
+    Modal,
+    CodeHighlight
   },
   computed: {
     formattedDescription(){

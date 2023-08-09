@@ -98,7 +98,7 @@ export default Object.freeze({
                 icon: require('@/assets/img/main/python.png')
             },
             {
-                name:'DataBase (mysql)',
+                name:'MySQL (DataBase)',
                 description:'MySQL은 오픈 소스 관계형 데이터베이스 관리 시스템(RDBMS)입니다.',
                 icon: require('@/assets/img/main/mysql.png')
             },
@@ -108,19 +108,39 @@ export default Object.freeze({
                 icon: require('@/assets/img/main/api.png')
             },
             {
-                name:'JavaScript/Jquery',
-                description:'웹페이지의 동적인 동작을 추가하고 HTML 문서의 요소를 조작할 수 있는 프로그래밍 언어, 라이브러리 입니다.',
-                icon: require('@/assets/img/main/api.png')
+                name:'JavaScript',
+                description:'웹 페이지의 동적인 동작을 추가하기 위해 사용되는 프로그래밍 언어입니다.',
+                icon: require('@/assets/img/main/javascript.png')
             },
             {
-                name:'Git/GitHub',
-                description:'Git은 버전관리 시스템으로, 코드 변경 사항을 추적하고 관리할 수 있는 도구입니다.<br>GitHub는 Git을 기반으로 하는 웹 기반 호스팅 서비스로, 코드 저장소를 온라인으로 관리하고 협업할 수 있는 플랫폼입니다.',
-                icon: require('@/assets/img/main/api.png')
+                name:'JQuery',
+                description:'자바스크립트 라이브러리로, HTML 문서의 요소를 조작하고 다루는 작업을 쉽게 만들어 줍니다.',
+                icon: require('@/assets/img/main/jquery.png')
+            },
+            {
+                name:'Git',
+                description:'버전 관리 시스템(VCS)으로, 코드 변경 사항을 추적하고 관리할 수 있는 도구입니다',
+                icon: require('@/assets/img/main/git.png')
+            },
+            {
+                name:'GitHub',
+                description:'깃을 기반으로 하는 웹 기반 호스팅 서비스로, 코드 저장소를 온라인으로 관리하고 협업할 수 있는 플랫폼입니다.',
+                icon: require('@/assets/img/main/github.png')
+            },
+            {
+                name:'SourceTree',
+                description:'Git 및 Mercurial 버전 관리 시스템을 사용하는 프로젝트를 관리하기 위한 무료 Git GUI 클라이언트입니다.',
+                icon: require('@/assets/img/main/sourcetree.png')
+            },
+            {
+                name:'Slack',
+                description:'비즈니스 및 팀 커뮤니케이션을 위한 협업 플랫폼입니다.',
+                icon: require('@/assets/img/main/slack.png')
             },
             {
                 name:'Docker',
                 description:'도커는 컨테이너화된 응용 프로그램을 만들고 배포하기 위한 오픈 소스 플랫폼입니다.',
-                icon: require('@/assets/img/main/api.png')
+                icon: require('@/assets/img/main/docker.png')
             }
         ]
     }

@@ -14,7 +14,6 @@
     <Tech />
     <Project />
     <Hobby />
-    <CodeHighlight :code="code" language="javascript" />
     <Footer />
   </div>
 </template>
@@ -27,7 +26,6 @@ import Career from './components/sections/Career.vue'
 import Tech from './components/sections/Tech.vue'
 import Project from './components/sections/Project.vue'
 import Hobby from './components/sections/Hobby.vue'
-import CodeHighlight from '@/components/sections/Test.vue';
 import Footer from './components/layout/Footer.vue'
 // import { useMeta } from 'vue-meta';
 
@@ -43,8 +41,7 @@ export default {
         Career,
         Tech,
         Project,
-        Hobby,
-        CodeHighlight
+        Hobby
     },
     data() {
       return {
