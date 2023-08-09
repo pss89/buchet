@@ -8,12 +8,15 @@
 import hljs from 'highlight.js';
 
 export default {
-props: ['code', 'language'],
+props: {
+    code:String,
+    language:String
+},
 computed: {
     highlightedCode() {
-        const highlighted = hljs.highlight(this.language, this.code, true, undefined);
+        const highlighted = hljs.highlight(this.code, this.language, true, undefined);
         return highlighted.value;
     },
-},
+}
 };
 </script>
