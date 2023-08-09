@@ -28,13 +28,13 @@
 <script>
 import LanguageItem from "@/components/sections/directive/tech/LanguageItem.vue";
 import Modal from "@/components/sections/directive/common/ModalPopup.vue";
-import CodeHighlight from "@/components/sections/directive/common/CodeHighlight.vue";
+// import CodeHighlight from "@/components/sections/directive/common/CodeHighlight.vue";
 
 export default {
   components: {
     LanguageItem,
     Modal,
-    CodeHighlight
+    // CodeHighlight
   },
   computed: {
     formattedDescription(){
