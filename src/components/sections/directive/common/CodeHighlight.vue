@@ -1,5 +1,5 @@
 <template>
-    <pre>
+    <pre class="text-xs h-32 overflow-y-auto h-80">
       <code v-html="highlightedCode" />
     </pre>
 </template>
@@ -9,13 +9,14 @@ import hljs from 'highlight.js';
 
 export default {
 props: {
-    code:String,
-    language:String
+    code: String,
+    language: String
 },
 computed: {
     highlightedCode() {
-        const highlighted = hljs.highlight(this.code, this.language, true, undefined);
-        return highlighted.value;
+        return hljs.highlight(this.code, { language: this.language }).value;
+        // const highlighted = hljs.highlight(this.code, this.language, true, undefined);
+        // return highlighted.value;
     },
 }
 };

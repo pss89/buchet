@@ -15,13 +15,15 @@
     </div>
   </section>
 
-  <CodeHighlight :code="codeSnippet" language="javascript" />
+  <!-- <CodeHighlight :code="code" language="php" /> -->
   
   <div>
     <!-- <button @click="openModal">Open Modal</button> -->
     <Modal :is-open="isModalOpen" @close="isModalOpen = false">
-      <h3>{{ modalContent.name }}</h3>
-      <p v-html="formattedDescription"></p>
+      <h3 class="text-center">{{ modalContent.codeTitle }}</h3>
+      <!-- <p v-html="formattedDescription"></p> -->
+      <!-- <p>{{ modalContent  }}</p> -->
+      <CodeHighlight :code="modalContent.code" language="php" />
     </Modal>
   </div>
 </template>
@@ -45,12 +47,7 @@ export default {
   data() {
     return {
       isModalOpen: false,
-      codeSnippet: `
-        function greet() {
-          return 'Hello, world!';
-        }
-        console.log(greet());
-      `,
+      // code: this.modalContent.code,
     };
   },
   methods: {
