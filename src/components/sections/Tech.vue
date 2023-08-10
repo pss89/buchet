@@ -15,10 +15,8 @@
     </div>
   </section>
 
-  <div>
-    <CodeHighlight :code="code" language="javascript" />
-  </div>
-
+  <CodeHighlight :code="codeSnippet" language="javascript" />
+  
   <div>
     <!-- <button @click="openModal">Open Modal</button> -->
     <Modal :is-open="isModalOpen" @close="isModalOpen = false">
@@ -47,11 +45,12 @@ export default {
   data() {
     return {
       isModalOpen: false,
-      code: `
+      codeSnippet: `
         function greet() {
           return 'Hello, world!';
         }
-        console.log(greet());`,
+        console.log(greet());
+      `,
     };
   },
   methods: {
