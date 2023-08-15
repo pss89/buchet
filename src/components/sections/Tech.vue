@@ -56,7 +56,7 @@ export default {
       this.modalContent = tech;
     },
   },
-  inject: ['constants'],
+  inject: ['constants']
 };
 </script>
 

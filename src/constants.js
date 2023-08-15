@@ -59,13 +59,32 @@ export default Object.freeze({
             {key:"insta",fa:"fa-brands fa-instagram"}
         ]
     },
+    HOBBY:{
+        list:[
+            {
+                title: "축구",
+                description: "하는것도 좋아하지만 축구 직관이나 경기 시청, 관련 게임들을 주로 합니다."
+                // image: "/src/assets/hobbies/photography.jpg",
+            },
+            {
+                title: "IT기기",
+                description: "전자기기에 대한 관심이 많고 구매하여 직접 사용해보는것에 대해 관심이 많다.",
+                // image: "/src/assets/hobbies/cooking.jpg",
+            },
+            {
+                title: "영화",
+                description: "영화 관람을 좋아하고 관련 유튜브를 보는것도 좋아합니다.",
+                // image: "/src/assets/hobbies/cooking.jpg",
+            }
+        ]
+    },
     TECH:{
         list:[
             {
                 name:'PHP',
                 // description:'웹개발에 주로 사용되는 인터프리터 서버언어 입니다. <br>Codeigniter, Laravel Framework 사용 경험이 있습니다.',
                 description:'웹개발에 주로 사용되는 인터프리터 서버언어 입니다. <br>실무에서 주로 사용 한 서버언어입니다.',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'레거시 코드',
                 code:'',
                 icon: require('@/assets/img/main/php.png')
             },
@@ -228,98 +247,98 @@ export default Object.freeze({
             {
                 name:'Laravel',
                 description:'PHP 언어 베이스의 웹개발 프레임워크입니다. <br>다양한 기능과 도구를 갖추고 있는 전체 스택 프레임워크이며 대표적인 PHP 언어 베이스의 프레임워크입니다.',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'소셜라이트',
                 code:'',
                 icon: require('@/assets/img/main/laravel.png')
             },
             {
                 name:'Angular',
                 description:'구글에서 개발한 자바스크립트 프론트엔드 프레임워크, 사용자와 상호작용하며 데이터를 효과적으로 제어하고 표시하는 데에 강력한 기능을 제공합니다.',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'커스텀 filter directive',
                 code:'',
                 icon: require('@/assets/img/main/angular.png')
             },
             {
                 name:'BootStrap',
                 description:'HTML, CSS 및 JavaScript를 사용하여 웹 애플리케이션과 웹 사이트를 빠르고 쉽게 디자인할 수 있도록 도움을 주는 오픈 소스 프론트엔드 프레임워크입니다.',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'bootstrap css 코드',
                 code:'',
                 icon: require('@/assets/img/main/bootstrap.png')
             },
             {
                 name:'Shell Script',
                 description:'컴퓨터의 운영 체제 쉘(Shell)에서 실행되는 스크립트 언어입니다.',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'shell script 코드',
                 code:'',
                 icon: require('@/assets/img/main/shell_script.png')
             },
             {
                 name:'Python',
                 description:'파이썬은 간결하고 읽기 쉬운 문법을 가진 프로그래밍 언어로, 다양한 분야에서 사용되는 언어입니다.',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'python 크롤링',
                 code:'',
                 icon: require('@/assets/img/main/python.png')
             },
             {
                 name:'MySQL (DataBase)',
                 description:'MySQL은 오픈 소스 관계형 데이터베이스 관리 시스템(RDBMS)입니다.',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'join 쿼리',
                 code:'',
                 icon: require('@/assets/img/main/mysql.png')
             },
             {
                 name:'API',
                 description:'애플리케이션 간 상호 작용을 위한 인터페이스로, 소프트웨어 구성 요소들이 서로 통신할 수 있도록 합니다.',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'공공데이터 포탈 api',
                 code:'',
                 icon: require('@/assets/img/main/api.png')
             },
             {
                 name:'JavaScript',
                 description:'웹 페이지의 동적인 동작을 추가하기 위해 사용되는 프로그래밍 언어입니다.',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'자바스크립트 기본문법',
                 code:'',
                 icon: require('@/assets/img/main/javascript.png')
             },
             {
                 name:'jQuery',
                 description:'자바스크립트 라이브러리로, HTML 문서의 요소를 조작하고 다루는 작업을 쉽게 만들어 줍니다.',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'jquery 이벤트',
                 code:'',
                 icon: require('@/assets/img/main/jquery.png')
             },
             {
                 name:'Git',
                 description:'버전 관리 시스템(VCS)으로, 코드 변경 사항을 추적하고 관리할 수 있는 도구입니다',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'git 사용법',
                 code:'',
                 icon: require('@/assets/img/main/git.png')
             },
             {
                 name:'GitHub',
                 description:'깃을 기반으로 하는 웹 기반 호스팅 서비스로, 코드 저장소를 온라인으로 관리하고 협업할 수 있는 플랫폼입니다.',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'깃허버 링크',
                 code:'',
                 icon: require('@/assets/img/main/github.png')
             },
             {
                 name:'SourceTree',
                 description:'Git 및 Mercurial 버전 관리 시스템을 사용하는 프로젝트를 관리하기 위한 무료 Git GUI 클라이언트입니다.',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'소스트리 사용법',
                 code:'',
                 icon: require('@/assets/img/main/sourcetree.png')
             },
             {
                 name:'Slack',
                 description:'비즈니스 및 팀 커뮤니케이션을 위한 협업 플랫폼입니다.',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'slack api',
                 code:'',
                 icon: require('@/assets/img/main/slack.png')
             },
             {
                 name:'Docker',
                 description:'도커는 컨테이너화된 응용 프로그램을 만들고 배포하기 위한 오픈 소스 플랫폼입니다.',
-                codeTitle:'네이버 배송상태 크롤링',
+                codeTitle:'도커 사용법',
                 code:'',
                 icon: require('@/assets/img/main/docker.png')
             }
