@@ -8,6 +8,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas,faBars } from '@fortawesome/free-solid-svg-icons'
 import { faGithub,faInstagram  } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+// vue scroll 라이브러리
 import VueSmoothScroll from 'vue3-smooth-scroll'
 
 // 슬라이드 구현을 위한 라이브러리
@@ -21,6 +23,7 @@ import 'vuetify/styles';
 import hljs from 'highlight.js/lib/core';
 import 'highlight.js/styles/github.css';
 
+// 슬라이드 관련 처리
 const vuetify = createVuetify({
     components,
     directives,
@@ -36,8 +39,10 @@ const vuetify = createVuetify({
     },
 });
 
+// 사용 할 fontawesome 추가
 library.add(fas,faBars ,faGithub,faInstagram )
 
+// 앱 생성
 const app = createApp(App)
 
 // css 파일 로드
@@ -47,9 +52,10 @@ import '@/assets/css/tailwind.css';
 // 상수 js 로드
 import constants from "@/constants.js"
 
+// 상수값을 constants 로 사용하겠다고 선언
 app.provide('constants', constants);
 
-// instance add
+// instance 에 사용 할 정보 제공
 app
 .use(router)
 .use(createMetaManager())

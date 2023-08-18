@@ -1,8 +1,8 @@
 <template>
   <div class="app">
-    <metainfo>
+    <!-- <metainfo>
         <template v-slot:title="{ content }">{{ content ? `${content}` : `Buchet About` }}</template>
-    </metainfo>
+    </metainfo> -->
     <Header />
     <!-- router 처리 할 때 사용 -->
     <!-- <main class="app-main"> -->
@@ -42,15 +42,6 @@ export default {
         Tech,
         Project,
         Hobby
-    },
-    data() {
-      return {
-        code: `
-        function greet() {
-          return 'Hello, world!';
-        }
-        console.log(greet());`,
-      };
     },
     setup () {
       // useMeta({

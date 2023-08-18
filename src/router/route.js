@@ -1,6 +1,7 @@
 // vue-router
 import { createWebHistory,createRouter } from "vue-router";
 
+// 경로에 따라 다른 vue 파일 로드
 const routes = [
     {
         path:'/buchet',
