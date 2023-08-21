@@ -30,7 +30,33 @@ export default Object.freeze({
                 period : {
                     startDate : '201904',
                     endDate : '202303'
-                }
+                },
+                desc : `
+                <div class="mb-2.5">
+                    <h4 class="font-bold text-red-400">자사 쇼핑몰</h4>
+                    <ul class="list-none p-0 m-0 space-y-2">
+                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                    </ul>
+                </div>
+                <div class="mb-2.5">
+                    <h4 class="font-bold text-red-400">쇼핑몰 연계 프로모션 페이지</h4>
+                    <ul class="list-none p-0 m-0 space-y-2">
+                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                    </ul>
+                </div>
+                <div class="mb-2.5">
+                    <h4 class="font-bold text-red-400">그룹웨어</h4>
+                    <ul class="list-none p-0 m-0 space-y-2">
+                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                    </ul>
+                </div>
+                <div class="mb-2.5">
+                    <h4 class="font-bold text-red-400">자사 ERP</h4>
+                    <ul class="list-none p-0 m-0 space-y-2">
+                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                    </ul>
+                </div>
+                `
             },
             {
                 name : '인터넷토마토',
@@ -39,7 +65,34 @@ export default Object.freeze({
                 period : {
                     startDate : '201511',
                     endDate : '201812'
-                }
+                },
+                desc :
+                `
+                <div class="mb-2.5">
+                    <h4 class="font-bold text-red-400">광고솔루션 백오피스 개발</h4>
+                    <ul class="list-none p-0 m-0 space-y-2">
+                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                    </ul>
+                </div>
+                <div class="mb-2.5">
+                    <h4 class="font-bold text-red-400">자사 관리자페이지</h4>
+                    <ul class="list-none p-0 m-0 space-y-2">
+                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                    </ul>
+                </div>
+                <div class="mb-2.5">
+                    <h4 class="font-bold text-red-400">모니터링 페이지</h4>
+                    <ul class="list-none p-0 m-0 space-y-2">
+                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                    </ul>
+                </div>
+                <div class="mb-2.5">
+                    <h4 class="font-bold text-red-400">거래처 홈페이지 유지보수</h4>
+                    <ul class="list-none p-0 m-0 space-y-2">
+                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                    </ul>
+                </div>
+                `
             }
         ]
     },

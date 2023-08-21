@@ -24,6 +24,12 @@
         <h2 class="text-2xl font-bold">{{ c_career.name }}</h2>
         <p class="text-gray-600">{{ c_career.belong }} - {{ c_career.position }}</p>
         <p class="text-gray-600">{{ formatDate(c_career.period.startDate) }} ~ {{ formatDate(c_career.period.endDate) }}</p>
+        <br/>
+        <span class="text-gray-600">
+          <p class="font-bold">담당 업무 설명</p>
+          <span v-html="c_career.desc" class="text-sm">
+          </span>
+        </span>
       </div>
       <!-- 경력 정보 -->
     </div>
