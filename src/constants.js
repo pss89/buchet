@@ -363,11 +363,11 @@ export default Object.freeze({
                             $socialId = $socialUser->id ?? null;
                             $name = $socialUser->name ?? null;
                             $email = $socialUser->email ?? null;
-                            $password = \getRandomString((15));
+                            $password = \\getRandomString((15));
 
                             // 이름정보가 있는지 체크
                             if ($name === null) {
-                                throw new \Exception($provider. ' 회원정보를 확인 할 수 없습니다.');
+                                throw new \\Exception($provider. ' 회원정보를 확인 할 수 없습니다.');
                             }
                 
                             // 회원정보 있는지 체크
@@ -424,7 +424,7 @@ export default Object.freeze({
                             Auth::login($user);
 
                             return redirect(RouteServiceProvider::HOME);
-                        } catch (\Exception $e) {
+                        } catch (\\Exception $e) {
                             // 예외 발생 시 트랜잭션을 롤백하여 변경사항을 취소합니다.
                             DB::rollback();
 
