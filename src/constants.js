@@ -34,25 +34,43 @@ export default Object.freeze({
                 desc : `
                 <div class="mb-2.5">
                     <h4 class="font-bold text-red-400">자사 쇼핑몰</h4>
-                    <ul class="list-none p-0 m-0 space-y-2">
-                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                    <ul class="list-none p-0 m-0">
+                        <li class="list-disc ml-5">백엔드 : PHP Codeigniter 프레임워크</li>
+                        <li class="list-disc ml-5">프론트 : Angular JS 프레임워크</li>
+                        <li class="list-disc ml-5">DB : AWS RDS MySQL</li>
+                        <li class="list-disc ml-5">웹서버 : Apache</li>
+                        <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
+                        <li class="list-disc ml-5">기타 : 공공데이터 포털 API(기상/미세먼지 정보), Batch(Crontab), 이니시스 결제 모듈 등</li>
+                        <li class="list-disc ml-5">담당업무 : 회원가입,로그인,쿠폰,포인트,장바구니,기상/미세먼지 정보를 톨한 상품추천,고객센터 페이지 등</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
                     <h4 class="font-bold text-red-400">쇼핑몰 연계 프로모션 페이지</h4>
-                    <ul class="list-none p-0 m-0 space-y-2">
-                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                    <ul class="list-none p-0 m-0">
+                        <li class="list-disc ml-5">백엔드 : PHP Codeigniter 프레임워크</li>
+                        <li class="list-disc ml-5">프론트 : Angular JS 프레임워크</li>
+                        <li class="list-disc ml-5">DB : AWS RDS MySQL</li>
+                        <li class="list-disc ml-5">웹서버 : Apache</li>
+                        <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
+                        <li class="list-disc ml-5">기타 : single page 스크롤링, 랜덤쿠폰, withCredentials 를 통한 스토어 상품구매 연동 등</li>
+                        <li class="list-disc ml-5">담당업무 : 프로모션별 프론트-백엔드 연동, 백엔드 db 트랜잭션, db 설계 담당</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
                     <h4 class="font-bold text-red-400">그룹웨어</h4>
-                    <ul class="list-none p-0 m-0 space-y-2">
-                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                    <ul class="list-none p-0 m-0">
+                        <li class="list-disc ml-5">백엔드 : PHP Codeigniter 프레임워크</li>
+                        <li class="list-disc ml-5">프론트 : Angular JS 프레임워크</li>
+                        <li class="list-disc ml-5">DB : AWS RDS MySQL</li>
+                        <li class="list-disc ml-5">웹서버 : Apache</li>
+                        <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
+                        <li class="list-disc ml-5">기타 : 공공데이터 포털 API(공휴일 정보), 이니시스 결제 모듈 등</li>
+                        <li class="list-disc ml-5">담당업무 : 스토어 관리자 기능인 쿠폰/포인트/회원내역/주문내역 등의 기능, 사내 주차관리 기능</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
                     <h4 class="font-bold text-red-400">자사 ERP</h4>
-                    <ul class="list-none p-0 m-0 space-y-2">
+                    <ul class="list-none p-0 m-0">
                         <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
                     </ul>
                 </div>
@@ -70,25 +88,25 @@ export default Object.freeze({
                 `
                 <div class="mb-2.5">
                     <h4 class="font-bold text-red-400">광고솔루션 백오피스 개발</h4>
-                    <ul class="list-none p-0 m-0 space-y-2">
+                    <ul class="list-none p-0 m-0">
                         <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
                     <h4 class="font-bold text-red-400">자사 관리자페이지</h4>
-                    <ul class="list-none p-0 m-0 space-y-2">
+                    <ul class="list-none p-0 m-0">
                         <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
                     <h4 class="font-bold text-red-400">모니터링 페이지</h4>
-                    <ul class="list-none p-0 m-0 space-y-2">
+                    <ul class="list-none p-0 m-0">
                         <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
                     <h4 class="font-bold text-red-400">거래처 홈페이지 유지보수</h4>
-                    <ul class="list-none p-0 m-0 space-y-2">
+                    <ul class="list-none p-0 m-0">
                         <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
                     </ul>
                 </div>
