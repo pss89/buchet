@@ -26,7 +26,7 @@
         <p class="text-gray-600">{{ formatDate(c_career.period.startDate) }} ~ {{ formatDate(c_career.period.endDate) }}</p>
         <br/>
         <span class="text-gray-600">
-          <p class="font-bold">담당 업무 설명</p>
+          <p class="font-bold">대표 업무 설명</p>
           <span v-html="c_career.desc" class="text-sm">
           </span>
         </span>

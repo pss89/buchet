@@ -71,7 +71,13 @@ export default Object.freeze({
                 <div class="mb-2.5">
                     <h4 class="font-bold text-red-400">자사 ERP</h4>
                     <ul class="list-none p-0 m-0">
-                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                        <li class="list-disc ml-5">백엔드 : PHP Codeigniter RestServer 프레임워크</li>
+                        <li class="list-disc ml-5">프론트 : React 프레임워크</li>
+                        <li class="list-disc ml-5">DB : AWS RDS MySQL</li>
+                        <li class="list-disc ml-5">웹서버 : Apache</li>
+                        <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
+                        <li class="list-disc ml-5">기타 : 사방넷 솔루션, Batch(Crontab) 등</li>
+                        <li class="list-disc ml-5">담당업무 : 백엔드 API 개발, ERP 흐름에 대한 구조 및 DB 설계</li>
                     </ul>
                 </div>
                 `
@@ -166,7 +172,7 @@ export default Object.freeze({
             {
                 name:'Codeigniter',
                 description:'PHP 언어 베이스의 웹개발 프레임워크입니다. <br>MVC 아키텍쳐의 경량화 된 웹프레임워크입니다.<br>경력의 대부분을 Codeigniter 프레임워크를 사용하여 개발을 하였습니다.',
-                codeTitle:'네이버 배송상태 크롤링 소스코드',
+                codeTitle:'네이버 배송상태 크롤리 소스코드',
                 languageType:'php',
                 code:`
                 function deliveryTracker($params = array())
@@ -323,15 +329,120 @@ export default Object.freeze({
             {
                 name:'Laravel',
                 description:'PHP 언어 베이스의 웹개발 프레임워크입니다. <br>다양한 기능과 도구를 갖추고 있는 전체 스택 프레임워크이며 대표적인 PHP 언어 베이스의 프레임워크입니다.',
-                codeTitle:'소셜라이트',
+                codeTitle:'라라벨 소셜라이트를 통한 소셜로그인 메서드',
                 languageType:'php',
-                code:'',
+                code:`
+                use Laravel\\Socialite\\Facades\\Socialite;
+
+                class SocialController extends Controller
+                {
+                    /**
+                     * @desc : 소셜정보 인가코드 발급을 위한 메서드
+                     */
+                    public function socialRedirect(String $provider)
+                    {
+                        // 소셜라이트 설치 후 드라이버 호출
+                        return Socialite::driver($provider)
+                            ->with(['service_terms' => 'true']) // 필수약관의 경우에만 재호출
+                            ->redirect();
+                    }
+
+                    /**
+                     * @desc : 소셜 애플리케인션에 등록되어야 하는 callback url의 메서드
+                     */
+                    public function loginCallback(string $provider)
+                    {
+                        // 소셜회원 정보 호출
+                        $socialUser = Socialite::driver($provider)->user();
+
+                        // 응답메시지
+                        $message = '';
+                        
+                        try {
+                            // db에 저장 할 정보
+                            $socialId = $socialUser->id ?? null;
+                            $name = $socialUser->name ?? null;
+                            $email = $socialUser->email ?? null;
+                            $password = \getRandomString((15));
+
+                            // 이름정보가 있는지 체크
+                            if ($name === null) {
+                                throw new \Exception($provider. ' 회원정보를 확인 할 수 없습니다.');
+                            }
+                
+                            // 회원정보 있는지 체크
+                            $user = User::where('email', $email)->first();
+
+                            // 소셜 회원정보 있는지 체크
+                            $socialUser = SocialUser::where('user_id', $socialId)->first();
+
+                            // 트랜잭션 시작
+                            DB::beginTransaction();
+                            
+                            // 소셜 연동 목록
+                            $socialType = [
+                                'kakao' => 1,
+                                'naver' => 2
+                            ];
+
+                            // 두 항목 모두 없으면 회원가입 처리 
+                            if (!$user && !$socialUser) {
+                                
+                                // user table에 생성
+                                $user = User::create([
+                                    'name' => $name,
+                                    'email' => $email,
+                                    'password' => Hash::make($password),
+                                ]);
+
+                                // 소셜회원정보 생성
+                                SocialUser::create([
+                                    'social_type' => $socialType[$provider],
+                                    'social_id' => $socialId,
+                                    'user_id' => $user->id
+                                ]);
+
+                            } else if ($user && !$socialUser) {
+                                // 회원정보가 있는데 소셜정보는 없을경우 소셜정보를 추가 (어떤 소셜정보로 접속해서 이메일이 동일하면 로그인 가능하도록)
+                                // 통합 로그인 형태
+                                SocialUser::create([
+                                    'social_type' => $socialType[$provider],
+                                    'social_id' => $socialId,
+                                    'user_id' => $user->id
+                                ]);
+
+                            }
+
+                            event(new Registered($user));
+
+                            // 모든 작업이 성공적으로 완료되면 트랜잭션을 커밋하여 변경사항을 유지합니다.
+                            DB::commit();
+                    
+                            Log::info('트랜잭션 성공 - '. $user);
+
+                            // 로그인 시키키
+                            Auth::login($user);
+
+                            return redirect(RouteServiceProvider::HOME);
+                        } catch (\Exception $e) {
+                            // 예외 발생 시 트랜잭션을 롤백하여 변경사항을 취소합니다.
+                            DB::rollback();
+
+                            $message = $e->getMessage();
+
+                            Log::error('트랜잭션 실패 - '. $message);
+
+                            echo "<script>alert('".$message."');window.location.href='/login';</script>";
+                        }
+                    }
+                }
+                `,
                 icon: require('@/assets/img/main/laravel.png')
             },
             {
                 name:'Angular',
                 description:'구글에서 개발한 자바스크립트 프론트엔드 프레임워크, 사용자와 상호작용하며 데이터를 효과적으로 제어하고 표시하는 데에 강력한 기능을 제공합니다.',
-                codeTitle:'커스텀 filter directive',
+                codeTitle:'AngularJs 커스팀 directive',
                 languageType:'javascript',
                 code:`
                 //쿠폰명 아래 쿠폰의 조건들을 노출해주는 부분
