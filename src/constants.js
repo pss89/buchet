@@ -164,7 +164,7 @@ export default Object.freeze({
                 name:'PHP',
                 // description:'웹개발에 주로 사용되는 인터프리터 서버언어 입니다. <br>Codeigniter, Laravel Framework 사용 경험이 있습니다.',
                 description:'웹개발에 주로 사용되는 인터프리터 서버언어 입니다. <br>실무에서 주로 사용 한 서버언어입니다.',
-                codeTitle:'레거시 코드',
+                codeTitle:'네이버 리뷰 파싱 배치 함수',
                 languageType:'php',
                 code:'',
                 icon: require('@/assets/img/main/php.png')
@@ -585,9 +585,87 @@ export default Object.freeze({
             {
                 name:'API',
                 description:'애플리케이션 간 상호 작용을 위한 인터페이스로, 소프트웨어 구성 요소들이 서로 통신할 수 있도록 합니다.',
-                codeTitle:'공공데이터 포탈 api',
+                codeTitle:'공공데이터 포탈 api - 미세먼지 정보 api 호출(php)',
                 languageType:'php',
-                code:'',
+                code:`
+                public function city_dust_avg_api(){
+                    //서비스 사용을 위한 인증키
+                    $service_key = SERVICE_KEY;
+                    
+                    // 호출 기준이 달라짐 (미세먼지 기준값 -> 시도이름)
+                    // 혹시 시도이름을 추가할 수 있기때문에 배열로 정의
+                    $call_array = array(
+                        'seoul'=>'서울'
+                    );
+                    
+                    //한국환경공단_에어코리아_대기오염정보 API 호출 URL(대기오염정보 조회 서비스 시도별 실시간 평균정보 조회)
+                    $url = 'http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty'; /*URL*/
+                    $queryParams = '?' . urlencode('serviceKey') . '='.$service_key.''; /*Service Key*/
+                    $queryParams .= '&' . urlencode('returnType') . '=' . urlencode('json'); /**/
+                    $queryParams .= '&' . urlencode('numOfRows') . '=' . urlencode('3'); /**/
+                    $queryParams .= '&' . urlencode('pageNo') . '=' . urlencode('1'); /**/
+                    $queryParams .= '&' . urlencode('ver') . '=' . urlencode('1.0'); /**/
+                    
+                    //배열 초기화
+                    $pm_array = array();
+            
+                    foreach($call_array as $key => $value){        
+                        $ch = curl_init();            
+                        // curl_setopt($ch, CURLOPT_URL,$call_url.$call.$param_url);
+                        $sidoName = '&' . urlencode('sidoName') .'='.urlencode($value);
+                        $call_url = $url.$queryParams.$sidoName;
+                        curl_setopt($ch, CURLOPT_URL, $call_url);
+                        curl_setopt($ch, CURLOPT_HEADER, FALSE);
+                        curl_setopt($ch, CURLOPT_FOLLOWLOCATION , 1);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER , TRUE);
+                        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+                        curl_setopt($ch, CURLOPT_TIMEOUT, 5);      //cURL 함수를 실행할 수 있는 최대 시간(초)
+                        curl_setopt($ch, CURLOPT_FORBID_REUSE, true);
+                        $result = curl_exec($ch);
+                        curl_close($ch);
+            
+                        // json 형태로 응답받은 데이터를 배열 형태로 변환
+                        $result_array = json_decode($result,true);
+            
+                        // 위에서 초기화 한 배열에 저장
+                        if(isset($result_array['response']['body']['items'])){
+                            foreach($result_array['response']['body']['items'] as $k => $value){
+                                if((isset($value['pm10Value']) || !empty($value['pm10Value'])) && $value['pm10Value'] != '-'){
+                                    $pm_array[$key] = $result_array['response']['body']['items'][$k];
+                                    $pm_array[$key]['resultCode'] = $result_array['response']['header']['resultCode'];
+                                    break;
+                                }
+                            }
+                        }
+                    }
+            
+                    // 초미세먼지는 제외, 미세먼지 정보만 받음
+                    $insert_data = array(
+                        'dust_type'=>'PM10'
+                        ,'itemCode'=>'PM10'
+                        ,'dataGubun'=>'시간평균'
+                        ,'seoul'=>$pm_array['seoul']['pm10Value']
+                        ,'busan'=>'0'
+                        ,'daegu'=>'0'
+                        ,'incheon'=>'0'
+                        ,'gwangju'=>'0'
+                        ,'daejeon'=>'0'
+                        ,'ulsan'=>'0'
+                        ,'gyeonggi'=>'0'
+                        ,'gangwon'=>'0'
+                        ,'chungbuk'=>'0'
+                        ,'chungnam'=>'0'
+                        ,'jeonbuk'=>'0'
+                        ,'jeonnam'=>'0'
+                        ,'gyeongbuk'=>'0'
+                        ,'gyeongnam'=>'0'
+                        ,'jeju'=>'0'
+                        ,'sejong'=>'0'
+                        ,'dataTime'=>date("YmdH",strtotime($pm_array['seoul']['dataTime']))
+                        ,'reg_date'=>date("YmdHis")
+                    );
+                }
+                `,
                 icon: require('@/assets/img/main/api.png')
             },
             {
