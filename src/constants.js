@@ -502,9 +502,84 @@ export default Object.freeze({
             {
                 name:'MySQL (DataBase)',
                 description:'MySQL은 오픈 소스 관계형 데이터베이스 관리 시스템(RDBMS)입니다.',
-                codeTitle:'join 쿼리',
+                codeTitle:'제품 입고내역을 호출하기 위해 join,union 등을 사용 한 쿼리',
                 languageType:'sql',
-                code:'',
+                code:`
+                SELECT *
+                FROM (
+                -- 구매정보 조회  
+                SELECT
+                    b.id as stk_no,
+                    a.id as stkorg_no,
+                    substring(a.created, 1, 10) AS stk_dt,
+                    0 as fg,
+                    '구매' as stk_tp,
+                    CASE WHEN a.sub_id = '0' THEN a.pa_code ELSE c.pa_code END AS pa_code,
+                    a.k2c_model as acc_code,
+                    a.pri_code as acc_code2,
+                    b.position,
+                    '' AS cancel_yn,
+                    '' AS del_yn,
+                    a.m_type AS exch_cd
+                FROM buy_acc a INNER JOIN acc_stock_log b ON a.id = b.log_value AND b.log_type = 'ba_id'
+                                LEFT OUTER JOIN (
+                                                SELECT
+                                                        group_id,
+                                                        max(pa_code) AS pa_code
+                                                FROM buy_acc
+                                                WHERE sub_id = 0
+                                                GROUP BY group_id
+                                                ) c ON a.group_id = c.group_id
+                WHERE a.received = '1'
+                AND a.created BETWEEN '202230822000000' AND '20230822235959'
+                UNION ALL
+                -- wetak_1 정보 조회
+                SELECT 
+                    a.id AS stk_no,
+                    b.log_value AS stkorg_no, 
+                    substring(a.created, 1, 10) AS stk_dt,
+                    1 AS fg,
+                    CASE concat(b.wetak_send_type, b.wetak_sent) WHEN 'B1' THEN '반품'
+                                                                    WHEN 'S2' THEN '반환'
+                                                                    WHEN 'E2' THEN '교환' ELSE '' END AS stk_tp,
+                    b.pa_code,                                             
+                    b.k2c_model AS acc_code,
+                    0 AS acc_code2,
+                    a.POSITION,
+                    b.yn_cancel AS cancel_yn,
+                    b.is_del AS del_yn,
+                    null AS exch_cd
+                FROM acc_stock_log a INNER JOIN wetak_1 b ON a.log_value = b.id
+                                                        AND b.log_type = 'as_id'                                            
+                WHERE a.log_type = 'we_id'
+                AND a.created BETWEEN '202230822000000' AND '20230822235959'
+                AND concat(b.wetak_send_type, b.wetak_sent) IN ('B1', 'S2', 'E2')  
+                UNION ALL
+                -- tb_order_return 정보 조회
+                SELECT 
+                    a.id AS stk_no,
+                    b.log_value AS stkorg_no, 
+                    substring(a.created, 1, 10) AS stk_dt,
+                    2 AS fg,
+                    CASE b.type_detail WHEN 'B1' THEN '반품'
+                                        WHEN 'S2' THEN '반환'
+                                        WHEN 'E2' THEN '교환' ELSE '' END AS stk_tp,
+                    b.pa_code,
+                    b.k2c_model AS acc_code,
+                    0 AS acc_code2,
+                    a.POSITION,
+                    CASE WHEN COALESCE(b.yn_cancel, '') = 'Y' THEN '취소' ELSE '' END AS cancel_yn,
+                    CASE WHEN b.is_del = '1' THEN '삭제' ELSE '' END AS del_yn,
+                    null AS exch_cd
+                FROM acc_stock_log a INNER JOIN tb_order_return b ON a.log_value = b.id
+                                                                AND b.log_type = 'as_id'                                            
+                WHERE a.log_type = 'or_id'
+                AND a.created BETWEEN '202230822000000' AND '20230822235959'
+                AND b.type_detail IN ('B1', 'S2', 'E2')
+                ) a 
+                ORDER BY a.stk_dt, a.fg, a.stkorg_no
+                ;
+                `,
                 icon: require('@/assets/img/main/mysql.png')
             },
             {

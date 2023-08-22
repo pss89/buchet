@@ -47,7 +47,6 @@ export default {
   data() {
     return {
       isModalOpen: false,
-      // code: this.modalContent.code,
     };
   },
   methods: {
