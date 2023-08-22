@@ -486,17 +486,43 @@ export default Object.freeze({
             {
                 name:'Shell Script',
                 description:'컴퓨터의 운영 체제 쉘(Shell)에서 실행되는 스크립트 언어입니다.',
-                codeTitle:'shell script 코드',
-                languageType:'shell',
-                code:'',
+                codeTitle:'여러대의 원격서버에서 파일 가져오기',
+                languageType:'bash',
+                code:``,
                 icon: require('@/assets/img/main/shell_script.png')
             },
             {
                 name:'Python',
                 description:'파이썬은 간결하고 읽기 쉬운 문법을 가진 프로그래밍 언어로, 다양한 분야에서 사용되는 언어입니다.',
-                codeTitle:'python 크롤링',
+                codeTitle:'Paramiko 모듈을 활용 한 원격서버 명령어 실행',
                 languageType:'python',
-                code:'',
+                code:`
+                #!/usr/bin/python
+
+                import sys
+                import paramiko
+                from paramiko import AutoAddPolicy
+
+                // 호스트 정보
+                host = sys.argv[1]
+                // 호스트 접속 시 public key
+                pkey = paramiko.RSAKey.from_private_key_file('{publickey.pem}')
+                // 실행하는 명령어
+                command = '{{ 원격서버에 실행시킬 명령어 }}'
+
+                // 원격서버 접속하여 명령어 실행
+                client = paramiko.SSHClient()
+                client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                client.connect(host,port=22,username='{username}',pkey=pkey)
+                stdin, stdout, stderr = client.exec_command(command,get_pty=True)
+
+                // 명령어 실행 후 결과 출력
+                for line in iter(stdout.readline, ""):
+                    print(host+' : '+line)
+
+                // 원격접속 닫기
+                client.close()
+                `,
                 icon: require('@/assets/img/main/python.png')
             },
             {
@@ -585,7 +611,7 @@ export default Object.freeze({
             {
                 name:'API',
                 description:'애플리케이션 간 상호 작용을 위한 인터페이스로, 소프트웨어 구성 요소들이 서로 통신할 수 있도록 합니다.',
-                codeTitle:'공공데이터 포탈 api - 미세먼지 정보 api 호출(php)',
+                codeTitle:'공공데이터 포탈 - 미세먼지 정보 API 호출(php)',
                 languageType:'php',
                 code:`
                 public function city_dust_avg_api(){
@@ -688,15 +714,15 @@ export default Object.freeze({
                 name:'Git',
                 description:'버전 관리 시스템(VCS)으로, 코드 변경 사항을 추적하고 관리할 수 있는 도구입니다',
                 codeTitle:'git 사용법',
-                languageType:'shell',
+                languageType:'bash',
                 code:'',
                 icon: require('@/assets/img/main/git.png')
             },
             {
                 name:'GitHub',
                 description:'깃을 기반으로 하는 웹 기반 호스팅 서비스로, 코드 저장소를 온라인으로 관리하고 협업할 수 있는 플랫폼입니다.',
-                codeTitle:'깃허버 링크',
-                languageType:'shell',
+                codeTitle:'깃허브 링크',
+                languageType:'bash',
                 code:'',
                 icon: require('@/assets/img/main/github.png')
             },
@@ -704,23 +730,46 @@ export default Object.freeze({
                 name:'SourceTree',
                 description:'Git 및 Mercurial 버전 관리 시스템을 사용하는 프로젝트를 관리하기 위한 무료 Git GUI 클라이언트입니다.',
                 codeTitle:'소스트리 사용법',
-                languageType:'shell',
+                languageType:'bash',
                 code:'',
                 icon: require('@/assets/img/main/sourcetree.png')
             },
             {
                 name:'Slack',
                 description:'비즈니스 및 팀 커뮤니케이션을 위한 협업 플랫폼입니다.',
-                codeTitle:'slack api',
+                codeTitle:'slack postMessage API',
                 languageType:'php',
-                code:'',
+                code:`
+                // slack 메시지 전송을 위한 메서드
+                function send_slack_message($channel, $message, $username = '{userName}') {
+                    // 요청 정보
+                    $postData = array(
+                        'token'    => '{slackToken}',
+                        'channel'  => $channel,
+                        'username' => $username,
+                        'text'     => $message
+                    );
+            
+                    // curl 실행
+                    $ch = curl_init('https://slack.com/api/chat.postMessage');
+                    curl_setopt($ch, CURLOPT_CUSTOMREQUEST,  'POST');
+                    curl_setopt($ch, CURLOPT_POSTFIELDS,     $postData);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                    curl_exec($ch);
+                    curl_close($ch);
+                }
+
+                // 위 함수 호출하기
+                send_slack_message('메시지 보낼 채널', '메시지 내용');
+                `,
                 icon: require('@/assets/img/main/slack.png')
             },
             {
                 name:'Docker',
                 description:'도커는 컨테이너화된 응용 프로그램을 만들고 배포하기 위한 오픈 소스 플랫폼입니다.',
                 codeTitle:'도커 사용법',
-                languageType:'shell',
+                languageType:'bash',
                 code:'',
                 icon: require('@/assets/img/main/docker.png')
             }
