@@ -1,5 +1,5 @@
 <template>
-    <div :class="{ 'fixed inset-0 flex items-center justify-center z-10': isOpen }" v-if="isOpen" >
+    <div :class="{ 'fixed inset-0 flex items-center justify-center z-10': isOpen }" v-if="isOpen">
         <div class="fixed inset-0 bg-black opacity-70"></div>
         <div class="bg-white rounded-lg shadow-md p-4 opacity-100 z-50 w-full sm:w-3/4 md:w-3/4 lg:w-4/4 h-auto">
             <slot></slot>
@@ -27,6 +27,16 @@ export default {
         };
     },
     mounted() {
+        // keyup 에 대한 처리
+        document.body.addEventListener('keyup', e => {
+            // 팝업이 열려있다면 아래 경우 실행
+            if (this.isOpen) {
+                // esc 키 클릭 시 팝업 닫기
+                if (e.key === 'Escape') {
+                    this.$emit('close');
+                }
+            }
+        })
         // const slotContent = this.$slots;
         // console.log(this.mcKey);
 
