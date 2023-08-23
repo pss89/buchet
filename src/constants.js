@@ -486,9 +486,44 @@ export default Object.freeze({
             {
                 name:'Shell Script',
                 description:'컴퓨터의 운영 체제 쉘(Shell)에서 실행되는 스크립트 언어입니다.',
-                codeTitle:'여러대의 원격서버에서 파일 가져오기',
+                codeTitle:'여러대의 원격서버에서 파일 가져오기 - 아파치 로그파일',
                 languageType:'bash',
-                code:``,
+                code:`
+                #!/bin/bash
+
+                ### define variable begin
+                # 원격서버에서 가져오는 파일들을 저장하는 폴더
+                DATA_PATH=/psstest/srv_apache_logs
+
+                # 일자별로 폴더,파일 생성을 위한 변수 지정
+                YESTER_DAY_FOLDER=\`date -d '1 day ago' +%Y%m%d\`
+                YESTER_DAY_FILE=\`date -d '1 day ago' +%y%m%d\`
+
+                # 원격 서버 아이피 정보
+                srv_ip_array=('아이피1' '아이피2' '아이피3')
+                ### define variable end
+
+                ### define function begin
+                # 경로 체크하는 함수
+                function checkPath() {
+                        local path=$1
+                        if [ ! -d \${path} ]; then
+                                /bin/mkdir \${path}
+                        fi
+                }
+                ### define function end
+
+                # 경로 있는지 체크
+                checkPath \${DATA_PATH}/\${YESTER_DAY_FOLDER}
+
+                # 서버 ip별로 scp 시작
+                for srv_ip in \${srv_ip_array[@]}
+                do
+                    // 원격 파일을 로컬서버로 복사해오기
+                    // 구분을 위해 로컬서버에 저장 할 때는 로그파일명에 아이피정보를 붙여주도록 처리
+                    scp -P 22 username@\${srv_ip}:/etc/httpd/conf/apachelogs/logfile.\${YESTER_DAY_FILE} \${DATA_PATH}/\${YESTER_DAY_FOLDER}/\${srv_ip}-logfile.\${YESTER_DAY_FILE}
+                done
+                `,
                 icon: require('@/assets/img/main/shell_script.png')
             },
             {
