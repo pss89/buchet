@@ -93,7 +93,7 @@ export default Object.freeze({
                 desc :
                 `
                 <div class="mb-2.5">
-                    <h4 class="font-bold text-red-500">크로스미디어 광고솔루션 백오피스 개발</h4>
+                    <h4 class="font-bold text-red-500">크로스미디어 광고솔루션</h4>
                     <ul class="list-none p-0 m-0">
                         <li class="list-disc ml-5">백엔드 : PHP Laravel 프레임워크</li>
                         <li class="list-disc ml-5">프론트 : HTML, CSS, JQUERY, JAVASCRIPT</li>
@@ -177,6 +177,34 @@ export default Object.freeze({
                 title: "영화",
                 description: "영화 관람을 좋아하고 관련 유튜브를 보는것도 좋아합니다.",
                 // image: "/src/assets/hobbies/cooking.jpg",
+            }
+        ]
+    },
+    PROJECT:{
+        list:[
+            {
+                title:"자사 쇼핑몰"
+            },
+            {
+                title:"쇼핑몰 연계 프로모션 페이지"
+            },
+            {
+                title:"자사 그룹웨어"
+            },
+            {
+                title:"자사 ERP"
+            },
+            {
+                title:"광고솔루션"
+            },
+            {
+                title:"자사 관리자페이지"
+            },
+            {
+                title:"모니터링 페이지"
+            },
+            {
+                title:"거래처 홈페이지 유지보수"
             }
         ]
     },

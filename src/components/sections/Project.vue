@@ -8,7 +8,7 @@
         progress="primary"
       >
         <v-carousel-item
-          v-for="(slide, i) in slides"
+          v-for="(project, i) in constants.PROJECT.list"
           :key="i"
         >
           <v-sheet
@@ -16,7 +16,7 @@
           >
             <div class="d-flex fill-height justify-center align-center">
               <div class="text-h2">
-                {{ slide }} Slide
+                {{ project.title }}
               </div>
             </div>
           </v-sheet>
@@ -30,15 +30,8 @@
   export default {
     data () {
       return {
-        slides: [
-          '크로스미디어 광고솔루션',
-          'VM사용량 모니터링',
-          '호스팅 ERP',
-          '자체 쇼핑몰',
-          '쇼핑몰 프로모션페이지',
-          '쇼핑몰 ERP',
-        ],
       }
-    }
+    },
+    inject: ['constants']
   }
 </script>
