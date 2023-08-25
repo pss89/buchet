@@ -33,7 +33,7 @@ export default Object.freeze({
                 },
                 desc : `
                 <div class="mb-2.5">
-                    <h4 class="font-bold text-red-400">자사 쇼핑몰</h4>
+                    <h4 class="font-bold text-red-800">자사 쇼핑몰</h4>
                     <ul class="list-none p-0 m-0">
                         <li class="list-disc ml-5">백엔드 : PHP Codeigniter 프레임워크</li>
                         <li class="list-disc ml-5">프론트 : Angular JS 프레임워크</li>
@@ -45,7 +45,7 @@ export default Object.freeze({
                     </ul>
                 </div>
                 <div class="mb-2.5">
-                    <h4 class="font-bold text-red-400">쇼핑몰 연계 프로모션 페이지</h4>
+                    <h4 class="font-bold text-red-800">쇼핑몰 연계 프로모션 페이지</h4>
                     <ul class="list-none p-0 m-0">
                         <li class="list-disc ml-5">백엔드 : PHP Codeigniter 프레임워크</li>
                         <li class="list-disc ml-5">프론트 : Angular JS 프레임워크</li>
@@ -57,7 +57,7 @@ export default Object.freeze({
                     </ul>
                 </div>
                 <div class="mb-2.5">
-                    <h4 class="font-bold text-red-400">그룹웨어</h4>
+                    <h4 class="font-bold text-red-800">그룹웨어</h4>
                     <ul class="list-none p-0 m-0">
                         <li class="list-disc ml-5">백엔드 : PHP Codeigniter 프레임워크</li>
                         <li class="list-disc ml-5">프론트 : Angular JS 프레임워크</li>
@@ -69,7 +69,7 @@ export default Object.freeze({
                     </ul>
                 </div>
                 <div class="mb-2.5">
-                    <h4 class="font-bold text-red-400">자사 ERP</h4>
+                    <h4 class="font-bold text-red-800">자사 ERP</h4>
                     <ul class="list-none p-0 m-0">
                         <li class="list-disc ml-5">백엔드 : PHP Codeigniter RestServer 프레임워크</li>
                         <li class="list-disc ml-5">프론트 : React 프레임워크</li>
@@ -93,27 +93,49 @@ export default Object.freeze({
                 desc :
                 `
                 <div class="mb-2.5">
-                    <h4 class="font-bold text-red-400">광고솔루션 백오피스 개발</h4>
+                    <h4 class="font-bold text-red-500">크로스미디어 광고솔루션 백오피스 개발</h4>
                     <ul class="list-none p-0 m-0">
-                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                        <li class="list-disc ml-5">백엔드 : PHP Laravel 프레임워크</li>
+                        <li class="list-disc ml-5">프론트 : HTML, CSS, JQUERY, JAVASCRIPT</li>
+                        <li class="list-disc ml-5">DB : AWS RDS MySQL</li>
+                        <li class="list-disc ml-5">웹서버 : Nginx</li>
+                        <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
+                        <li class="list-disc ml-5">기타 : Wecandeo CDN 서비스(API) 사용</li>
+                        <li class="list-disc ml-5">담당업무 : 캠페인/슬롯/아이템/리포트/회원가입/로그인 등 CRUD 및 백오피스 CRUD 개발, DB Dump 담당</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
-                    <h4 class="font-bold text-red-400">자사 관리자페이지</h4>
+                    <h4 class="font-bold text-red-500">자사 관리자페이지</h4>
                     <ul class="list-none p-0 m-0">
-                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                        <li class="list-disc ml-5">백엔드 : PHP 자체 MVC 패턴 프레임워크</li>
+                        <li class="list-disc ml-5">프론트 : HTML, CSS, JQUERY, JAVASCRIPT</li>
+                        <li class="list-disc ml-5">DB : 자사 서버 IDC 호스팅(코로케이션) - MySQL</li>
+                        <li class="list-disc ml-5">웹서버 : Nginx</li>
+                        <li class="list-disc ml-5">서버 환경 : CentOS</li>
+                        <li class="list-disc ml-5">담당업무 : 전체 개발 담당(물리/vm 서버 관리, 기타장비 관리, 스냅샷 로그 관리 등)</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
-                    <h4 class="font-bold text-red-400">모니터링 페이지</h4>
+                    <h4 class="font-bold text-red-500">모니터링 페이지</h4>
                     <ul class="list-none p-0 m-0">
-                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                        <li class="list-disc ml-5">백엔드 : PHP 자체 MVC 패턴 프레임워크</li>
+                        <li class="list-disc ml-5">프론트 : HTML, CSS, JQUERY, JAVASCRIPT</li>
+                        <li class="list-disc ml-5">DB : 자사 서버 IDC 호스팅(코로케이션) - MySQL</li>
+                        <li class="list-disc ml-5">웹서버 : Nginx</li>
+                        <li class="list-disc ml-5">서버 환경 : CentOS</li>
+                        <li class="list-disc ml-5">기타 : FusionCharts 라이브러리 사용</li>
+                        <li class="list-disc ml-5">담당업무 : 업체 서버 모니터링 페이지 개발</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
-                    <h4 class="font-bold text-red-400">거래처 홈페이지 유지보수</h4>
+                    <h4 class="font-bold text-red-500">거래처 홈페이지 유지보수(온맛닷컴)</h4>
                     <ul class="list-none p-0 m-0">
-                        <li class="list-disc ml-5">PHP Codeigniter 프레임워크를 통해 개발</li>
+                        <li class="list-disc ml-5">백엔드 : PHP Codeigniter 프레임워크</li>
+                        <li class="list-disc ml-5">프론트 : HTML, CSS, JAVASCRIPT, JQUERY</li>
+                        <li class="list-disc ml-5">DB : 자체 서버 IDC 호스팅(코로케이션) - MySQL</li>
+                        <li class="list-disc ml-5">웹서버 : Nginx</li>
+                        <li class="list-disc ml-5">서버 환경 : CentOS</li>
+                        <li class="list-disc ml-5">담당업무 : 거래처 요청에 따른 개발 및 유지보수</li>
                     </ul>
                 </div>
                 `
