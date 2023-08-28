@@ -128,9 +128,9 @@ export default Object.freeze({
                     </ul>
                 </div>
                 <div class="mb-2.5">
-                    <h4 class="font-bold text-red-500">거래처 홈페이지 유지보수(온맛닷컴)</h4>
+                    <h4 class="font-bold text-red-500">거래처 홈페이지 유지보수 - gameY</h4>
                     <ul class="list-none p-0 m-0">
-                        <li class="list-disc ml-5">백엔드 : PHP Codeigniter 프레임워크</li>
+                        <li class="list-disc ml-5">백엔드 : PHP 자체 MVC 패턴 프레임워크</li>
                         <li class="list-disc ml-5">프론트 : HTML, CSS, JAVASCRIPT, JQUERY</li>
                         <li class="list-disc ml-5">DB : 자체 서버 IDC 호스팅(코로케이션) - MySQL</li>
                         <li class="list-disc ml-5">웹서버 : Nginx</li>
@@ -214,11 +214,11 @@ export default Object.freeze({
                 title:"모니터링 페이지"
             },
             {
-                code:"onmam",
+                code:"gamey",
                 title:"거래처 홈페이지 유지보수"
             }
         ],
-        projectList: {
+        capture: {
             mall:[
                 {img:'img1'},
                 {img:'img2'},
@@ -254,7 +254,7 @@ export default Object.freeze({
                 {img:'img2'},
                 {img:'img3'}
             ],
-            onmam:[
+            gamey:[
                 {img:'img1'},
                 {img:'img2'},
                 {img:'img3'}

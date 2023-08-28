@@ -33,7 +33,7 @@
       progress="primary"
     >
       <v-carousel-item
-        v-for="(pl, i) in constants.PROJECT.projectList[this.modalContent.code]"
+        v-for="(pl, i) in constants.PROJECT.capture[this.modalContent.code]"
         :key="i"
       >
         <v-sheet
