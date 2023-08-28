@@ -186,30 +186,81 @@ export default Object.freeze({
     PROJECT:{
         list:[
             {
+                code:"mall",
                 title:"자사 쇼핑몰"
             },
             {
+                code:"promotion",
                 title:"쇼핑몰 연계 프로모션 페이지"
             },
             {
+                code:"groupware",
                 title:"자사 그룹웨어"
             },
             {
+                code:"erp",
                 title:"자사 ERP"
             },
             {
+                code:"advertiser",
                 title:"광고솔루션"
             },
             {
+                code:"admin",
                 title:"자사 관리자페이지"
             },
             {
+                code:"monitoring",
                 title:"모니터링 페이지"
             },
             {
+                code:"onmam",
                 title:"거래처 홈페이지 유지보수"
             }
-        ]
+        ],
+        projectList: {
+            mall:[
+                {img:'img1'},
+                {img:'img2'},
+                {img:'img3'}
+            ],
+            promotion:[
+                {img:'img1'},
+                {img:'img2'},
+                {img:'img3'}
+            ],
+            groupware:[
+                {img:'img1'},
+                {img:'img2'},
+                {img:'img3'}
+            ],
+            erp:[
+                {img:'img1'},
+                {img:'img2'},
+                {img:'img3'}
+            ],
+            advertiser:[
+                {img:'img1'},
+                {img:'img2'},
+                {img:'img3'}
+            ],
+            admin:[
+                {img:'img1'},
+                {img:'img2'},
+                {img:'img3'}
+            ],
+            monitoring:[
+                {img:'img1'},
+                {img:'img2'},
+                {img:'img3'}
+            ],
+            onmam:[
+                {img:'img1'},
+                {img:'img2'},
+                {img:'img3'}
+            ],
+        }
+        
     },
     TECH:{
         list:[
