@@ -216,7 +216,61 @@ export default Object.freeze({
                 description:'웹개발에 주로 사용되는 인터프리터 서버언어 입니다. <br>실무에서 주로 사용 한 서버언어입니다.',
                 codeTitle:'네이버 리뷰 파싱 배치 함수',
                 languageType:'php',
-                code:'',
+                code:`
+                // 네이버 스마트 스토어 쇼핑몰 코드
+                $mechantNo = '1234567';
+
+                // 요청 url
+                $requestUrl = 'https://brand.naver.com/n/v1/reviews/paged-reviews';
+
+                // 요청 할 상품번호
+                $requestProductNoList = [
+                    '상품번호1','상품번호2'
+                ];
+
+                // 요청정보
+                $reauestData = [
+                    "merchantNo" => $mechantNo,
+                    "page" => '호출 할 페이지번호',
+                    "pageSize" => "30" // 호출 할 리뷰 개수
+                ];
+
+                // 파싱하여 저장 할 배열 초기화
+                $resultArray = [];
+
+                $ch = curl_init();
+                foreach($requestProductNoList as $productNo){
+                    
+                    curl_setopt($ch, CURLOPT_URL, $requestUrl);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); // 응답 데이터를 문자열로 반환
+                    curl_setopt($ch, CURLOPT_POST, 1);
+                    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($reauestData));
+                    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                        "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.51"
+                    ));
+                    curl_setopt($ch, CURLOPT_TIMEOUT, 10);      //cURL 함수를 실행할 수 있는 최대 시간(초)
+                    $result = curl_exec($ch);
+                    
+                    $response = curl_exec($ch); // cURL 요청 실행
+
+                    // json decode 함수를 사용하여 배열로 저장
+                    $result = json_decode($response,true);
+
+                    if (!empty($result['contents'])) {
+                        // 상품번호별로 리뷰 30개씩을 호출
+                        $resultArray[$productNo]]][] = $result['contents'];
+                    } else {
+                        break;
+                    }
+                }
+
+                curl_close($ch);
+
+                // 아래 배열을 활용하여 다양한 작업 가능 ex) db 저장, 파일에 저장 등
+                echo "<pre>";
+                print_r($resultArray);
+                echo "</pre>";
+                `,
                 icon: require('@/assets/img/main/php.png')
             },
             {
