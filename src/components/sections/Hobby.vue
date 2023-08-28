@@ -6,7 +6,7 @@
         <!-- 이미지 사이즈 줄여야함 -->
         <img :src="hobby.img" :alt="hobby.title" class="h-45 w-full object-cover rounded-lg">
         <h3 class="text-xl font-semibold mt-2">{{ hobby.title }}</h3>
-        <p class="text-gray-600 mt-2">{{ hobby.description }}</p>
+        <p class="text-gray-600 mt-2" v-html="hobby.description"></p>
       </div>
     </div>
   </div>

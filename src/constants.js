@@ -163,20 +163,23 @@ export default Object.freeze({
             {
                 img:require('@/assets/img/main/football.png'),
                 title: "축구",
-                description: "하는것도 좋아하지만 축구 직관이나 경기 시청, 관련 게임들을 주로 합니다."
-                // image: "/src/assets/hobbies/photography.jpg",
+                description: `
+                축구 내용 작성
+                `
             },
             {
                 img:require('@/assets/img/main/it_machine.png'),
                 title: "IT기기",
-                description: "전자기기에 대한 관심이 많고 구매하여 직접 사용해보는것에 대해 관심이 많다.",
-                // image: "/src/assets/hobbies/cooking.jpg",
+                description: `
+                IT기기 내용 작성
+                `
             },
             {
                 img:require('@/assets/img/main/movie.png'),
                 title: "영화",
-                description: "영화 관람을 좋아하고 관련 유튜브를 보는것도 좋아합니다.",
-                // image: "/src/assets/hobbies/cooking.jpg",
+                description: `
+                영화 내용 작성
+                `
             }
         ]
     },
