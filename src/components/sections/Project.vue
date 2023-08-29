@@ -15,7 +15,7 @@
           <v-sheet
             height="100%"
           >
-            <div class="d-flex fill-height justify-center align-center">
+            <div class="d-flex fill-height justify-center align-center cursor-pointer">
               <div class="text-h2">
                 {{ project.title }}
               </div>
@@ -41,7 +41,7 @@
         >
           <h1 class="text-3xl ml-5 mt-5">{{ pl.title }}</h1>
           <div class="d-flex fill-height justify-center align-center">
-            <img :src="pl.img" :alt="pl.title" />
+            <img :src="pl.img" :alt="pl.title" class="w-3/4 h-3/4" />
             <!-- <div class="text-h2">
               {{ this.modalContent.code + '-' + pl.img }}
             </div> -->
