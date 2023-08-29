@@ -203,7 +203,7 @@ export default Object.freeze({
             },
             {
                 code:"advertiser",
-                title:"광고솔루션"
+                title:"광고솔루션 백오피스 - 크로스미디어"
             },
             {
                 code:"admin",
@@ -215,49 +215,133 @@ export default Object.freeze({
             },
             {
                 code:"gamey",
-                title:"거래처 홈페이지 유지보수"
+                title:"거래처 홈페이지 유지보수 - GameY"
             }
         ],
         capture: {
             mall:[
-                {img:'img1'},
-                {img:'img2'},
-                {img:'img3'}
+                {
+                    title:'로그인',
+                    img:'img1'
+                },
+                {
+                    title:'로그인',
+                    img:'img2'
+                },
+                {
+                    title:'로그인',
+                    img:'img3'
+                }
             ],
             promotion:[
-                {img:'img1'},
-                {img:'img2'},
-                {img:'img3'}
+                {
+                    title:'로그인',
+                    img:'img1'
+                },
+                {
+                    title:'로그인',
+                    img:'img2'
+                },
+                {
+                    title:'로그인',
+                    img:'img3'
+                }
             ],
             groupware:[
-                {img:'img1'},
-                {img:'img2'},
-                {img:'img3'}
+                {
+                    title:'로그인',
+                    img:'img1'
+                },
+                {
+                    title:'로그인',
+                    img:'img2'
+                },
+                {
+                    title:'로그인',
+                    img:'img3'
+                }
             ],
             erp:[
-                {img:'img1'},
-                {img:'img2'},
-                {img:'img3'}
+                {
+                    title:'로그인',
+                    img:'img1'
+                },
+                {
+                    title:'로그인',
+                    img:'img2'
+                },
+                {
+                    title:'로그인',
+                    img:'img3'
+                }
             ],
             advertiser:[
-                {img:'img1'},
-                {img:'img2'},
-                {img:'img3'}
+                {
+                    title:'로그인',
+                    img:require('@/assets/img/capture/advertiser/login.png'),
+                },
+                {
+                    title:'대시보드',
+                    img:require('@/assets/img/capture/advertiser/dashboard.png'),
+                },
+                {
+                    title:'소재 등록',
+                    img:require('@/assets/img/capture/advertiser/item.png'),
+                },
+                {
+                    title:'리포트 목록',
+                    img:require('@/assets/img/capture/advertiser/report.png'),
+                },
+                {
+                    title:'리포트 상세',
+                    img:require('@/assets/img/capture/advertiser/report_detail.png'),
+                },
+                {
+                    title:'통계 페이지',
+                    img:require('@/assets/img/capture/advertiser/statistics.png'),
+                }
             ],
             admin:[
-                {img:'img1'},
-                {img:'img2'},
-                {img:'img3'}
+                {
+                    title:'로그인',
+                    img:'img1'
+                },
+                {
+                    title:'로그인',
+                    img:'img2'
+                },
+                {
+                    title:'로그인',
+                    img:'img3'
+                }
             ],
             monitoring:[
-                {img:'img1'},
-                {img:'img2'},
-                {img:'img3'}
+                {
+                    title:'로그인',
+                    img:'img1'
+                },
+                {
+                    title:'로그인',
+                    img:'img2'
+                },
+                {
+                    title:'로그인',
+                    img:'img3'
+                }
             ],
             gamey:[
-                {img:'img1'},
-                {img:'img2'},
-                {img:'img3'}
+                {
+                    title:'로그인',
+                    img:'img1'
+                },
+                {
+                    title:'로그인',
+                    img:'img2'
+                },
+                {
+                    title:'로그인',
+                    img:'img3'
+                }
             ],
         }
         

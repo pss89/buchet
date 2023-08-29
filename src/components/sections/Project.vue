@@ -39,10 +39,12 @@
         <v-sheet
           height="100%"
         >
+          <h1 class="text-3xl ml-5 mt-5">{{ pl.title }}</h1>
           <div class="d-flex fill-height justify-center align-center">
-            <div class="text-h2">
+            <img :src="pl.img" :alt="pl.title" />
+            <!-- <div class="text-h2">
               {{ this.modalContent.code + '-' + pl.img }}
-            </div>
+            </div> -->
           </div>
         </v-sheet>
       </v-carousel-item>
