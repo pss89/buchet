@@ -974,9 +974,23 @@ export default Object.freeze({
             {
                 name:'JavaScript',
                 description:'웹 페이지의 동적인 동작을 추가하기 위해 사용되는 프로그래밍 언어입니다.',
-                codeTitle:'자바스크립트 기본문법',
+                codeTitle:'자바스크립트 라이브러리 사용 - SweetAlert',
                 languageType:'javascript',
-                code:'',
+                code:`
+                // js 로드
+                <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+                <script type="text/javascript">
+                    // 성공 or 확인
+                    swal("확인","완료되었습니다.","success");
+
+                    // 경고
+                    swal("경고","확인이 필요합니다.","warning");
+
+                    // 오류
+                    swal("오류","오류가 확인되었습니다.","error");
+                </script>
+                `,
                 icon: require('@/assets/img/main/javascript.png')
             },
             {
