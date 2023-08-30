@@ -993,6 +993,7 @@ export default Object.freeze({
                     // 정보 확인
                     swal("정보","정보가 확인되었습니다.","info");
 
+                    // confirm 구현
                     swal({
                         title: "정보 확인",
                         text: "진행하시겠습니까?",
