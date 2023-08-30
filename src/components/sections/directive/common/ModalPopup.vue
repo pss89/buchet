@@ -37,10 +37,6 @@ export default {
                 }
             }
         })
-        // const slotContent = this.$slots;
-        // console.log(this.mcKey);
-
-        // console.log(slotContent);
     },
     methods: {
         closeModal() {

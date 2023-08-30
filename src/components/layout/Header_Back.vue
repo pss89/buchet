@@ -74,7 +74,7 @@ export default {
                 hash: '#sampleHash'
             })
         }
-        console.log(scrollToMyEl);
+        // console.log(scrollToMyEl);
     }
 }
 </script>

@@ -9,6 +9,7 @@
           :name="tech.name"
           :description="tech.description"
           :icon="tech.icon"
+          :isComplete="tech.isComplete"
           @open-modal="openModal(tech)"
         />
       </div>
@@ -49,8 +50,10 @@ export default {
   },
   methods: {
     openModal(tech) {
-      this.isModalOpen = true;
-      this.modalContent = tech;
+      if (tech.isComplete == true) {
+        this.isModalOpen = true;
+        this.modalContent = tech;
+      }
     },
   },
   inject: ['constants']

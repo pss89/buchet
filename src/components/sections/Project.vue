@@ -65,14 +65,7 @@
       openModal(project) {
         this.isModalOpen = true;
         this.modalContent = project;
-
-        // let dd = this.constants.PROJECT.projectList[this.modalContent.code]
-        // console.log(dd);
       }
-      // handleSlideClick(project) {
-      //   // 클릭된 슬라이드에 대한 처리를 수행합니다.
-      //   console.log('Clicked on project:', project);
-      // }
     },
     inject: ['constants']
   }

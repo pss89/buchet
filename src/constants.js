@@ -422,7 +422,8 @@ export default Object.freeze({
                 print_r($resultArray);
                 echo "</pre>";
                 `,
-                icon: require('@/assets/img/main/php.png')
+                icon: require('@/assets/img/main/php.png'),
+                isComplete: true,
             },
             {
                 name:'Codeigniter',
@@ -579,7 +580,8 @@ export default Object.freeze({
             
                     return $result;
                 }`,
-                icon: require('@/assets/img/main/codeigniter.png')
+                icon: require('@/assets/img/main/codeigniter.png'),
+                isComplete: true,
             },
             {
                 name:'Laravel',
@@ -692,7 +694,8 @@ export default Object.freeze({
                     }
                 }
                 `,
-                icon: require('@/assets/img/main/laravel.png')
+                icon: require('@/assets/img/main/laravel.png'),
+                isComplete: true,
             },
             {
                 name:'Angular',
@@ -728,7 +731,8 @@ export default Object.freeze({
                 // 위 directive를 호출하는 방법
                 <coupon-condition coupon-info='{{coupon.condition}}'></coupon-condition>
                 `,
-                icon: require('@/assets/img/main/angular.png')
+                icon: require('@/assets/img/main/angular.png'),
+                isComplete: true,
             },
             {
                 name:'BootStrap',
@@ -736,7 +740,8 @@ export default Object.freeze({
                 codeTitle:'bootstrap css 코드',
                 languageType:'css',
                 code:'',
-                icon: require('@/assets/img/main/bootstrap.png')
+                icon: require('@/assets/img/main/bootstrap.png'),
+                isComplete: false,
             },
             {
                 name:'Shell Script',
@@ -779,7 +784,8 @@ export default Object.freeze({
                     scp -P 22 username@\${srv_ip}:/etc/httpd/conf/apachelogs/logfile.\${YESTER_DAY_FILE} \${DATA_PATH}/\${YESTER_DAY_FOLDER}/\${srv_ip}-logfile.\${YESTER_DAY_FILE}
                 done
                 `,
-                icon: require('@/assets/img/main/shell_script.png')
+                icon: require('@/assets/img/main/shell_script.png'),
+                isComplete: true,
             },
             {
                 name:'Python',
@@ -813,7 +819,8 @@ export default Object.freeze({
                 // 원격접속 닫기
                 client.close()
                 `,
-                icon: require('@/assets/img/main/python.png')
+                icon: require('@/assets/img/main/python.png'),
+                isComplete: true,
             },
             {
                 name:'MySQL (DataBase)',
@@ -896,7 +903,8 @@ export default Object.freeze({
                 ORDER BY a.stk_dt, a.fg, a.stkorg_no
                 ;
                 `,
-                icon: require('@/assets/img/main/mysql.png')
+                icon: require('@/assets/img/main/mysql.png'),
+                isComplete: true,
             },
             {
                 name:'API',
@@ -982,7 +990,8 @@ export default Object.freeze({
                     );
                 }
                 `,
-                icon: require('@/assets/img/main/api.png')
+                icon: require('@/assets/img/main/api.png'),
+                isComplete: true,
             },
             {
                 name:'JavaScript',
@@ -1028,15 +1037,108 @@ export default Object.freeze({
                     });
                 </script>
                 `,
-                icon: require('@/assets/img/main/javascript.png')
+                icon: require('@/assets/img/main/javascript.png'),
+                isComplete: true,
             },
             {
                 name:'jQuery',
                 description:'자바스크립트 라이브러리로, HTML 문서의 요소를 조작하고 다루는 작업을 쉽게 만들어 줍니다.',
-                codeTitle:'jquery 이벤트',
+                codeTitle:'jQuery를 활용 한 소셜 공유 기능',
                 languageType:'javascript',
-                code:'',
-                icon: require('@/assets/img/main/jquery.png')
+                code:`
+                // 카카오 공유를 위한 라이브러리 로드
+                <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+                <script>Kakao.init('KAKAO_API_KEY');</script>
+                
+                // 중복클릭 방지
+                let is_share_duple_chk = false;
+
+                // 소셜 공유 버튼 클릭
+                $(".sns-share-item").on("click",function(){
+                    // 소셜 유형 변수 정의
+                    let sns_name = $(this).attr("data-id");
+
+                    //진행중이면
+                    if (is_share_duple_chk)
+                        return false;
+
+                    // switch case로 처리
+                    switch(sns_name){
+                        case "facebook" : 
+                            // 페이스북
+                            url = "https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(location.href);
+                            window.open(url, "viral_window");
+
+                            //진행하면 true로 변경
+                            is_share_duple_chk = true;
+
+                            break;
+                        case "kakaostory" :
+                            // 카카오스토리
+                            Kakao.Story.share({
+                                url: location.href,
+                                text: '공유 할 때 타이틀'
+                            });
+
+                            //진행하면 true로 변경
+                            is_share_duple_chk = true;
+
+                            break;
+                        case "kakaotalk" :
+                            // 카카오톡
+                            Kakao.Link.sendDefault({
+                                objectType: 'feed',
+                                content: {
+                                    title: '공유 타이틀',
+                                    description: '모아만의 차별화된 고민과 기술을 확인하고\n보아르 제품 10,000원 할인도 받으세요',
+                                    imageUrl: 'https:'+oaEvent.store_cdn_domain+'/event/dehumidifier/img/meta_image.jpg',
+                                    link: {
+                                        mobileWebUrl: location.href,
+                                        webUrl: location.href
+                                    }
+                                }
+                            });
+
+                            //진행하면 true로 변경
+                            is_share_duple_chk = true;
+
+                            break;
+                        case "url-copy" :
+                            // 링크복사
+                            if(oaEvent.user_device_flag == "_mobile"){
+                                //url 복사
+                                var copy_url_to_clipboard = function(){
+                                    var tempInput = document.createElement("input");
+                                    tempInput.value = location.href;
+                                    document.body.appendChild(tempInput);
+                                    tempInput.select();
+                                    document.execCommand("copy");
+                                    tempInput.blur();
+                                    document.body.removeChild(tempInput);
+                                    alert("URL이 클립보드에 복사되었습니다.\n공유해보세요!");
+                                }
+                                copy_url_to_clipboard();
+                            } else {
+                                //현재 주소 복사
+                                var copy_url = function(){
+                                    var tempInput = document.createElement("input");
+                                    tempInput.value = location.href;
+                                    document.body.appendChild(tempInput);
+                                    tempInput.select();
+                                    document.execCommand("copy");
+                                    document.body.removeChild(tempInput);
+                                    alert("URL이 클립보드에 복사되었습니다.\n공유해보세요!");
+                                };
+                                copy_url();
+                            }
+                            //진행하면 true로 변경
+                            is_share_duple_chk = true;
+
+                            break;
+                    }
+                `,
+                icon: require('@/assets/img/main/jquery.png'),
+                isComplete: true,
             },
             {
                 name:'Git',
@@ -1044,7 +1146,8 @@ export default Object.freeze({
                 codeTitle:'git 사용법',
                 languageType:'bash',
                 code:'',
-                icon: require('@/assets/img/main/git.png')
+                icon: require('@/assets/img/main/git.png'),
+                isComplete: false
             },
             {
                 name:'GitHub',
@@ -1052,7 +1155,8 @@ export default Object.freeze({
                 codeTitle:'깃허브 링크',
                 languageType:'bash',
                 code:'',
-                icon: require('@/assets/img/main/github.png')
+                icon: require('@/assets/img/main/github.png'),
+                isComplete: false
             },
             {
                 name:'SourceTree',
@@ -1060,7 +1164,8 @@ export default Object.freeze({
                 codeTitle:'소스트리 사용법',
                 languageType:'bash',
                 code:'',
-                icon: require('@/assets/img/main/sourcetree.png')
+                icon: require('@/assets/img/main/sourcetree.png'),
+                isComplete: false
             },
             {
                 name:'Slack',
@@ -1099,7 +1204,8 @@ export default Object.freeze({
                 codeTitle:'도커 사용법',
                 languageType:'bash',
                 code:'',
-                icon: require('@/assets/img/main/docker.png')
+                icon: require('@/assets/img/main/docker.png'),
+                isComplete: false
             }
         ]
     }
