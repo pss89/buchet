@@ -989,6 +989,29 @@ export default Object.freeze({
 
                     // 오류
                     swal("오류","오류가 확인되었습니다.","error");
+
+                    // 정보 확인
+                    swal("정보","정보가 확인되었습니다.","info");
+
+                    swal({
+                        title: "정보 확인",
+                        text: "진행하시겠습니까?",
+                        icon: "info",
+                        buttons: {
+                            cancel: "취소",
+                            confirm: {
+                              text: "진행",
+                              value: "confirm",
+                            }
+                        }
+                    }).then(function(value) {
+                        if (value == 'confirm') {
+                            // 진행하려는 작업 처리
+
+                            // 완료 후 해당 메서드 호출
+                            swal("진행", "진행 완료되었습니다", "success")
+                        }
+                    });
                 </script>
                 `,
                 icon: require('@/assets/img/main/javascript.png')
