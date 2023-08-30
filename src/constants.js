@@ -203,14 +203,6 @@ export default Object.freeze({
                 title:"자사 쇼핑몰"
             },
             {
-                code:"promotion",
-                title:"쇼핑몰 연계 프로모션 페이지"
-            },
-            {
-                code:"groupware",
-                title:"자사 그룹웨어"
-            },
-            {
                 code:"erp",
                 title:"자사 ERP"
             },
@@ -225,10 +217,6 @@ export default Object.freeze({
             {
                 code:"monitoring",
                 title:"모니터링 페이지"
-            },
-            {
-                code:"gamey",
-                title:"거래처 홈페이지 유지보수 - GameY"
             }
         ],
         capture: {
@@ -252,34 +240,6 @@ export default Object.freeze({
                 {
                     title:'멤버십-쿠폰',
                     img:require('@/assets/img/capture/mall/membership_coupon.png'),
-                }
-            ],
-            promotion:[
-                {
-                    title:'로그인',
-                    img:'img1'
-                },
-                {
-                    title:'로그인',
-                    img:'img2'
-                },
-                {
-                    title:'로그인',
-                    img:'img3'
-                }
-            ],
-            groupware:[
-                {
-                    title:'로그인',
-                    img:'img1'
-                },
-                {
-                    title:'로그인',
-                    img:'img2'
-                },
-                {
-                    title:'로그인',
-                    img:'img3'
                 }
             ],
             erp:[
@@ -349,21 +309,7 @@ export default Object.freeze({
                     title:'로그인',
                     img:'img3'
                 }
-            ],
-            gamey:[
-                {
-                    title:'로그인',
-                    img:'img1'
-                },
-                {
-                    title:'로그인',
-                    img:'img2'
-                },
-                {
-                    title:'로그인',
-                    img:'img3'
-                }
-            ],
+            ]
         }
         
     },
