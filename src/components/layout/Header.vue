@@ -8,7 +8,13 @@
     <!-- 가운데 상단 메뉴 (작은 화면에서는 숨김) -->
     <div class="hidden md:flex space-x-8">
       <!-- <a href="#" class="hover:text-gray-300" v-for="(menu, index) in constants.MENU.list" :key="menu.key"> -->
-      <a :href="'#'+menu.key" class="hover:text-gray-300" v-for="menu in constants.MENU.list" :key="menu.key">
+      <!-- :href="'#'+menu.key"  -->
+      <a 
+        class="hover:text-gray-300 cursor-pointer"
+        v-for="menu in constants.MENU.list"
+        :key="menu.key"
+        @click="scrollToSection(menu.key)"
+        >
         {{ menu.title }}
       </a>
     </div>
@@ -68,6 +74,11 @@ export default {
           alert('허용하지 않는 유형입니다.');
           return false;
       }
+    },
+    scrollToSection: function(section){
+      // window.scrollTo({ top: 0, behavior: "smooth" });
+      const targetElement = document.getElementById(section);
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   },
   inject: ['constants']
