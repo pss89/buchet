@@ -7,6 +7,14 @@
             </div>
         </div>
     </footer>
+
+    <button
+        id="scrollToTopBtn"
+        class="fixed bottom-4 right-4 bg-cyan-600 hover:bg-cyan-700 text-white py-2 px-4 rounded-full shadow-lg"
+        @click="scrollToTop"
+    >
+        TOP
+    </button>
 </template>
 
 <script>
@@ -14,6 +22,11 @@ export default {
     name: 'Footer',
     props: {
         msg: String
+    },
+    methods: {
+        scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
     }
 }
 </script>
