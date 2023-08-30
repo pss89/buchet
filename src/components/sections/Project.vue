@@ -15,8 +15,8 @@
           <v-sheet
             height="100%"
           >
-            <div class="d-flex fill-height justify-center align-center cursor-pointer">
-              <div class="text-h2">
+            <div class="flex items-center justify-center cursor-pointer h-full bg-cyan-600 hover:bg-cyan-700 transition">
+              <div class="text-3xl font-semibold text-white">
                 {{ project.title }}
               </div>
             </div>
@@ -35,12 +35,13 @@
       <v-carousel-item
         v-for="(pl, i) in constants.PROJECT.capture[this.modalContent.code]"
         :key="i"
+        @click="openWindow(pl)"
       >
         <v-sheet
           height="100%"
         >
           <h1 class="text-3xl ml-5 mt-5">{{ pl.title }}</h1>
-          <div class="d-flex fill-height justify-center align-center">
+          <div class="d-flex fill-height justify-center align-center cursor-pointer">
             <img :src="pl.img" :alt="pl.title" class="w-3/4 h-3/4" />
           </div>
         </v-sheet>
@@ -65,6 +66,14 @@
       openModal(project) {
         this.isModalOpen = true;
         this.modalContent = project;
+      },
+      openWindow(project) {
+        const baseUrl = window.location.origin;
+        const imgPath = project.img;
+
+        const openUrl = baseUrl + imgPath;
+
+        window.open(openUrl, "_blank"); // 새 창으로 이미지 URL 열기
       }
     },
     inject: ['constants']

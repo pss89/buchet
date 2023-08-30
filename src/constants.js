@@ -54,7 +54,7 @@ export default Object.freeze({
                         <li class="list-disc ml-5">웹서버 : Apache</li>
                         <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
                         <li class="list-disc ml-5">기타 : 공공데이터 포털 API(기상/미세먼지 정보), Batch(Crontab), 이니시스 결제 모듈 등</li>
-                        <li class="list-disc ml-5">담당업무 : 회원가입,로그인,쿠폰,포인트,장바구니,기상/미세먼지 정보를 톨한 상품추천,고객센터 페이지 등</li>
+                        <li class="list-disc ml-5">담당업무 : 회원가입,로그인,마이페이지,쿠폰,포인트,장바구니,기상/미세먼지 정보를 톨한 상품추천,고객센터 페이지 등</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
@@ -235,15 +235,23 @@ export default Object.freeze({
             mall:[
                 {
                     title:'로그인',
-                    img:'img1'
+                    img:require('@/assets/img/capture/mall/login.png'),
                 },
                 {
-                    title:'로그인',
-                    img:'img2'
+                    title:'마이페이지',
+                    img:require('@/assets/img/capture/mall/mypage.png'),
                 },
                 {
-                    title:'로그인',
-                    img:'img3'
+                    title:'고객센터',
+                    img:require('@/assets/img/capture/mall/customer.png'),
+                },
+                {
+                    title:'장바구니',
+                    img:require('@/assets/img/capture/mall/cart.png'),
+                },
+                {
+                    title:'멤버십-쿠폰',
+                    img:require('@/assets/img/capture/mall/membership_coupon.png'),
                 }
             ],
             promotion:[
