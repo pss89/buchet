@@ -3,16 +3,17 @@ export default Object.freeze({
         description:`
         <h2 class="text-2xl font-bold mb-4">안녕하세요! 박성식입니다.</h2>
         <p class="text-stone-900">
-          웹프로그래머로 경력을 쌓고 있습니다.<br>
-          FrontEnd는 기본적으로 html,css,javascript/jquery 사용 경험이 있으며 추가적으로 bootstrap, angularjs 와 같은 FrontEnd FrameWork 사용 경험이 있습니다.
-          <br><br>
-          주업무인 BackEnd는 PHP 언어를 사용하였으며 Codeigniter3.x , Laravel 5.x 사용 경험이 있습니다. 주로 Codeigniter 환경에서 개발을 진행하였습니다.
-          <br><br>
-          이 외 linux(centos, ubuntu) cli , db(mysql, mariadb) , DevOps(slack, jira/confluence, redmine) , git/github/bitbucket 등을 업무에서 사용 한 경험이 있습니다.
+          7년간 웹프로그래머 경력을 이어가고 있습니다.<br><br>
+
+          저는 Front/BackEnd 모두 개발을 진행해왔습니다.<br>
+          그동안 개발하면서 BootStrap, AngularJs, PHP (Legacy, CodeIgniter(3.x), Laravel(5.x)) 등의 프레임워크 개발 경험이 있습니다.<br>
+          그 외 Git, GitHub, Docker, Python(특정 모듈), Atlassian(Jira, Confluence, Bitbucket), Svn, Mysql 등을 사용하였습니다.<br><br>
+
+          광고솔루션 백오피스, 자사 쇼핑몰(프론트/백오피스), 그룹웨어, ERP 등 다양한 솔루션을 개발해왔습니다.
         </p>
         `
     },
-    S_CAREER:{ // school career
+    S_CAREER:{
         subject : '학력 소개',
         list : [
             {
@@ -33,7 +34,7 @@ export default Object.freeze({
             }
         ]
     },
-    C_CAREER:{ // company career
+    C_CAREER:{
         subject:'경력 소개',
         list:[
             {
