@@ -67,7 +67,7 @@ app
 .use(vuetify)
 .use(hljs)
 .use(VueLazyload, {
-    preLoad: 1.3, // 미리 로드할 이미지의 비율 설정
+    preLoad: 1, // 미리 로드할 이미지의 비율 설정
     // error: 'error.jpg', // 이미지 로드 실패 시 표시할 이미지
     // loading: 'loading.gif', // 이미지 로딩 중 표시할 이미지
     attempt: 1 // 이미지 로딩 시도 횟수
