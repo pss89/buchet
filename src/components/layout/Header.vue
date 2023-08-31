@@ -2,7 +2,8 @@
   <header class="bg-cyan-600 flex items-center justify-between p-4 text-white">
     <!-- 왼쪽 상단 로고 -->
     <a class="font-bold text-lg" href="/buchet">
-      <img :src="require('@/assets/img/icon/buchet_icon.png')" alt="Logo" class="w-14" />
+      <!-- <img :src="require('@/assets/img/icon/buchet_icon.png')" alt="Logo" class="w-14" /> -->
+      <img v-lazy="imageUrl" alt="Logo" class="w-14" />
     </a>
 
     <!-- 가운데 상단 메뉴 (작은 화면에서는 숨김) -->
@@ -53,7 +54,8 @@
 export default {
   data() {
     return {
-      showMenu: false
+      showMenu: false,
+      imageUrl: require('@/assets/img/icon/buchet_icon.png')
     };
   },
   methods: {

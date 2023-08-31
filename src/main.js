@@ -23,6 +23,9 @@ import 'vuetify/styles';
 import hljs from 'highlight.js/lib/core';
 import 'highlight.js/styles/github.css';
 
+// lazyload
+import VueLazyload from 'vue-lazyload';
+
 // 슬라이드 관련 처리
 const vuetify = createVuetify({
     components,
@@ -63,4 +66,10 @@ app
 .use(VueSmoothScroll)
 .use(vuetify)
 .use(hljs)
+.use(VueLazyload, {
+    preLoad: 1.3, // 미리 로드할 이미지의 비율 설정
+    // error: 'error.jpg', // 이미지 로드 실패 시 표시할 이미지
+    // loading: 'loading.gif', // 이미지 로딩 중 표시할 이미지
+    attempt: 1 // 이미지 로딩 시도 횟수
+})
 .mount('#app')

@@ -27,8 +27,7 @@
         <br/>
         <span class="text-gray-600">
           <p class="font-bold">대표 업무 설명</p>
-          <span v-html="c_career.desc" class="text-sm">
-          </span>
+          <span v-html="c_career.desc" class="text-sm"></span>
         </span>
       </div>
       <!-- 경력 정보 -->
