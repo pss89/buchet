@@ -19,11 +19,12 @@
 export default {
     props: {
         isOpen: Boolean,
+        code: String,
         // mcKey: String
     },
     data() {
         return {
-            copiedText: "" // 클립보드 복사 결과 메시지
+            copiedText: this.code // 클립보드 복사 결과 메시지
         };
     },
     mounted() {
@@ -41,10 +42,10 @@ export default {
     methods: {
         closeModal() {
             this.$emit('close');
-        }
-
+        },
         // copyToClipboard() {
-        //     this.$copyText(this.code)
+        //     console.log(this.code);
+        //     this.$copyText(this.copiedText)
         //         .then(() => {
         //             alert('코드가 클립보드에 복사되었습니다.');
         //         })
