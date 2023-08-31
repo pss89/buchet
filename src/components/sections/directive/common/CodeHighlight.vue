@@ -15,8 +15,6 @@ props: {
 computed: {
     highlightedCode() {
         return hljs.highlight(this.code, { language: this.language }).value;
-        // const highlighted = hljs.highlight(this.code, this.language, true, undefined);
-        // return highlighted.value;
     },
 }
 };

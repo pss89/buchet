@@ -16,13 +16,8 @@
     </div>
   </section>
 
-  <!-- <CodeHighlight :code="code" language="php" /> -->
-  
-  <!-- <button @click="openModal">Open Modal</button> -->
   <Modal :is-open="isModalOpen" @close="isModalOpen = false">
     <h3 class="text-center">{{ modalContent.codeTitle }}</h3>
-    <!-- <p v-html="formattedDescription"></p> -->
-    <!-- <p>{{ modalContent  }}</p> -->
     <CodeHighlight :code="modalContent.code" :language="modalContent.languageType" />
   </Modal>
 </template>

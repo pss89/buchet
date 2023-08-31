@@ -29,8 +29,6 @@ import Hobby from './components/sections/Hobby.vue'
 import Footer from './components/layout/Footer.vue'
 // import { useMeta } from 'vue-meta';
 
-// import iconImage from "@/assets/img/icon/icon-image.png";
-
 // 컴포넌트 정의
 export default {
     name: 'App',

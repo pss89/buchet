@@ -41,11 +41,16 @@ export default {
     methods: {
         closeModal() {
             this.$emit('close');
-        },
-        // copyToClipboard() {
-        //     this.copiedText = this.mc;
+        }
 
-        //     alert(this.copiedText);
+        // copyToClipboard() {
+        //     this.$copyText(this.code)
+        //         .then(() => {
+        //             alert('코드가 클립보드에 복사되었습니다.');
+        //         })
+        //         .catch(() => {
+        //             alert('코드 복사 중 오류가 발생했습니다.');
+        //         });
         // }
     },
 };

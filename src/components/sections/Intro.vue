@@ -2,7 +2,6 @@
     <div id="intro" class="container mx-auto p-4 flex flex-col md:flex-row items-center mt-5">
       <!-- 프로필 이미지 영역 -->
       <div class="w-full md:w-1/3">
-        <!-- <img :src="profileImage" alt="Profile" class="rounded-full w-32 h-32 mx-auto md:mx-0 md:w-48 md:h-48"> -->
         <img v-lazy="profileImage" alt="Profile" class="rounded-full w-32 h-32 mx-auto md:mx-0 md:w-48 md:h-48">
       </div>
   

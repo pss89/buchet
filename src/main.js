@@ -26,6 +26,9 @@ import 'highlight.js/styles/github.css';
 // lazyload
 import VueLazyload from 'vue-lazyload';
 
+// 클립보드 복사 기능
+import VueClipboard from 'vue-clipboard2';
+
 // 슬라이드 관련 처리
 const vuetify = createVuetify({
     components,
@@ -72,4 +75,5 @@ app
     // loading: 'loading.gif', // 이미지 로딩 중 표시할 이미지
     attempt: 1 // 이미지 로딩 시도 횟수
 })
+.use(VueClipboard)
 .mount('#app')
