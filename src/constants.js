@@ -204,6 +204,10 @@ export default Object.freeze({
                 title:"자사 쇼핑몰"
             },
             {
+                code:"promotion",
+                title:"쇼핑몰 연계 프로모션 페이지"
+            },
+            {
                 code:"groupware",
                 title:"자사 그룹웨어"
             },
@@ -213,7 +217,7 @@ export default Object.freeze({
             },
             {
                 code:"advertiser",
-                title:"광고솔루션 백오피스 - 크로스미디어"
+                title:"광고솔루션 - 크로스미디어"
             },
             {
                 code:"admin",
@@ -247,6 +251,20 @@ export default Object.freeze({
                     img:require('@/assets/img/capture/mall/membership_coupon.png'),
                 }
             ],
+            // promotion:[
+            //     {
+            //         title:'로그인',
+            //         img:'img1'
+            //     },
+            //     {
+            //         title:'로그인',
+            //         img:'img2'
+            //     },
+            //     {
+            //         title:'로그인',
+            //         img:'img3'
+            //     }
+            // ],
             groupware:[
                 {
                     title:'로그인',
@@ -336,7 +354,6 @@ export default Object.freeze({
         list:[
             {
                 name:'PHP',
-                // description:'웹개발에 주로 사용되는 인터프리터 서버언어 입니다. <br>Codeigniter, Laravel Framework 사용 경험이 있습니다.',
                 description:'웹개발에 주로 사용되는 인터프리터 서버언어 입니다. <br>실무에서 주로 사용 한 서버언어입니다.',
                 codeTitle:'네이버 리뷰 파싱 배치 함수',
                 languageType:'php',
