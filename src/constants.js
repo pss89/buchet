@@ -204,6 +204,10 @@ export default Object.freeze({
                 title:"자사 쇼핑몰"
             },
             {
+                code:"groupware",
+                title:"자사 그룹웨어"
+            },
+            {
                 code:"erp",
                 title:"자사 ERP"
             },
@@ -241,6 +245,20 @@ export default Object.freeze({
                 {
                     title:'멤버십-쿠폰',
                     img:require('@/assets/img/capture/mall/membership_coupon.png'),
+                }
+            ],
+            groupware:[
+                {
+                    title:'로그인',
+                    img:'img1'
+                },
+                {
+                    title:'로그인',
+                    img:'img2'
+                },
+                {
+                    title:'로그인',
+                    img:'img3'
                 }
             ],
             erp:[
