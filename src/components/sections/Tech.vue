@@ -16,7 +16,7 @@
     </div>
   </section>
 
-  <Modal :is-open="isModalOpen" @close="isModalOpen = false">
+  <Modal :is-open="isModalOpen" :modalCode="modalCode" @close="isModalOpen = false">
     <h3 class="text-center">{{ modalContent.codeTitle }}</h3>
     <CodeHighlight :code="modalContent.code" :language="modalContent.languageType" />
   </Modal>
@@ -34,13 +34,11 @@ export default {
     CodeHighlight
   },
   computed: {
-    formattedDescription(){
-      return this.modalContent.description.replace(/\n/g, '<br>');
-    }
   },
   data() {
     return {
       isModalOpen: false,
+      modalCode: true
     };
   },
   methods: {
@@ -48,6 +46,8 @@ export default {
       if (tech.isComplete == true) {
         this.isModalOpen = true;
         this.modalContent = tech;
+
+        this.modalCode = this.modalContent.code;
       }
     },
   },

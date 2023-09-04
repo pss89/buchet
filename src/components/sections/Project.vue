@@ -26,7 +26,7 @@
     </div>
   </div>
 
-  <Modal :is-open="isModalOpen" @close="isModalOpen = false">
+  <Modal :is-open="isModalOpen" :modalCode="modalCode" @close="isModalOpen = false">
     <v-carousel
       height="600"
       hide-delimiters
@@ -65,7 +65,8 @@
     },
     data () {
       return {
-        isModalOpen: false
+        isModalOpen: false,
+        modalCode: false
       }
     },
     methods: {

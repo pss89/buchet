@@ -4,9 +4,9 @@
         <div class="bg-white rounded-lg shadow-md p-4 opacity-100 z-50 w-full sm:w-3/4 md:w-3/4 lg:w-4/4 h-auto">
             <slot></slot>
             <div class="flex float-right">
-                <!-- <button @click="copyToClipboard" class="mt-4 bg-lime-300 hover:bg-lime-400 text-gray-800 font-semibold py-2 px-4 rounded mr-2">
+                <button v-if="modalCode" @click="copyToClipboard" class="mt-4 bg-lime-300 hover:bg-lime-400 text-gray-800 font-semibold py-2 px-4 rounded mr-2">
                     Copy
-                </button> -->
+                </button>
                 <button @click="closeModal" class="mt-4 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded">
                     Close
                 </button>
@@ -16,15 +16,15 @@
 </template>
   
 <script>
+import copy from 'copy-to-clipboard';
+
 export default {
     props: {
         isOpen: Boolean,
-        code: String,
-        // mcKey: String
+        modalCode: String,
     },
     data() {
         return {
-            copiedText: this.code // 클립보드 복사 결과 메시지
         };
     },
     mounted() {
@@ -43,16 +43,24 @@ export default {
         closeModal() {
             this.$emit('close');
         },
-        // copyToClipboard() {
-        //     console.log(this.code);
-        //     this.$copyText(this.copiedText)
-        //         .then(() => {
-        //             alert('코드가 클립보드에 복사되었습니다.');
-        //         })
-        //         .catch(() => {
-        //             alert('코드 복사 중 오류가 발생했습니다.');
-        //         });
-        // }
+        copyToClipboard() {
+            const codeToCopy = this.modalCode;
+
+            console.log(codeToCopy);
+            if (copy(codeToCopy)) {
+                alert('코드가 클립보드에 복사되었습니다.');
+            } else {
+                alert('코드 복사 중 오류가 발생했습니다.');
+            }
+            // console.log(this.code);
+            // this.$copyText(this.copiedText)
+            //     .then(() => {
+            //         alert('코드가 클립보드에 복사되었습니다.');
+            //     })
+            //     .catch(() => {
+            //         alert('코드 복사 중 오류가 발생했습니다.');
+            //     });
+        }
     },
 };
 </script>
