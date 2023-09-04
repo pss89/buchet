@@ -16,6 +16,7 @@
 </template>
   
 <script>
+// npm install copy-to-clipboard --save
 import copy from 'copy-to-clipboard';
 
 export default {
