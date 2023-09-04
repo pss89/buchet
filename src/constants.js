@@ -201,31 +201,38 @@ export default Object.freeze({
         list:[
             {
                 code:"mall",
-                title:"자사 쇼핑몰"
+                title:"자사 쇼핑몰",
+                isUse:true
             },
             {
                 code:"promotion",
-                title:"쇼핑몰 연계 프로모션 페이지"
+                title:"쇼핑몰 연계 프로모션 페이지",
+                isUse:false
             },
             {
                 code:"groupware",
-                title:"자사 그룹웨어"
+                title:"자사 그룹웨어",
+                isUse:false
             },
             {
                 code:"erp",
-                title:"자사 ERP"
+                title:"자사 ERP",
+                isUse:false
             },
             {
                 code:"advertiser",
-                title:"광고솔루션 - 크로스미디어"
+                title:"광고솔루션 - 크로스미디어",
+                isUse:true
             },
             {
                 code:"admin",
-                title:"자사 관리자페이지"
+                title:"자사 관리자페이지",
+                isUse:false
             },
             {
                 code:"monitoring",
-                title:"모니터링 페이지"
+                title:"모니터링 페이지",
+                isUse:false
             }
         ],
         capture: {
@@ -251,20 +258,20 @@ export default Object.freeze({
                     img:require('@/assets/img/capture/mall/membership_coupon.png'),
                 }
             ],
-            // promotion:[
-            //     {
-            //         title:'로그인',
-            //         img:'img1'
-            //     },
-            //     {
-            //         title:'로그인',
-            //         img:'img2'
-            //     },
-            //     {
-            //         title:'로그인',
-            //         img:'img3'
-            //     }
-            // ],
+            promotion:[
+                {
+                    title:'로그인',
+                    img:'img1'
+                },
+                {
+                    title:'로그인',
+                    img:'img2'
+                },
+                {
+                    title:'로그인',
+                    img:'img3'
+                }
+            ],
             groupware:[
                 {
                     title:'로그인',

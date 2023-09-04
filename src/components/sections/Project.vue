@@ -8,7 +8,7 @@
         progress="primary"
       >
         <v-carousel-item
-          v-for="(project, i) in constants.PROJECT.list"
+          v-for="(project, i) in filteredProjects"
           :key="i"
           @click="openModal(project)"
         >
@@ -56,6 +56,12 @@
   export default {
     components: {
       Modal
+    },
+    computed: {
+      filteredProjects() {
+        // constants.PROJECT.list를 필터링하여 필터링된 배열 반환
+        return this.constants.PROJECT.list.filter(project => project.isUse);
+      }
     },
     data () {
       return {
