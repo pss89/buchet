@@ -10,7 +10,7 @@ import { faGithub,faInstagram  } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // vue scroll 라이브러리
-import VueSmoothScroll from 'vue3-smooth-scroll'
+// import VueSmoothScroll from 'vue3-smooth-scroll'
 
 // 슬라이드 구현을 위한 라이브러리
 import { createVuetify } from "vuetify";
@@ -66,7 +66,7 @@ app
 .use(router)
 .use(createMetaManager())
 .component('font-awesome-icon', FontAwesomeIcon)
-.use(VueSmoothScroll)
+// .use(VueSmoothScroll)
 .use(vuetify)
 .use(hljs)
 .use(VueLazyload, {
