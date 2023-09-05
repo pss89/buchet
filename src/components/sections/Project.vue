@@ -51,38 +51,38 @@
 </template>
 
 <script>
-  import Modal from "@/components/sections/directive/common/ModalPopup.vue";
+import Modal from "@/components/sections/directive/common/ModalPopup.vue";
 
-  export default {
-    components: {
-      Modal
+export default {
+  components: {
+    Modal
+  },
+  computed: {
+    filteredProjects() {
+      // constants.PROJECT.list를 필터링하여 필터링된 배열 반환
+      return this.constants.PROJECT.list.filter(project => project.isUse);
+    }
+  },
+  data () {
+    return {
+      isModalOpen: false,
+      modalCode: false
+    }
+  },
+  methods: {
+    openModal(project) {
+      this.isModalOpen = true;
+      this.modalContent = project;
     },
-    computed: {
-      filteredProjects() {
-        // constants.PROJECT.list를 필터링하여 필터링된 배열 반환
-        return this.constants.PROJECT.list.filter(project => project.isUse);
-      }
-    },
-    data () {
-      return {
-        isModalOpen: false,
-        modalCode: false
-      }
-    },
-    methods: {
-      openModal(project) {
-        this.isModalOpen = true;
-        this.modalContent = project;
-      },
-      openWindow(project) {
-        const baseUrl = window.location.origin;
-        const imgPath = project.img;
+    openWindow(project) {
+      const baseUrl = window.location.origin;
+      const imgPath = project.img;
 
-        const openUrl = baseUrl + imgPath;
+      const openUrl = baseUrl + imgPath;
 
-        window.open(openUrl, "_blank"); // 새 창으로 이미지 URL 열기
-      }
-    },
-    inject: ['constants']
-  }
+      window.open(openUrl, "_blank"); // 새 창으로 이미지 URL 열기
+    }
+  },
+  inject: ['constants']
+}
 </script>

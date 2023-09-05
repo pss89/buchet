@@ -1,8 +1,5 @@
 <template>
   <div class="app">
-    <!-- <metainfo>
-        <template v-slot:title="{ content }">{{ content ? `${content}` : `Buchet About` }}</template>
-    </metainfo> -->
     <Header />
     <!-- router 처리 할 때 사용 -->
     <!-- <main class="app-main"> -->
@@ -27,12 +24,11 @@ import Tech from './components/sections/Tech.vue'
 import Project from './components/sections/Project.vue'
 import Hobby from './components/sections/Hobby.vue'
 import Footer from './components/layout/Footer.vue'
-// import { useMeta } from 'vue-meta';
 
 // 컴포넌트 정의
 export default {
-    name: 'App',
-    components: {
+    name: 'App', // 컴포넌트 이름, 필수 항목 x
+    components: { // 컴포넌트 항목 정의
         Header,
         Footer,
         Intro,
@@ -41,51 +37,23 @@ export default {
         Project,
         Hobby
     },
-    setup () {
-      // useMeta({
-      //   meta: [
-      //     // if no subcomponents specify a metaInfo.title, this title will be used
-      //     {title: 'Default Title', name: 'title'}
-      //     // all titles will be injected into this template
-      //   ],
-      // })
-      // useMeta({
-      //   title: 'Buchet Introduction.',
-      //   htmlAttrs: { lang: 'ko', amp: true },
-      //   bodyAttrs: {
-      //     class: ['dark-mode', 'mobile'],
-      //     tabIndex: 0
-      //   },
-      //   metaInfo: {
-      //     meta: [
-      //       { charset: 'utf-8' },
-      //       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-      //     ]
-      //   }
-        
-      //   // meta :[
-      //     // { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no' },
-      //     // { name: 'description', content: 'Buchet Introduction WebSite.' },
-      //     // // Open Graph meta 설정
-      //     // { property: 'og:title', content: 'Buchet Introduction.' },
-      //     // { property: 'og:description', content: 'Buchet Introduction WebSite.' },
-      //     // { property: 'og:image', content: require('@/assets/img/icon/buchet_icon.png') },
-      //     // { property: 'og:url', content: window.location.href },
-      //   // ]
-      //   // meta: [
-      //   //   // { charset: 'utf-8'},
-      //   //   { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no' },
-      //   //   { name: 'description', content: 'Buchet Introduction WebSite.' },
-      //   //   // Open Graph meta 설정
-      //   //   { property: 'og:title', content: 'Buchet Introduction.' },
-      //   //   { property: 'og:description', content: 'Buchet Introduction WebSite.' },
-      //   //   { property: 'og:image', content: require('@/assets/img/icon/buchet_icon.png') },
-      //   //   { property: 'og:url', content: window.location.href },
-      //   // ]
-      // });
-    }
+    data() { // 컴포넌트 내부 데이터
+      return {
+
+      };
+    },
+    computed: { // 계산된 속성정보 ex) 기존 데이터를 기반으로 새로운 데이터 계산
+
+    },
+    method: { // 해당 컴포넌트에서 실행 할 메서드 정보
+
+    },
+    created() { // 컴포넌트 생성 시 실행되는 코드 ex)컴포넌트의 초기화 로직 작성
+
+    },
 }
 </script>
 
+<!-- 컴포넌트 내부에서 실행되는 css 코드 -->
 <style>
 </style>
