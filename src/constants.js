@@ -1193,7 +1193,8 @@ export default Object.freeze({
                 // 위 함수 호출하기
                 send_slack_message('메시지 보낼 채널', '메시지 내용');
                 `,
-                icon: require('@/assets/img/main/slack.png')
+                icon: require('@/assets/img/main/slack.png'),
+                isComplete: true
             },
             {
                 name:'Docker',
