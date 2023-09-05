@@ -1,5 +1,8 @@
 <template>
   <header class="bg-cyan-600 flex items-center justify-between p-4 text-white">
+    <!-- <p>현재 Vue.js 버전: {{ $vueVersion }}</p>
+    <p>현재 디바이스: {{ $isMobile ? '모바일' : 'PC' }}</p> -->
+
     <!-- 왼쪽 상단 로고 -->
     <a class="font-bold text-lg" href="/buchet">
       <!-- <img :src="require('@/assets/img/icon/buchet_icon.png')" alt="Logo" class="w-14" /> -->
@@ -57,6 +60,10 @@ export default {
       showMenu: false,
       imageUrl: require('@/assets/img/icon/buchet_icon.png')
     };
+  },
+  mounted() {
+    const vueVersion = this.$vueVersion;
+    console.log('Vue.js 버전:', vueVersion);
   },
   methods: {
     toggleMenu() {

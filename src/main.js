@@ -61,6 +61,16 @@ import constants from "@/constants.js"
 // 상수값을 constants 로 사용하겠다고 선언
 app.provide('constants', constants);
 
+
+// 디바이스 환경 확인
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+// Vue.config.globalProperties를 사용하여 디바이스 환경을 전역으로 설정
+app.config.globalProperties.$isMobile = isMobile;
+
+// Vue.js 버전을 전역으로 설정
+app.config.globalProperties.$vueVersion = app.version;
+
 // instance 에 사용 할 정보 제공
 app
 .use(router)

@@ -15,7 +15,7 @@
           <v-sheet
             height="100%"
           >
-            <div class="flex items-center justify-center cursor-pointer h-full bg-cyan-600 hover:bg-cyan-700 transition">
+            <div class="flex items-center justify-center cursor-pointer h-full bg-cyan-500 hover:bg-cyan-600 transition">
               <div class="text-3xl font-semibold text-white">
                 {{ project.title }}
               </div>
