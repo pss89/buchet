@@ -232,7 +232,7 @@ export default Object.freeze({
             {
                 code:"monitoring",
                 title:"모니터링 페이지",
-                isUse:false
+                isUse:true
             }
         ],
         capture: {
@@ -347,15 +347,15 @@ export default Object.freeze({
             monitoring:[
                 {
                     title:'로그인',
-                    img:'img1'
+                    img:require('@/assets/img/capture/monitoring/login.png'),
                 },
                 {
-                    title:'로그인',
-                    img:'img2'
+                    title:'퍼포먼스 체크',
+                    img:require('@/assets/img/capture/monitoring/performance.png'),
                 },
                 {
-                    title:'로그인',
-                    img:'img3'
+                    title:'속도 체크',
+                    img:require('@/assets/img/capture/monitoring/refresh_speed_rate.png'),
                 }
             ]
         }
