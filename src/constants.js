@@ -845,12 +845,12 @@ export default Object.freeze({
                     '' AS cancel_yn,
                     '' AS del_yn,
                     a.m_type AS exch_cd
-                FROM buy_acc a INNER JOIN acc_stock_log b ON a.id = b.log_value AND b.log_type = 'ba_id'
+                FROM {구매테이블} a INNER JOIN acc_stock_log b ON a.id = b.log_value AND b.log_type = 'ba_id'
                                 LEFT OUTER JOIN (
                                                 SELECT
                                                         group_id,
                                                         max(pa_code) AS pa_code
-                                                FROM buy_acc
+                                                FROM {구매테이블}
                                                 WHERE sub_id = 0
                                                 GROUP BY group_id
                                                 ) c ON a.group_id = c.group_id
@@ -873,13 +873,13 @@ export default Object.freeze({
                     b.yn_cancel AS cancel_yn,
                     b.is_del AS del_yn,
                     null AS exch_cd
-                FROM acc_stock_log a INNER JOIN wetak_1 b ON a.log_value = b.id
+                FROM {재고변경이력} a INNER JOIN wetak_1 b ON a.log_value = b.id
                                                         AND b.log_type = 'as_id'                                            
                 WHERE a.log_type = 'we_id'
                 AND a.created BETWEEN '202230822000000' AND '20230822235959'
                 AND concat(b.wetak_send_type, b.wetak_sent) IN ('B1', 'S2', 'E2')  
                 UNION ALL
-                -- tb_order_return 정보 조회
+                -- 반품 정보 조회
                 SELECT 
                     a.id AS stk_no,
                     b.log_value AS stkorg_no, 
@@ -895,7 +895,7 @@ export default Object.freeze({
                     CASE WHEN COALESCE(b.yn_cancel, '') = 'Y' THEN '취소' ELSE '' END AS cancel_yn,
                     CASE WHEN b.is_del = '1' THEN '삭제' ELSE '' END AS del_yn,
                     null AS exch_cd
-                FROM acc_stock_log a INNER JOIN tb_order_return b ON a.log_value = b.id
+                FROM {재고변경이력} a INNER JOIN tb_order_return b ON a.log_value = b.id
                                                                 AND b.log_type = 'as_id'                                            
                 WHERE a.log_type = 'or_id'
                 AND a.created BETWEEN '202230822000000' AND '20230822235959'
