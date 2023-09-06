@@ -28,7 +28,7 @@
 
   <Modal :is-open="isModalOpen" :modalCode="modalCode" @close="isModalOpen = false">
     <v-carousel
-      height="600"
+      height="700"
       hide-delimiters
       progress="primary"
     >
@@ -40,9 +40,9 @@
         <v-sheet
           height="100%"
         >
-          <h1 class="text-3xl ml-5 mt-5">{{ pl.title }}</h1>
-          <div class="d-flex fill-height justify-center align-center cursor-pointer">
-            <img v-lazy="pl.img" :alt="pl.title" class="w-3/4 h-3/4" />
+          <h1 class="text-3xl ml-5 mt-5 mb-5">{{ pl.title }}</h1>
+          <div class="d-flex fill-height justify-center align-center cursor-pointer w-4/4 h-4/4">
+            <img v-lazy="pl.img" :alt="pl.title" class="w-full h-full" />
           </div>
         </v-sheet>
       </v-carousel-item>
@@ -54,6 +54,9 @@
 import Modal from "@/components/sections/directive/common/ModalPopup.vue";
 
 export default {
+  props: {
+    device: Boolean
+  },
   components: {
     Modal
   },
@@ -71,6 +74,11 @@ export default {
   },
   methods: {
     openModal(project) {
+      // 모바일 환경에서는 확인 안되도록 처리
+      if (this.device) {
+        return false;
+      }
+
       this.isModalOpen = true;
       this.modalContent = project;
     },

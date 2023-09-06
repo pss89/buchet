@@ -217,7 +217,7 @@ export default Object.freeze({
             {
                 code:"erp",
                 title:"자사 ERP",
-                isUse:false
+                isUse:true
             },
             {
                 code:"advertiser",
@@ -288,16 +288,20 @@ export default Object.freeze({
             ],
             erp:[
                 {
-                    title:'로그인',
-                    img:'img1'
+                    title:'전체주문',
+                    img:require('@/assets/img/capture/erp/all_order.png'),
                 },
                 {
-                    title:'로그인',
-                    img:'img2'
+                    title:'주문수집',
+                    img:require('@/assets/img/capture/erp/order_collection.png'),
                 },
                 {
-                    title:'로그인',
-                    img:'img3'
+                    title:'송장입력',
+                    img:require('@/assets/img/capture/erp/order_delivery.png'),
+                },
+                {
+                    title:'통합주문내역',
+                    img:require('@/assets/img/capture/erp/integrated_shipment.png'),
                 }
             ],
             advertiser:[

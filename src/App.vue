@@ -9,7 +9,7 @@
     <Intro />
     <Career />
     <Tech />
-    <Project />
+    <Project :device="$isMobile"/>
     <Hobby />
     <Footer />
   </div>
