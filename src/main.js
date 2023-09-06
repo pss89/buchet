@@ -61,7 +61,6 @@ import constants from "@/constants.js"
 // 상수값을 constants 로 사용하겠다고 선언
 app.provide('constants', constants);
 
-
 // 디바이스 환경 확인
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
