@@ -17,8 +17,9 @@
     <!-- 제목 -->
     <h1 class="text-4xl font-bold mb-6">{{ constants.C_CAREER.subject }}</h1>
 
+    <!-- <font-awesome-icon icon="arrow-right" class="text-gray-600" /> -->
     <!-- 반응형 그리드 레이아웃 -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <!-- 경력 소개 영역 -->
       <div v-for="c_career in constants.C_CAREER.list" :key="c_career.key" class="p-4 border rounded shadow-md">
         <h2 class="text-2xl font-bold">{{ c_career.name }}</h2>
