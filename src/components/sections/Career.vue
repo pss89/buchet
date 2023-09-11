@@ -19,7 +19,7 @@
 
     <!-- 반응형 그리드 레이아웃 -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- 학력 소개 영역 -->
+      <!-- 경력 소개 영역 -->
       <div v-for="c_career in constants.C_CAREER.list" :key="c_career.key" class="p-4 border rounded shadow-md">
         <h2 class="text-2xl font-bold">{{ c_career.name }}</h2>
         <p class="text-gray-600">{{ c_career.belong }} - {{ c_career.position }}</p>
