@@ -44,9 +44,13 @@ export default {
   },
   methods: {
     formatDate: function(date){
-      const year = Math.floor(date / 100);
-      const month = date % 100;
-      return `${year}.${month.toString().padStart(2, '0')}`;
+      if (date) {
+        const year = Math.floor(date / 100);
+        const month = date % 100;
+        return `${year}.${month.toString().padStart(2, '0')}`;
+      } else {
+        return '';
+      }
     }
   },
   inject: ['constants']
