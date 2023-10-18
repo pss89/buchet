@@ -43,7 +43,7 @@ export default Object.freeze({
                 position : '매니저',
                 period : {
                     startDate : '202306',
-                    endDate : ''
+                    endDate : '202310'
                 },
                 desc : `
                 <div class="mb-2.5">
