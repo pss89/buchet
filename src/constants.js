@@ -3,7 +3,7 @@ export default Object.freeze({
         description:`
         <h2 class="text-2xl font-bold mb-4">안녕하세요! 박성식입니다.</h2>
         <p class="text-stone-900">
-          7년간 웹프로그래머 경력을 이어가고 있습니다.<br><br>
+          저는 2015년부터 웹개발 경력을 이어가고 있습니다.<br><br>
 
           저는 Front/BackEnd 모두 개발을 진행해왔습니다.<br>
           그동안 개발하면서 BootStrap, AngularJs, PHP (Legacy, CodeIgniter(3.x), Laravel(5.x)) 등의 프레임워크 개발 경험이 있습니다.<br>
@@ -55,6 +55,7 @@ export default Object.freeze({
                         <li class="list-disc ml-5">웹서버 : Nginx</li>
                         <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
                         <li class="list-disc ml-5">담당업무 : CS 이슈 처리 , 통합회원 SSO 솔루션 연동, 통합회원으로 인한 기존 로그인/회원가입 변경 등</li>
+                        <li class="list-disc ml-5"><a class="underline underline-offset-2" href="https://www.aipartner.com/" target="_blank">이실장 서비스 링크</a></li>
                     </ul>
                 </div>
                 `
@@ -78,6 +79,7 @@ export default Object.freeze({
                         <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
                         <li class="list-disc ml-5">기타 : 공공데이터 포털 API(기상/미세먼지 정보), Batch(Crontab), 이니시스 결제 모듈 등</li>
                         <li class="list-disc ml-5">담당업무 : 회원가입,로그인,마이페이지,쿠폰,포인트,장바구니,기상/미세먼지 정보를 톨한 상품추천,고객센터 페이지 등</li>
+                        <li class="list-disc ml-5"><a class="underline underline-offset-2" href="https://store.oa-world.com/" target="_blank">오아스토어 링크</a></li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
@@ -172,6 +174,7 @@ export default Object.freeze({
                         <li class="list-disc ml-5">웹서버 : Nginx</li>
                         <li class="list-disc ml-5">서버 환경 : CentOS</li>
                         <li class="list-disc ml-5">담당업무 : 거래처 요청에 따른 개발 및 유지보수</li>
+                        <li class="list-disc ml-5"><a class="underline underline-offset-2" href="https://www.gamey.kr/" target="_blank">게임와이 링크</a></li>
                     </ul>
                 </div>
                 `
