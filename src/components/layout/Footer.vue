@@ -1,5 +1,5 @@
 <template>
-<footer class="bg-cyan-600 text-white py-8 w-full bottom-0 left-0 mt-20">
+<footer class="dark:bg-slate-900 text-white py-8 w-full bottom-0 left-0 mt-20">
   <div class="container mx-auto flex flex-col items-center">
     <div class="text-center md:text-left mb-4 md:mb-0">
       <h3 class="text-2xl font-bold">Buchet Introduction WebSite</h3>
@@ -13,7 +13,7 @@
 <div>
   <!-- 스크롤 시 TOP 버튼 보이기 -->
   <button
-    class="fixed bottom-16 right-4 bg-cyan-600 hover:bg-cyan-700 text-white py-2 px-4 rounded-full shadow-lg"
+    class="fixed bottom-16 right-4 dark:bg-slate-800 hover:bg-slate-700 text-white py-2 px-4 rounded-full shadow-lg"
     @click="scrollMoving('top')"
   >
   <!-- TOP -->
@@ -22,7 +22,7 @@
 
   <!-- 스크롤 시 BOTTOM 버튼 보이기 -->
   <button
-    class="fixed bottom-4 right-4 bg-cyan-600 hover:bg-cyan-700 text-white py-2 px-4 rounded-full shadow-lg"
+    class="fixed bottom-4 right-4 dark:bg-slate-800 hover:bg-slate-700 text-white py-2 px-4 rounded-full shadow-lg"
     @click="scrollMoving('bottom')"
   >
   <font-awesome-icon :icon="['fas', 'arrow-down']" />

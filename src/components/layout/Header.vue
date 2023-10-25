@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-cyan-600 flex items-center justify-between p-4 text-white">
+  <header class="dark:bg-slate-900 flex items-center justify-between p-4 text-white">
     <!-- <p>현재 Vue.js 버전: {{ $vueVersion }}</p>
     <p>현재 디바이스: {{ $isMobile ? '모바일' : 'PC' }}</p> -->
 
@@ -37,7 +37,7 @@
     <!-- 모바일 메뉴 (작은 화면에서만 보임) -->
     <div
       v-show="showMenu"
-      class="md:hidden absolute top-16 right-0 bg-cyan-600 rounded shadow-md p-6 space-y-2"
+      class="md:hidden absolute top-16 right-0 dark:bg-slate-900 rounded shadow-md p-6 space-y-2"
     >
       <a href="#" class="hover:text-gray-300 block" v-for="menu in constants.MENU.list" :key="menu.key">
         {{ menu.title }}

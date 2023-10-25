@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app dark:bg-slate-800 dark:text-white">
     <Header />
     <!-- router 처리 할 때 사용 -->
     <!-- <main class="app-main"> -->
@@ -9,7 +9,7 @@
     <Intro />
     <Career />
     <Tech />
-    <!-- <Project :device="$isMobile"/> -->
+    <Project :device="$isMobile"/>
     <Hobby />
     <Footer />
   </div>
@@ -21,7 +21,7 @@ import Header from './components/layout/Header.vue'
 import Intro from './components/sections/Intro.vue'
 import Career from './components/sections/Career.vue'
 import Tech from './components/sections/Tech.vue'
-// import Project from './components/sections/Project.vue'
+import Project from './components/sections/Project.vue'
 import Hobby from './components/sections/Hobby.vue'
 import Footer from './components/layout/Footer.vue'
 
@@ -34,7 +34,7 @@ export default {
         Intro,
         Career,
         Tech,
-        // Project,
+        Project,
         Hobby
     },
     data() { // 컴포넌트 내부 데이터

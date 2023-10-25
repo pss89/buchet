@@ -2,14 +2,16 @@ export default Object.freeze({
     INTRO:{
         description:`
         <h2 class="text-2xl font-bold mb-4">안녕하세요! 박성식입니다.</h2>
-        <p class="text-stone-900">
+        <p>
           저는 2015년부터 웹개발 경력을 이어가고 있습니다.<br><br>
 
-          저는 Front/BackEnd 모두 개발을 진행해왔습니다.<br>
-          그동안 개발하면서 BootStrap, AngularJs, PHP (Legacy, CodeIgniter(3.x), Laravel(5.x)) 등의 프레임워크 개발 경험이 있습니다.<br>
-          그 외 Git, GitHub, Docker, Python(특정 모듈), Atlassian(Jira, Confluence, Bitbucket), Svn, Mysql 등을 사용하였습니다.<br><br>
+          광고솔루션 백오피스, 자사 쇼핑몰, 그룹웨어, ERP 등 다양한 솔루션에 대한 웹개발을 해왔습니다.<br>
+          Front/BackEnd 가리지 않고 개발하였고 BootStrap, AngularJs, Codeigniter, Laravel 등 다양한 프레임워크를 경험하였습니다.<br>
+          그 외 Git, GitHub, Docker, Python(특정 모듈), Atlassian(Jira, Confluence, Bitbucket), Svn, Mysql 등의 다양한 개발 관련 프로그램들을 사용하여 어떤 업무든 적응에 자신 있습니다.<br><br>
 
-          광고솔루션 백오피스, 자사 쇼핑몰(프론트/백오피스), 그룹웨어, ERP 등 다양한 솔루션을 개발해왔습니다.
+          그리고 사이드프로젝트를 통해 Vue, Python(FastAPI) 등에 대해 스터디 중입니다.<br><br>
+          잘 부탁드립니다.<br>
+          감사합니다.
         </p>
         `
     },
