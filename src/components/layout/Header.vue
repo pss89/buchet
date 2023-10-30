@@ -1,8 +1,6 @@
 <template>
   <header class="dark:bg-slate-900 flex items-center justify-between p-4 text-white">
-    <!-- <p>현재 Vue.js 버전: {{ $vueVersion }}</p>
-    <p>현재 디바이스: {{ $isMobile ? '모바일' : 'PC' }}</p> -->
-
+    
     <!-- 왼쪽 상단 로고 -->
     <a class="font-bold text-lg" href="/buchet">
       <!-- <img :src="require('@/assets/img/icon/buchet_icon.png')" alt="Logo" class="w-14" /> -->
@@ -24,7 +22,9 @@
     </div>
     
     <ul class="hidden md:flex space-x-4">
-      <li @click="pageMove(social.key)" v-for="social in constants.SOCIAL.list" :key="social.key" class="cursor-pointer">
+      <li @click="pageMove(social.key)" v-for="social in constants.SOCIAL.list" 
+        :key="social.key" class="cursor-pointer"
+        >
         <font-awesome-icon :icon="social.fa" />
       </li>
     </ul>
@@ -39,7 +39,9 @@
       v-show="showMenu"
       class="md:hidden absolute top-16 right-0 dark:bg-slate-900 rounded shadow-md p-6 space-y-2"
     >
-      <a href="#" class="hover:text-gray-300 block" v-for="menu in constants.MENU.list" :key="menu.key">
+      <a href="#" class="hover:text-gray-300 block" v-for="menu in constants.MENU.list" 
+        :key="menu.key"
+      >
         {{ menu.title }}
       </a>
       
@@ -48,8 +50,8 @@
           <font-awesome-icon :icon="social.fa" />
         </li>
       </ul>
-
     </div>
+
   </header>
 </template>
 
