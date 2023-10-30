@@ -76,6 +76,7 @@ export default {
     openModal(project) {
       // 모바일 환경에서는 확인 안되도록 처리
       if (this.device) {
+        alert('팝업은 PC버전에서 확인 가능합니다.');
         return false;
       }
 
