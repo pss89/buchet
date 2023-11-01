@@ -9,7 +9,7 @@ export default Object.freeze({
           Front/BackEnd 가리지 않고 개발하였고 BootStrap, AngularJs, Codeigniter, Laravel 등 다양한 프레임워크를 경험하였습니다.<br>
           그 외 Git, GitHub, Docker, Python(특정 모듈), Atlassian(Jira, Confluence, Bitbucket), Svn, Mysql 등의 다양한 개발 관련 프로그램들을 사용하여 어떤 업무든 적응에 자신 있습니다.<br><br>
 
-          그리고 사이드프로젝트를 통해 Vue, Python(FastAPI) 등에 대해 스터디 중입니다.<br><br>
+          그리고 사이드프로젝트를 통해 PHP(Laravel), Vue, Python(FastAPI) 등에 대해 스터디 중입니다.<br><br>
           잘 부탁드립니다.<br>
           감사합니다.
         </p>
