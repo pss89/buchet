@@ -5,6 +5,7 @@
         <h3 class="text-2xl font-bold">Buchet Introduction WebSite</h3>
         <p class="text-sm">Vue Version : {{ $vueVersion }}</p>
         <p class="text-sm">Device Info : {{ $isMobile ? '모바일' : 'PC' }}</p>
+        <p class="text-sm">System Mode : {{ $isDarkMode ? '다크모드 On' : '다크모드 Off' }}</p>
         <p class="text-sm">© 2023 All rights reserved.</p>
       </div>
     </div>

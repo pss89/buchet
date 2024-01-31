@@ -70,6 +70,18 @@ app.config.globalProperties.$isMobile = isMobile;
 // Vue.js 버전을 전역으로 설정
 app.config.globalProperties.$vueVersion = app.version;
 
+// 미디어 쿼리를 이용하여 다크 모드 설정 확인
+const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+// 초기 설정 및 변경 감지
+app.isDarkMode = darkModeMediaQuery.matches;
+darkModeMediaQuery.addEventListener('change', (e) => {
+  app.isDarkMode = e.matches;
+});
+
+// 다크모드 여부
+app.config.globalProperties.$isDarkMode = app.isDarkMode;
+
 // instance 에 사용 할 정보 제공
 app
 .use(router)
