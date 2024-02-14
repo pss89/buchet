@@ -1,5 +1,5 @@
 <template>
-  <header class="dark:bg-slate-900 flex items-center justify-between p-4 text-white">
+  <header class="dark:bg-slate-900 flex items-center justify-between p-4">
     
     <!-- 왼쪽 상단 로고 -->
     <a class="font-bold text-lg" href="/buchet">
@@ -30,7 +30,7 @@
     </ul>
 
     <!-- 햄버거 아이콘 (작은 화면에서만 보임) -->
-    <button class="md:hidden text-white" @click="toggleMenu">
+    <button class="md:hidden" @click="toggleMenu">
       <font-awesome-icon icon="fa-solid fa-bars" />
     </button>
 

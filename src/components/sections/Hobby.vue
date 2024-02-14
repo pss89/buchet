@@ -5,7 +5,7 @@
       <div v-for="hobby in constants.HOBBY.list" :key="hobby.key" class="dark:bg-slate-700 p-4 shadow-md">
         <img v-lazy="hobby.img" :alt="hobby.title" class="w-full h-auto mb-4">
         <h3 class="text-xl font-semibold mt-2">{{ hobby.title }}</h3>
-        <p class="text-white" v-html="hobby.description"></p>
+        <p v-html="hobby.description"></p>
       </div>
     </div>
   </div>
