@@ -14,7 +14,7 @@
   <div>
     <!-- 스크롤 시 TOP 버튼 보이기 -->
     <button
-      class="fixed bottom-16 right-4 dark:bg-slate-800 hover:bg-slate-700 text-white py-2 px-4 rounded-full shadow-lg"
+      class="fixed bottom-16 right-4 dark:bg-slate-800 hover:bg-slate-700 py-2 px-4 rounded-full shadow-lg"
       @click="scrollMoving('top')"
     >
       <!-- TOP -->
@@ -23,7 +23,7 @@
 
     <!-- 스크롤 시 BOTTOM 버튼 보이기 -->
     <button
-      class="fixed bottom-4 right-4 dark:bg-slate-800 hover:bg-slate-700 text-white py-2 px-4 rounded-full shadow-lg"
+      class="fixed bottom-4 right-4 dark:bg-slate-800 hover:bg-slate-700 py-2 px-4 rounded-full shadow-lg"
       @click="scrollMoving('bottom')"
     >
       <font-awesome-icon :icon="['fas', 'arrow-down']" />
