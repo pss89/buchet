@@ -12,7 +12,7 @@
       <!-- <a href="#" class="hover:text-gray-300" v-for="(menu, index) in constants.MENU.list" :key="menu.key"> -->
       <!-- :href="'#'+menu.key"  -->
       <a 
-        class="hover:text-gray-300 cursor-pointer"
+        class="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300"
         v-for="menu in constants.MENU.list"
         :key="menu.key"
         @click="scrollToSection(menu.key)"
