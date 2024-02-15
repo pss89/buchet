@@ -13,20 +13,22 @@
 
   <div>
     <!-- 스크롤 시 TOP 버튼 보이기 -->
-    <button
-      class="fixed bottom-16 right-4 dark:bg-slate-800 hover:bg-slate-700 py-2 px-4 rounded-full shadow-lg"
+    <!-- <button
+      class="fixed bottom-16 right-4 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 py-2 px-4 rounded-full shadow-lg"
       @click="scrollMoving('top')"
-    >
+    > -->
       <!-- TOP -->
-      <font-awesome-icon :icon="['fas', 'arrow-up']" />
-    </button>
+      <!-- <font-awesome-icon :icon="['fas', 'arrow-up']" />
+    </button> -->
 
     <!-- 스크롤 시 BOTTOM 버튼 보이기 -->
     <button
-      class="fixed bottom-4 right-4 dark:bg-slate-800 hover:bg-slate-700 py-2 px-4 rounded-full shadow-lg"
-      @click="scrollMoving('bottom')"
+      class="fixed bottom-4 right-4 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 py-2 px-4 rounded-full shadow-lg"
+      @click="scrollMoving()"
     >
-      <font-awesome-icon :icon="['fas', 'arrow-down']" />
+      <!-- <font-awesome-icon :icon="['fas', 'arrow-down']" /> -->
+      <font-awesome-icon v-if="isAtTop" :icon="['fas', 'arrow-down']" />
+      <font-awesome-icon v-else :icon="['fas', 'arrow-up']" />
     </button>
   </div>
 </template>
@@ -34,17 +36,29 @@
 <script>
 export default {
   name: 'Footer',
+  data() {
+    return {
+      isAtTop: true
+    }
+  },
   mounted() {
-    const vueVersion = this.$vueVersion;
-    console.log('Vue.js 버전:', vueVersion);
+    window.addEventListener('scroll', this.handleScroll);
+    // const vueVersion = this.$vueVersion;
+    // console.log('Vue.js 버전:', vueVersion);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
-    scrollMoving(type) {
-      if (type == 'top') {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } else {
+    scrollMoving() {
+      if (this.isAtTop) { // 탑일 경우 아래쪽으로 이동되어야 함
         window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
+    },
+    handleScroll() {
+      this.isAtTop = window.scrollY === 0;
     }
   }
 }
