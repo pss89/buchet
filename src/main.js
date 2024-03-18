@@ -46,7 +46,7 @@ const vuetify = createVuetify({
 });
 
 // 사용 할 fontawesome 추가
-library.add(fas, faBars ,faGithub, faInstagram )
+library.add(fas, faBars ,faGithub, faInstagram)
 
 // 앱 생성
 const app = createApp(App)
