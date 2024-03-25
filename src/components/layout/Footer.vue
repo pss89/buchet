@@ -14,12 +14,18 @@
   <div>
     <!-- 스크롤 시 top, bottom 버튼 보이기 -->
     <button
-      class="fixed bottom-4 right-4 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 py-2 px-4 rounded-full shadow-lg"
-      @click="scrollMoving()"
+      class="fixed bottom-16 right-4 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 py-2 px-4 rounded-full shadow-lg"
+      @click="scrollMoving('top')"
     >
-      <!-- <font-awesome-icon :icon="['fas', 'arrow-down']" /> -->
-      <font-awesome-icon v-if="isAtTop" :icon="['fas', 'arrow-down']" />
-      <font-awesome-icon v-else :icon="['fas', 'arrow-up']" />
+      <font-awesome-icon :icon="['fas', 'arrow-up']" />
+    </button>
+    <button
+      class="fixed bottom-4 right-4 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 py-2 px-4 rounded-full shadow-lg"
+      @click="scrollMoving('bottom')"
+    >
+      <font-awesome-icon :icon="['fas', 'arrow-down']" />
+      <!-- <font-awesome-icon v-if="isAtTop" :icon="['fas', 'arrow-down']" />
+      <font-awesome-icon v-else :icon="['fas', 'arrow-up']" /> -->
     </button>
   </div>
 </template>
@@ -41,12 +47,17 @@ export default {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
-    scrollMoving() {
-      if (this.isAtTop) { // 탑일 경우 아래쪽으로 이동되어야 함
-        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    scrollMoving(isType) {
+      if (isType === 'top') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
       }
+      // if (this.isAtTop) { // 탑일 경우 아래쪽으로 이동되어야 함
+      //   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+      // } else {
+      //   window.scrollTo({ top: 0, behavior: "smooth" });
+      // }
     },
     handleScroll() {
       this.isAtTop = window.scrollY === 0;
