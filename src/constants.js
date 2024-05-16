@@ -37,6 +37,7 @@ export default Object.freeze({
         ]
     },
     C_CAREER:{
+        startDate: '201511',
         subject:'경력 소개',
         list:[
             {
@@ -133,15 +134,26 @@ export default Object.freeze({
                 desc :
                 `
                 <div class="mb-2.5">
+                    <h4 class="font-bold text-red-500">CJ Digital Music 광고솔루션</h4>
+                    <ul class="list-none p-0 m-0">
+                        <li class="list-disc ml-5">백엔드 : 자사 MVC 패턴 프레임워크</li>
+                        <li class="list-disc ml-5">프론트 : HTML, CSS, JQUERY, JAVASCRIPT</li>
+                        <li class="list-disc ml-5">DB : AWS RDS MySQL</li>
+                        <li class="list-disc ml-5">웹서버 : Nginx</li>
+                        <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
+                        <li class="list-disc ml-5">담당업무 : 캠페인/슬롯/아이템/리포트/회원가입/로그인 등 백오피스 CRUD 개발, DB Dump 담당</li>
+                    </ul>
+                </div>
+                <div class="mb-2.5">
                     <h4 class="font-bold text-red-500">크로스미디어 광고솔루션</h4>
                     <ul class="list-none p-0 m-0">
                         <li class="list-disc ml-5">백엔드 : PHP Laravel 프레임워크</li>
                         <li class="list-disc ml-5">프론트 : HTML, CSS, JQUERY, JAVASCRIPT</li>
                         <li class="list-disc ml-5">DB : AWS RDS MySQL</li>
                         <li class="list-disc ml-5">웹서버 : Nginx</li>
-                        <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
+                        <li class="list-disc ml-5">서버 환경 : 자사 서버 IDC 호스팅 (CentOs)</li>
                         <li class="list-disc ml-5">기타 : Wecandeo CDN 서비스(API) 사용</li>
-                        <li class="list-disc ml-5">담당업무 : 캠페인/슬롯/아이템/리포트/회원가입/로그인 등 CRUD 및 백오피스 CRUD 개발, DB Dump 담당</li>
+                        <li class="list-disc ml-5">담당업무 : 캠페인/슬롯/아이템/리포트/회원가입/로그인 등 백오피스 CRUD 개발, DB Dump 담당</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
