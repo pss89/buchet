@@ -52,17 +52,6 @@ export default {
         return '';
       }
     },
-    // 시작일을 기준으로 현재까지의 경력을 연차로 계산해주는 함수
-    // calcCareer: function(startDate){
-    //   const today = new Date();
-    //   const year = today.getFullYear();
-    //   const month = today.getMonth() + 1;
-    //   const current = year * 100 + month;
-    //   const diff = current - startDate;
-
-    //   let careerYears = Math.floor(diff / 100)+"년차";
-    //   return "("+careerYears+")";
-    // },
 
     // 시작일을 기준으로 현재까지의 경력을 n년n월로 계산해주는 함수 ex) 7년10개월차
     calcCareer: function(startDate){
