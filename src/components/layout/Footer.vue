@@ -14,7 +14,7 @@
   <div>
     <!-- 스크롤 시 top, bottom 버튼 보이기 -->
     <button
-      class="fixed bottom-4 right-4 bg-slate-100 dark:bg-slate-800 hover:bg-slate-700 py-2 px-4 rounded-full shadow-lg"
+      class="fixed bottom-4 right-4 bg-slate-100 dark:bg-cyan-800 hover:bg-slate-500 py-2 px-4 rounded-full shadow-lg"
       @click="scrollMoving()"
     >
       <!-- <font-awesome-icon :icon="['fas', 'arrow-down']" /> -->
