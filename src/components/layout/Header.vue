@@ -1,5 +1,5 @@
 <template>
-  <header class="dark:bg-slate-900 flex items-center justify-between p-4">
+  <header class="sticky top-0 left-0 right-0 z-50 dark:bg-slate-900 flex items-center justify-between p-4">
     
     <!-- 왼쪽 상단 로고 -->
     <a class="font-bold text-lg" href="/buchet">

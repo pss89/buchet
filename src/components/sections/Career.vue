@@ -15,7 +15,7 @@
     </div>
 
     <!-- 제목 -->
-    <h1 class="text-4xl font-bold mb-6">{{ constants.C_CAREER.subject }}</h1>
+    <h1 class="text-4xl font-bold mb-6">{{ constants.C_CAREER.subject }} {{ calcCareer(constants.C_CAREER.startDate) }}</h1>
 
     <!-- <font-awesome-icon icon="arrow-right" class="text-gray-600" /> -->
     <!-- 반응형 그리드 레이아웃 -->
@@ -51,6 +51,25 @@ export default {
       } else {
         return '';
       }
+    },
+
+    // 시작일을 기준으로 현재까지의 경력을 n년n월로 계산해주는 함수 ex) 7년10개월차
+    calcCareer: function(startDate){
+      const startYear = parseInt(startDate.slice(0, 4));
+      const startMonth = parseInt(startDate.slice(4, 6)) - 1; // JavaScript의 월은 0부터 시작합니다.
+
+      const start = new Date(startYear, startMonth);
+      const now = new Date();
+
+      let years = now.getFullYear() - start.getFullYear();
+      let months = now.getMonth() - start.getMonth();
+
+      if (months < 0) {
+          years--;
+          months += 12;
+      }
+
+      return `(${years}년 ${months}개월차)`;
     }
   },
   inject: ['constants']
