@@ -14,7 +14,7 @@ export default defineConfig({
   },
   build: {
     outDir: 'docs',
-    publicPath: '/buchet/',
+    publicPath: '/',
     rollupOptions: {
       // input: '/buchet'
       input: 'src/main.js'
