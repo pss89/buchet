@@ -5,7 +5,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/buchet',
+  base: '/',
   plugins: [vue(), VueDevTools()],
   resolve: {
     alias: {
