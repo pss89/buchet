@@ -48,6 +48,7 @@
         class="hover:text-gray-300 block"
         v-for="menu in constants.MENU.list"
         :key="menu.key"
+        @click="scrollToSection(menu.key)"
       >
         {{ menu.title }}
       </a>
