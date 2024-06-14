@@ -19,8 +19,8 @@
     </div>
   </section>
 
-  <Modal :is-open="isModalOpen" :modalCode="modalCode" @close="isModalOpen = false">
-    <h3 class="text-center">{{ modalContent.codeTitle }}</h3>
+  <Modal :is-open="isModalOpen" :modalCode="modalCode" :page="'tech'" @close="isModalOpen = false">
+    <h3 class="text-center text-slate-900">{{ modalContent.codeTitle }}</h3>
     <CodeHighlight :code="modalContent.code" :language="modalContent.languageType" />
   </Modal>
 </template>

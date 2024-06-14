@@ -9,11 +9,11 @@
     </a>
 
     <!-- 가운데 상단 메뉴 (작은 화면에서는 숨김) -->
-    <div class="hidden md:flex space-x-8">
+    <div class="hidden md:flex space-x-8 text-white">
       <!-- <a href="#" class="hover:text-gray-300" v-for="(menu, index) in constants.MENU.list" :key="menu.key"> -->
       <!-- :href="'#'+menu.key"  -->
       <a
-        class="cursor-pointer text-white hover:text-gray-600 dark:hover:text-gray-300"
+        class="cursor-pointer hover:text-gray-600 dark:hover:text-gray-300"
         v-for="menu in constants.MENU.list"
         :key="menu.key"
         @click="scrollToSection(menu.key)"
@@ -22,7 +22,7 @@
       </a>
     </div>
 
-    <ul class="hidden md:flex space-x-4">
+    <ul class="hidden md:flex space-x-4 text-white">
       <li
         @click="pageMove(social.key)"
         v-for="social in constants.SOCIAL.list"
@@ -34,7 +34,7 @@
     </ul>
 
     <!-- 햄버거 아이콘 (작은 화면에서만 보임) -->
-    <button class="md:hidden" @click="toggleMenu">
+    <button class="md:hidden text-white" @click="toggleMenu">
       <font-awesome-icon icon="fa-solid fa-bars" />
     </button>
 
