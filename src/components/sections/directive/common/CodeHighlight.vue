@@ -1,5 +1,5 @@
 <template>
-    <pre class="text-xs h-32 overflow-y-auto h-96">
+    <pre class="text-xs overflow-y-auto">
         <code v-html="highlightedCode" />
     </pre>
 </template>
