@@ -5,7 +5,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
+  base: '/buchet',
   plugins: [vue(), VueDevTools()],
   resolve: {
     alias: {
@@ -14,7 +14,7 @@ export default defineConfig({
   },
   build: {
     outDir: 'docs',
-    publicPath: '/',
+    publicPath: '/buchet',
     rollupOptions: {
       // input: '/buchet'
       input: 'src/main.js'
