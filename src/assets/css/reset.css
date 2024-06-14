@@ -1,24 +1,31 @@
 /* css 변수 선언 */
-:root{
-    --text-color:#f0f4f5;
-    --background-color:#263343;
-    --accent-color:#d49466;
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  --accent-color: #d49466;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap'); */
 
 /* 기본 style 설정 */
-#app{
-    font-family: 'Noto Sans KR', sans-serif;
-    display:contents;
+#app {
+  font-family: 'Noto Sans KR', sans-serif;
+  display: contents;
 }
-.app{
-    /* height:90vh; */
-    /* width:100vw; */
+.app {
+  /* height:90vh; */
+  /* width:100vw; */
 }
 
-body {margin:0;}
+body {
+  margin: 0;
+}
 
-a{text-decoration: none;color:var(--text-color);}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
 
-h1{margin-block:0}
+h1 {
+  margin-block: 0;
+}

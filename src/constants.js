@@ -1,54 +1,92 @@
+import footballImage from '@/assets/img/main/football.png'
+
+import itMachine from '@/assets/img/main/it_machine.png'
+import movie from '@/assets/img/main/movie.png'
+import login from '@/assets/img/capture/mall/login.png'
+import mypage from '@/assets/img/capture/mall/mypage.png'
+import customer from '@/assets/img/capture/mall/customer.png'
+import cart from '@/assets/img/capture/mall/cart.png'
+import membership_coupon from '@/assets/img/capture/mall/membership_coupon.png'
+
+import allOrder from '@/assets/img/capture/erp/all_order.png'
+import orderCollection from '@/assets/img/capture/erp/order_collection.png'
+import orderDelivery from '@/assets/img/capture/erp/order_delivery.png'
+import integratedShipment from '@/assets/img/capture/erp/integrated_shipment.png'
+import login2 from '@/assets/img/capture/advertiser/login.png'
+import dashboard from '@/assets/img/capture/advertiser/dashboard.png'
+import item from '@/assets/img/capture/advertiser/item.png'
+import report from '@/assets/img/capture/advertiser/report.png'
+import reportDetail from '@/assets/img/capture/advertiser/report_detail.png'
+import statistics from '@/assets/img/capture/advertiser/statistics.png'
+import login3 from '@/assets/img/capture/monitoring/login.png'
+import performance from '@/assets/img/capture/monitoring/performance.png'
+import refreshSpeedRate from '@/assets/img/capture/monitoring/refresh_speed_rate.png'
+import php from '@/assets/img/main/php.png'
+import codeigniter from '@/assets/img/main/codeigniter.png'
+import laravel from '@/assets/img/main/laravel.png'
+import angular from '@/assets/img/main/angular.png'
+import bootstrap from '@/assets/img/main/bootstrap.png'
+import shellScript from '@/assets/img/main/shell_script.png'
+import python from '@/assets/img/main/python.png'
+import mysql from '@/assets/img/main/mysql.png'
+import api from '@/assets/img/main/api.png'
+import javascript from '@/assets/img/main/javascript.png'
+import jquery from '@/assets/img/main/jquery.png'
+import git from '@/assets/img/main/git.png'
+import github from '@/assets/img/main/github.png'
+import sourcetree from '@/assets/img/main/sourcetree.png'
+import slack from '@/assets/img/main/slack.png'
+import docker from '@/assets/img/main/docker.png'
+
 export default Object.freeze({
-    INTRO:{
-        description:`
+  INTRO: {
+    description: `
         <h2 class="text-2xl font-bold mb-4">안녕하세요! 박성식입니다.</h2>
-        <p>
-          저는 2015년부터 웹개발 경력을 이어가고 있습니다.<br><br>
+        <p>저는 2015년부터 웹개발 경력을 이어가고 있습니다.<br><br>
+        광고솔루션 백오피스, 자사 쇼핑몰, 그룹웨어, ERP 등 다양한 솔루션에 대한 웹개발을 해왔습니다.<br>
+        Front/BackEnd 가리지 않고 개발하였고 BootStrap, AngularJs, Codeigniter, Laravel 등 다양한 프레임워크를 경험하였습니다.<br>
+        그 외 Git, GitHub, Docker, Python(특정 모듈), Atlassian(Jira, Confluence, Bitbucket), Svn, Mysql 등의 다양한 개발 관련 프로그램들을 사용하여 어떤 업무든 적응에 자신 있습니다.<br><br>
 
-          광고솔루션 백오피스, 자사 쇼핑몰, 그룹웨어, ERP 등 다양한 솔루션에 대한 웹개발을 해왔습니다.<br>
-          Front/BackEnd 가리지 않고 개발하였고 BootStrap, AngularJs, Codeigniter, Laravel 등 다양한 프레임워크를 경험하였습니다.<br>
-          그 외 Git, GitHub, Docker, Python(특정 모듈), Atlassian(Jira, Confluence, Bitbucket), Svn, Mysql 등의 다양한 개발 관련 프로그램들을 사용하여 어떤 업무든 적응에 자신 있습니다.<br><br>
-
-          그리고 사이드프로젝트를 통해 PHP(Laravel), Vue, Python(FastAPI) 등에 대해 스터디 중입니다.<br><br>
-          잘 부탁드립니다.<br>
-          감사합니다.
+        그리고 사이드프로젝트를 통해 PHP(Laravel), Vue, Python(FastAPI) 등에 대해 스터디 중입니다.<br><br>
+        잘 부탁드립니다.<br>
+        감사합니다.
         </p>
         `
-    },
-    S_CAREER:{
-        subject : '학력 소개',
-        list : [
-            {
-                name : '청운대학교',
-                major : '컴퓨터학과',
-                period : {
-                    startDate : '200803',
-                    endDate : '201502'
-                }
-            },
-            {
-                name : '안산국제비즈니스고등학교',
-                major : '정보처리과',
-                period : {
-                    startDate : '200503',
-                    endDate : '200802'
-                }
-            }
-        ]
-    },
-    C_CAREER:{
-        startDate: '201511',
-        subject:'경력 소개',
-        list:[
-            {
-                name : '더비즈',
-                belong: '포털개발그룹',
-                position : '매니저',
-                period : {
-                    startDate : '202306',
-                    endDate : '202310'
-                },
-                desc : `
+  },
+  S_CAREER: {
+    subject: '학력 소개',
+    list: [
+      {
+        name: '청운대학교',
+        major: '컴퓨터학과',
+        period: {
+          startDate: '200803',
+          endDate: '201502'
+        }
+      },
+      {
+        name: '안산국제비즈니스고등학교',
+        major: '정보처리과',
+        period: {
+          startDate: '200503',
+          endDate: '200802'
+        }
+      }
+    ]
+  },
+  C_CAREER: {
+    startDate: '201511',
+    subject: '경력 소개',
+    list: [
+      {
+        name: '더비즈',
+        belong: '포털개발그룹',
+        position: '매니저',
+        period: {
+          startDate: '202306',
+          endDate: '202310'
+        },
+        desc: `
                 <div class="mb-2.5">
                     <h4 class="font-bold text-orange-400">자사 서비스 - 이실장</h4>
                     <ul class="list-none p-0 m-0">
@@ -62,16 +100,16 @@ export default Object.freeze({
                     </ul>
                 </div>
                 `
-            },
-            {
-                name : '오아',
-                belong: '개발본부/서버개발팀',
-                position : 'TL',
-                period : {
-                    startDate : '201904',
-                    endDate : '202303'
-                },
-                desc : `
+      },
+      {
+        name: '오아',
+        belong: '개발본부/서버개발팀',
+        position: 'TL',
+        period: {
+          startDate: '201904',
+          endDate: '202303'
+        },
+        desc: `
                 <div class="mb-2.5">
                     <h4 class="font-bold text-red-800">자사 쇼핑몰</h4>
                     <ul class="list-none p-0 m-0">
@@ -122,17 +160,16 @@ export default Object.freeze({
                     </ul>
                 </div>
                 `
-            },
-            {
-                name : '인터넷토마토',
-                belong: '개발팀',
-                position : '대리',
-                period : {
-                    startDate : '201511',
-                    endDate : '201812'
-                },
-                desc :
-                `
+      },
+      {
+        name: '인터넷토마토',
+        belong: '개발팀',
+        position: '대리',
+        period: {
+          startDate: '201511',
+          endDate: '201812'
+        },
+        desc: `
                 <div class="mb-2.5">
                     <h4 class="font-bold text-red-500">CJ Digital Music 광고솔루션</h4>
                     <ul class="list-none p-0 m-0">
@@ -192,222 +229,223 @@ export default Object.freeze({
                     </ul>
                 </div>
                 `
-            }
-        ]
-    },
-    MENU:{
-        list:[
-            {key:"intro",title:'소개'},
-            {key:"career",title:'경력'},
-            {key:"tech",title:'기술'},
-            {key:"project",title:'프로젝트'},
-            {key:"hobby",title:'취미'}
-        ]
-    },
-    SOCIAL:{
-        list:[
-            {key:"github",fa:"fa-brands fa-github"},
-            {key:"blog",fa:"fa-solid fa-blog"},
-            {key:"insta",fa:"fa-brands fa-instagram"}
-        ]
-    },
-    HOBBY:{
-        list:[
-            {
-                img:require('@/assets/img/main/football.png'),
-                title: "축구",
-                description: `
+      }
+    ]
+  },
+  MENU: {
+    list: [
+      { key: 'intro', title: '소개' },
+      { key: 'career', title: '경력' },
+      { key: 'tech', title: '기술' },
+      { key: 'project', title: '프로젝트' },
+      { key: 'hobby', title: '취미' }
+    ]
+  },
+  SOCIAL: {
+    list: [
+      { key: 'github', fa: 'fa-brands fa-github' },
+      { key: 'blog', fa: 'fa-solid fa-blog' },
+      { key: 'insta', fa: 'fa-brands fa-instagram' }
+    ]
+  },
+  HOBBY: {
+    list: [
+      {
+        // img: require('@/assets/img/main/football.png'),
+        img: footballImage,
+        title: '축구',
+        description: `
                 축구를 하는것도 좋아하지만 시청,직관 하는것을 더 좋아합니다.<br>업무를 하다 보면 필연적으로 스트레스가 쌓일 수 밖에 없는데 그 스트레스를 쌓아 두기 보단 빠르게 해소하는것을 지향합니다.
                 `
-            },
-            {
-                img:require('@/assets/img/main/it_machine.png'),
-                title: "IT기기",
-                description: `
+      },
+      {
+        img: itMachine,
+        title: 'IT기기',
+        description: `
                 IT기기에 관심이 많습니다.<br>특히 애플기기에 관심이 많아 주변에서 흔히 말하는 '앱등이' 라고 불리곤합니다.<br>IT 관련 직종을 하다보면 사소하게나마 도움이 될 때도 있습니다.
                 `
-            },
-            {
-                img:require('@/assets/img/main/movie.png'),
-                title: "영화",
-                description: `
+      },
+      {
+        img: movie,
+        title: '영화',
+        description: `
                 축구와 함게 유이하게 즐기는 문화생활입니다.<br>영화를 보다 보면 인문학적으로도 도움이 되는 부분이 있어 업무에서 문서작업을 하거나 소통을 할 때 조금이나마 도움이 되곤 합니다.
                 `
-            }
-        ]
-    },
-    PROJECT:{
-        list:[
-            {
-                code:"mall",
-                title:"자사 쇼핑몰",
-                isUse:true
-            },
-            {
-                code:"promotion",
-                title:"쇼핑몰 연계 프로모션 페이지",
-                isUse:false
-            },
-            {
-                code:"groupware",
-                title:"자사 그룹웨어",
-                isUse:false
-            },
-            {
-                code:"erp",
-                title:"자사 ERP",
-                isUse:true
-            },
-            {
-                code:"advertiser",
-                title:"광고솔루션 - 크로스미디어",
-                isUse:true
-            },
-            {
-                code:"admin",
-                title:"자사 관리자페이지",
-                isUse:false
-            },
-            {
-                code:"monitoring",
-                title:"모니터링 페이지",
-                isUse:true
-            }
-        ],
-        capture: {
-            mall:[
-                {
-                    title:'로그인',
-                    img:require('@/assets/img/capture/mall/login.png'),
-                },
-                {
-                    title:'마이페이지',
-                    img:require('@/assets/img/capture/mall/mypage.png'),
-                },
-                {
-                    title:'고객센터',
-                    img:require('@/assets/img/capture/mall/customer.png'),
-                },
-                {
-                    title:'장바구니',
-                    img:require('@/assets/img/capture/mall/cart.png'),
-                },
-                {
-                    title:'멤버십-쿠폰',
-                    img:require('@/assets/img/capture/mall/membership_coupon.png'),
-                }
-            ],
-            promotion:[
-                {
-                    title:'로그인',
-                    img:'img1'
-                },
-                {
-                    title:'로그인',
-                    img:'img2'
-                },
-                {
-                    title:'로그인',
-                    img:'img3'
-                }
-            ],
-            groupware:[
-                {
-                    title:'로그인',
-                    img:'img1'
-                },
-                {
-                    title:'로그인',
-                    img:'img2'
-                },
-                {
-                    title:'로그인',
-                    img:'img3'
-                }
-            ],
-            erp:[
-                {
-                    title:'전체주문',
-                    img:require('@/assets/img/capture/erp/all_order.png'),
-                },
-                {
-                    title:'주문수집',
-                    img:require('@/assets/img/capture/erp/order_collection.png'),
-                },
-                {
-                    title:'송장입력',
-                    img:require('@/assets/img/capture/erp/order_delivery.png'),
-                },
-                {
-                    title:'통합주문내역',
-                    img:require('@/assets/img/capture/erp/integrated_shipment.png'),
-                }
-            ],
-            advertiser:[
-                {
-                    title:'로그인',
-                    img:require('@/assets/img/capture/advertiser/login.png'),
-                },
-                {
-                    title:'대시보드',
-                    img:require('@/assets/img/capture/advertiser/dashboard.png'),
-                },
-                {
-                    title:'소재 등록',
-                    img:require('@/assets/img/capture/advertiser/item.png'),
-                },
-                {
-                    title:'리포트 목록',
-                    img:require('@/assets/img/capture/advertiser/report.png'),
-                },
-                {
-                    title:'리포트 상세',
-                    img:require('@/assets/img/capture/advertiser/report_detail.png'),
-                },
-                {
-                    title:'통계 페이지',
-                    img:require('@/assets/img/capture/advertiser/statistics.png'),
-                }
-            ],
-            admin:[
-                {
-                    title:'로그인',
-                    img:'img1'
-                },
-                {
-                    title:'로그인',
-                    img:'img2'
-                },
-                {
-                    title:'로그인',
-                    img:'img3'
-                }
-            ],
-            monitoring:[
-                {
-                    title:'로그인',
-                    img:require('@/assets/img/capture/monitoring/login.png'),
-                },
-                {
-                    title:'퍼포먼스 체크',
-                    img:require('@/assets/img/capture/monitoring/performance.png'),
-                },
-                {
-                    title:'속도 체크',
-                    img:require('@/assets/img/capture/monitoring/refresh_speed_rate.png'),
-                }
-            ]
+      }
+    ]
+  },
+  PROJECT: {
+    list: [
+      {
+        code: 'mall',
+        title: '자사 쇼핑몰',
+        isUse: true
+      },
+      {
+        code: 'promotion',
+        title: '쇼핑몰 연계 프로모션 페이지',
+        isUse: false
+      },
+      {
+        code: 'groupware',
+        title: '자사 그룹웨어',
+        isUse: false
+      },
+      {
+        code: 'erp',
+        title: '자사 ERP',
+        isUse: true
+      },
+      {
+        code: 'advertiser',
+        title: '광고솔루션 - 크로스미디어',
+        isUse: true
+      },
+      {
+        code: 'admin',
+        title: '자사 관리자페이지',
+        isUse: false
+      },
+      {
+        code: 'monitoring',
+        title: '모니터링 페이지',
+        isUse: true
+      }
+    ],
+    capture: {
+      mall: [
+        {
+          title: '로그인',
+          img: login
+        },
+        {
+          title: '마이페이지',
+          img: mypage
+        },
+        {
+          title: '고객센터',
+          img: customer
+        },
+        {
+          title: '장바구니',
+          img: cart
+        },
+        {
+          title: '멤버십-쿠폰',
+          img: membership_coupon
         }
-        
-    },
-    TECH:{
-        list:[
-            {
-                name:'PHP',
-                description:'웹개발에 주로 사용되는 인터프리터 서버언어 입니다. <br>실무에서 주로 사용 한 서버언어입니다.',
-                codeTitle:'네이버 리뷰 파싱 배치 함수',
-                languageType:'php',
-                code:`
+      ],
+      promotion: [
+        {
+          title: '로그인',
+          img: 'img1'
+        },
+        {
+          title: '로그인',
+          img: 'img2'
+        },
+        {
+          title: '로그인',
+          img: 'img3'
+        }
+      ],
+      groupware: [
+        {
+          title: '로그인',
+          img: 'img1'
+        },
+        {
+          title: '로그인',
+          img: 'img2'
+        },
+        {
+          title: '로그인',
+          img: 'img3'
+        }
+      ],
+      erp: [
+        {
+          title: '전체주문',
+          img: allOrder
+        },
+        {
+          title: '주문수집',
+          img: orderCollection
+        },
+        {
+          title: '송장입력',
+          img: orderDelivery
+        },
+        {
+          title: '통합주문내역',
+          img: integratedShipment
+        }
+      ],
+      advertiser: [
+        {
+          title: '로그인',
+          img: login2
+        },
+        {
+          title: '대시보드',
+          img: dashboard
+        },
+        {
+          title: '소재 등록',
+          img: item
+        },
+        {
+          title: '리포트 목록',
+          img: report
+        },
+        {
+          title: '리포트 상세',
+          img: reportDetail
+        },
+        {
+          title: '통계 페이지',
+          img: statistics
+        }
+      ],
+      admin: [
+        {
+          title: '로그인',
+          img: 'img1'
+        },
+        {
+          title: '로그인',
+          img: 'img2'
+        },
+        {
+          title: '로그인',
+          img: 'img3'
+        }
+      ],
+      monitoring: [
+        {
+          title: '로그인',
+          img: login3
+        },
+        {
+          title: '퍼포먼스 체크',
+          img: performance
+        },
+        {
+          title: '속도 체크',
+          img: refreshSpeedRate
+        }
+      ]
+    }
+  },
+  TECH: {
+    list: [
+      {
+        name: 'PHP',
+        description:
+          '웹개발에 주로 사용되는 인터프리터 서버언어 입니다. <br>실무에서 주로 사용 한 서버언어입니다.',
+        codeTitle: '네이버 리뷰 파싱 배치 함수',
+        languageType: 'php',
+        code: `
                 // 네이버 스마트 스토어 쇼핑몰 코드
                 $mechantNo = '1234567';
 
@@ -462,15 +500,16 @@ export default Object.freeze({
                 print_r($resultArray);
                 echo "</pre>";
                 `,
-                icon: require('@/assets/img/main/php.png'),
-                isComplete: true,
-            },
-            {
-                name:'Codeigniter',
-                description:'PHP 언어 베이스의 웹개발 프레임워크입니다. <br>MVC 아키텍쳐의 경량화 된 웹프레임워크입니다.<br>경력의 대부분을 Codeigniter 프레임워크를 사용하여 개발을 하였습니다.',
-                codeTitle:'네이버 배송상태 크롤리 소스코드',
-                languageType:'php',
-                code:`
+        icon: php,
+        isComplete: true
+      },
+      {
+        name: 'Codeigniter',
+        description:
+          'PHP 언어 베이스의 웹개발 프레임워크입니다. <br>MVC 아키텍쳐의 경량화 된 웹프레임워크입니다.<br>경력의 대부분을 Codeigniter 프레임워크를 사용하여 개발을 하였습니다.',
+        codeTitle: '네이버 배송상태 크롤리 소스코드',
+        languageType: 'php',
+        code: `
                 function deliveryTracker($params = array())
                 {
                     // 리턴해줄 배열
@@ -620,15 +659,16 @@ export default Object.freeze({
             
                     return $result;
                 }`,
-                icon: require('@/assets/img/main/codeigniter.png'),
-                isComplete: true,
-            },
-            {
-                name:'Laravel',
-                description:'PHP 언어 베이스의 웹개발 프레임워크입니다. <br>다양한 기능과 도구를 갖추고 있는 전체 스택 프레임워크이며 대표적인 PHP 언어 베이스의 프레임워크입니다.',
-                codeTitle:'라라벨 소셜라이트를 통한 소셜로그인 메서드',
-                languageType:'php',
-                code:`
+        icon: codeigniter,
+        isComplete: true
+      },
+      {
+        name: 'Laravel',
+        description:
+          'PHP 언어 베이스의 웹개발 프레임워크입니다. <br>다양한 기능과 도구를 갖추고 있는 전체 스택 프레임워크이며 대표적인 PHP 언어 베이스의 프레임워크입니다.',
+        codeTitle: '라라벨 소셜라이트를 통한 소셜로그인 메서드',
+        languageType: 'php',
+        code: `
                 use Laravel\\Socialite\\Facades\\Socialite;
 
                 class SocialController extends Controller
@@ -734,15 +774,16 @@ export default Object.freeze({
                     }
                 }
                 `,
-                icon: require('@/assets/img/main/laravel.png'),
-                isComplete: true,
-            },
-            {
-                name:'Angular',
-                description:'구글에서 개발한 자바스크립트 프론트엔드 프레임워크, 사용자와 상호작용하며 데이터를 효과적으로 제어하고 표시하는 데에 강력한 기능을 제공합니다.',
-                codeTitle:'AngularJs 커스팀 directive',
-                languageType:'javascript',
-                code:`
+        icon: laravel,
+        isComplete: true
+      },
+      {
+        name: 'Angular',
+        description:
+          '구글에서 개발한 자바스크립트 프론트엔드 프레임워크, 사용자와 상호작용하며 데이터를 효과적으로 제어하고 표시하는 데에 강력한 기능을 제공합니다.',
+        codeTitle: 'AngularJs 커스팀 directive',
+        languageType: 'javascript',
+        code: `
                 //쿠폰명 아래 쿠폰의 조건들을 노출해주는 부분
                 oaStoreApp.directive('couponCondition', function($filter){
                     return {
@@ -771,24 +812,25 @@ export default Object.freeze({
                 // 위 directive를 호출하는 방법
                 <coupon-condition coupon-info='{{coupon.condition}}'></coupon-condition>
                 `,
-                icon: require('@/assets/img/main/angular.png'),
-                isComplete: true,
-            },
-            {
-                name:'BootStrap',
-                description:'HTML, CSS 및 JavaScript를 사용하여 웹 애플리케이션과 웹 사이트를 빠르고 쉽게 디자인할 수 있도록 도움을 주는 오픈 소스 프론트엔드 프레임워크입니다.',
-                codeTitle:'bootstrap css 코드',
-                languageType:'css',
-                code:'',
-                icon: require('@/assets/img/main/bootstrap.png'),
-                isComplete: false,
-            },
-            {
-                name:'Shell Script',
-                description:'컴퓨터의 운영 체제 쉘(Shell)에서 실행되는 스크립트 언어입니다.',
-                codeTitle:'여러대의 원격서버에서 파일 가져오기 - 아파치 로그파일',
-                languageType:'bash',
-                code:`
+        icon: angular,
+        isComplete: true
+      },
+      {
+        name: 'BootStrap',
+        description:
+          'HTML, CSS 및 JavaScript를 사용하여 웹 애플리케이션과 웹 사이트를 빠르고 쉽게 디자인할 수 있도록 도움을 주는 오픈 소스 프론트엔드 프레임워크입니다.',
+        codeTitle: 'bootstrap css 코드',
+        languageType: 'css',
+        code: '',
+        icon: bootstrap,
+        isComplete: false
+      },
+      {
+        name: 'Shell Script',
+        description: '컴퓨터의 운영 체제 쉘(Shell)에서 실행되는 스크립트 언어입니다.',
+        codeTitle: '여러대의 원격서버에서 파일 가져오기 - 아파치 로그파일',
+        languageType: 'bash',
+        code: `
                 #!/bin/bash
 
                 ### define variable begin
@@ -824,15 +866,16 @@ export default Object.freeze({
                     scp -P 22 username@\${srv_ip}:/etc/httpd/conf/apachelogs/logfile.\${YESTER_DAY_FILE} \${DATA_PATH}/\${YESTER_DAY_FOLDER}/\${srv_ip}-logfile.\${YESTER_DAY_FILE}
                 done
                 `,
-                icon: require('@/assets/img/main/shell_script.png'),
-                isComplete: true,
-            },
-            {
-                name:'Python',
-                description:'파이썬은 간결하고 읽기 쉬운 문법을 가진 프로그래밍 언어로, 다양한 분야에서 사용되는 언어입니다.',
-                codeTitle:'Paramiko 모듈을 활용 한 원격서버 명령어 실행',
-                languageType:'python',
-                code:`
+        icon: shellScript,
+        isComplete: true
+      },
+      {
+        name: 'Python',
+        description:
+          '파이썬은 간결하고 읽기 쉬운 문법을 가진 프로그래밍 언어로, 다양한 분야에서 사용되는 언어입니다.',
+        codeTitle: 'Paramiko 모듈을 활용 한 원격서버 명령어 실행',
+        languageType: 'python',
+        code: `
                 #!/usr/bin/python
 
                 import sys
@@ -859,15 +902,15 @@ export default Object.freeze({
                 // 원격접속 닫기
                 client.close()
                 `,
-                icon: require('@/assets/img/main/python.png'),
-                isComplete: true,
-            },
-            {
-                name:'MySQL (DataBase)',
-                description:'MySQL은 오픈 소스 관계형 데이터베이스 관리 시스템(RDBMS)입니다.',
-                codeTitle:'제품 입고내역을 호출하기 위해 join,union 등을 사용 한 쿼리',
-                languageType:'sql',
-                code:`
+        icon: python,
+        isComplete: true
+      },
+      {
+        name: 'MySQL (DataBase)',
+        description: 'MySQL은 오픈 소스 관계형 데이터베이스 관리 시스템(RDBMS)입니다.',
+        codeTitle: '제품 입고내역을 호출하기 위해 join,union 등을 사용 한 쿼리',
+        languageType: 'sql',
+        code: `
                 SELECT *
                 FROM (
                 -- 구매정보 조회  
@@ -943,15 +986,16 @@ export default Object.freeze({
                 ORDER BY a.stk_dt, a.fg, a.stkorg_no
                 ;
                 `,
-                icon: require('@/assets/img/main/mysql.png'),
-                isComplete: true,
-            },
-            {
-                name:'API',
-                description:'애플리케이션 간 상호 작용을 위한 인터페이스로, 소프트웨어 구성 요소들이 서로 통신할 수 있도록 합니다.',
-                codeTitle:'공공데이터 포탈 - 미세먼지 정보 API 호출(php)',
-                languageType:'php',
-                code:`
+        icon: mysql,
+        isComplete: true
+      },
+      {
+        name: 'API',
+        description:
+          '애플리케이션 간 상호 작용을 위한 인터페이스로, 소프트웨어 구성 요소들이 서로 통신할 수 있도록 합니다.',
+        codeTitle: '공공데이터 포탈 - 미세먼지 정보 API 호출(php)',
+        languageType: 'php',
+        code: `
                 public function city_dust_avg_api(){
                     //서비스 사용을 위한 인증키
                     $service_key = SERVICE_KEY;
@@ -1030,15 +1074,15 @@ export default Object.freeze({
                     );
                 }
                 `,
-                icon: require('@/assets/img/main/api.png'),
-                isComplete: true,
-            },
-            {
-                name:'JavaScript',
-                description:'웹 페이지의 동적인 동작을 추가하기 위해 사용되는 프로그래밍 언어입니다.',
-                codeTitle:'자바스크립트 라이브러리 사용 - SweetAlert',
-                languageType:'javascript',
-                code:`
+        icon: api,
+        isComplete: true
+      },
+      {
+        name: 'JavaScript',
+        description: '웹 페이지의 동적인 동작을 추가하기 위해 사용되는 프로그래밍 언어입니다.',
+        codeTitle: '자바스크립트 라이브러리 사용 - SweetAlert',
+        languageType: 'javascript',
+        code: `
                 // js 로드
                 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
@@ -1077,15 +1121,16 @@ export default Object.freeze({
                     });
                 </script>
                 `,
-                icon: require('@/assets/img/main/javascript.png'),
-                isComplete: true,
-            },
-            {
-                name:'jQuery',
-                description:'자바스크립트 라이브러리로, HTML 문서의 요소를 조작하고 다루는 작업을 쉽게 만들어 줍니다.',
-                codeTitle:'jQuery를 활용 한 소셜 공유 기능',
-                languageType:'javascript',
-                code:`
+        icon: javascript,
+        isComplete: true
+      },
+      {
+        name: 'jQuery',
+        description:
+          '자바스크립트 라이브러리로, HTML 문서의 요소를 조작하고 다루는 작업을 쉽게 만들어 줍니다.',
+        codeTitle: 'jQuery를 활용 한 소셜 공유 기능',
+        languageType: 'javascript',
+        code: `
                 // 카카오 공유를 위한 라이브러리 로드
                 <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
                 <script>Kakao.init('KAKAO_API_KEY');</script>
@@ -1177,42 +1222,45 @@ export default Object.freeze({
                             break;
                     }
                 `,
-                icon: require('@/assets/img/main/jquery.png'),
-                isComplete: true,
-            },
-            {
-                name:'Git',
-                description:'버전 관리 시스템(VCS)으로, 코드 변경 사항을 추적하고 관리할 수 있는 도구입니다',
-                codeTitle:'git 사용법',
-                languageType:'bash',
-                code:'',
-                icon: require('@/assets/img/main/git.png'),
-                isComplete: false
-            },
-            {
-                name:'GitHub',
-                description:'깃을 기반으로 하는 웹 기반 호스팅 서비스로, 코드 저장소를 온라인으로 관리하고 협업할 수 있는 플랫폼입니다.',
-                codeTitle:'깃허브 링크',
-                languageType:'bash',
-                code:'',
-                icon: require('@/assets/img/main/github.png'),
-                isComplete: false
-            },
-            {
-                name:'SourceTree',
-                description:'Git 및 Mercurial 버전 관리 시스템을 사용하는 프로젝트를 관리하기 위한 무료 Git GUI 클라이언트입니다.',
-                codeTitle:'소스트리 사용법',
-                languageType:'bash',
-                code:'',
-                icon: require('@/assets/img/main/sourcetree.png'),
-                isComplete: false
-            },
-            {
-                name:'Slack',
-                description:'비즈니스 및 팀 커뮤니케이션을 위한 협업 플랫폼입니다.',
-                codeTitle:'slack postMessage API',
-                languageType:'php',
-                code:`
+        icon: jquery,
+        isComplete: true
+      },
+      {
+        name: 'Git',
+        description:
+          '버전 관리 시스템(VCS)으로, 코드 변경 사항을 추적하고 관리할 수 있는 도구입니다',
+        codeTitle: 'git 사용법',
+        languageType: 'bash',
+        code: '',
+        icon: git,
+        isComplete: false
+      },
+      {
+        name: 'GitHub',
+        description:
+          '깃을 기반으로 하는 웹 기반 호스팅 서비스로, 코드 저장소를 온라인으로 관리하고 협업할 수 있는 플랫폼입니다.',
+        codeTitle: '깃허브 링크',
+        languageType: 'bash',
+        code: '',
+        icon: github,
+        isComplete: false
+      },
+      {
+        name: 'SourceTree',
+        description:
+          'Git 및 Mercurial 버전 관리 시스템을 사용하는 프로젝트를 관리하기 위한 무료 Git GUI 클라이언트입니다.',
+        codeTitle: '소스트리 사용법',
+        languageType: 'bash',
+        code: '',
+        icon: sourcetree,
+        isComplete: false
+      },
+      {
+        name: 'Slack',
+        description: '비즈니스 및 팀 커뮤니케이션을 위한 협업 플랫폼입니다.',
+        codeTitle: 'slack postMessage API',
+        languageType: 'php',
+        code: `
                 // slack 메시지 전송을 위한 메서드
                 function send_slack_message($channel, $message, $username = '{userName}') {
                     // 요청 정보
@@ -1236,18 +1284,19 @@ export default Object.freeze({
                 // 위 함수 호출하기
                 send_slack_message('메시지 보낼 채널', '메시지 내용');
                 `,
-                icon: require('@/assets/img/main/slack.png'),
-                isComplete: true
-            },
-            {
-                name:'Docker',
-                description:'도커는 컨테이너화된 응용 프로그램을 만들고 배포하기 위한 오픈 소스 플랫폼입니다.',
-                codeTitle:'도커 사용법',
-                languageType:'bash',
-                code:'',
-                icon: require('@/assets/img/main/docker.png'),
-                isComplete: false
-            }
-        ]
-    }
+        icon: slack,
+        isComplete: true
+      },
+      {
+        name: 'Docker',
+        description:
+          '도커는 컨테이너화된 응용 프로그램을 만들고 배포하기 위한 오픈 소스 플랫폼입니다.',
+        codeTitle: '도커 사용법',
+        languageType: 'bash',
+        code: '',
+        icon: docker,
+        isComplete: false
+      }
+    ]
+  }
 })

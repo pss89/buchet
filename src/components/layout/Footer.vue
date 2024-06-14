@@ -32,26 +32,26 @@
 
 <script>
 export default {
-  name: 'Footer',
+  name: 'AppFooter',
   data() {
     return {
       isAtTop: true
     }
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll)
     // const vueVersion = this.$vueVersion;
     // console.log('Vue.js 버전:', vueVersion);
   },
-  destroyed() {
-    window.removeEventListener('scroll', this.handleScroll);
+  unmounted() {
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     scrollMoving(isType) {
       if (isType === 'top') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: 'smooth' })
       } else {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
       }
       // if (this.isAtTop) { // 탑일 경우 아래쪽으로 이동되어야 함
       //   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
@@ -60,7 +60,7 @@ export default {
       // }
     },
     handleScroll() {
-      this.isAtTop = window.scrollY === 0;
+      this.isAtTop = window.scrollY === 0
     }
   }
 }
