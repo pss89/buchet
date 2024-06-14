@@ -13,6 +13,7 @@ export default defineConfig({
   },
   build: {
     outDir: 'docs',
+    publicPath: '/buchet',
     rollupOptions: {
       // input: '/buchet'
       input: 'src/main.js'
@@ -22,8 +23,9 @@ export default defineConfig({
     fs: {
       strict: true
     }
-  },
-  esbuild: {
-    include: ['vue-meta']
   }
+  // ,
+  // esbuild: {
+  //   include: ['vue-meta']
+  // }
 })
