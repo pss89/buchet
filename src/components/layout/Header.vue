@@ -41,7 +41,7 @@
     <!-- 모바일 메뉴 (작은 화면에서만 보임) -->
     <div
       v-show="showMenu"
-      class="bg-slate-100 md:hidden absolute top-16 right-0 dark:bg-slate-900 rounded shadow-md p-6 space-y-2"
+      class="bg-slate-900 md:hidden absolute top-16 right-0 text-white dark:bg-slate-900 rounded shadow-md p-6 space-y-2"
     >
       <a
         href="#"
