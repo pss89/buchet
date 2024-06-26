@@ -1,0 +1,1 @@
+import{_ as a,o as t,c as n,a as r,t as o}from"./index-CI4VGAZa.js";const s={name:"Info",setup(){}};function c(e,u,p,l,f,i){return t(),n("div",null,[r("h1",null,o(e.$route.query.name)+" / "+o(e.$route.query.age),1)])}const d=a(s,[["render",c]]);export{d as default};

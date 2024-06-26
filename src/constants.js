@@ -79,6 +79,51 @@ export default Object.freeze({
     subject: '경력 소개',
     list: [
       {
+        name: '클린일렉스',
+        belong: '서버개발팀',
+        position: '선임연구원',
+        period: {
+          startDate: '202310',
+          endDate: ''
+        },
+        desc: `
+              <div class="mb-2.5">
+                    <h4 class="font-bold text-blue-500">CSMS 관리자페이지 개발 및 유지보수</h4>
+                    <ul class="list-none p-0 m-0">
+                        <li class="list-disc ml-5">백엔드 : PHP Legacy Code</li>
+                        <li class="list-disc ml-5">프론트 : JavaScript & JQuery</li>
+                        <li class="list-disc ml-5">DB : 클라우드호스팅(IDC) DB 서버 및 자체 DB 서버</li>
+                        <li class="list-disc ml-5">웹서버 : Apache</li>
+                        <li class="list-disc ml-5">서버 환경 : 클라우드호스팅(IDC) - CentOS</li>
+                        <li class="list-disc ml-5">업무 : 이슈 처리 및 유지보수, 신규기능(로밍 서비스) 개발, 서버사이드(리눅스) 개발 등</li>
+                    </ul>
+                </div>
+                <div class="mb-2.5">
+                    <h4 class="font-bold text-blue-500">CSMS 앱(하이브리드 앱) 페이지 개발 및 유지보수</h4>
+                    <ul class="list-none p-0 m-0">
+                        <li class="list-disc ml-5">백엔드 : PHP Legacy Code</li>
+                        <li class="list-disc ml-5">프론트 : JavaScript & JQuery</li>
+                        <li class="list-disc ml-5">DB : 클라우드호스팅(IDC) DB 서버 및 자체 DB 서버</li>
+                        <li class="list-disc ml-5">웹서버 : Apache</li>
+                        <li class="list-disc ml-5">서버 환경 : 클라우드호스팅(IDC) - CentOS</li>
+                        <li class="list-disc ml-5">업무 : 이슈 처리 및 유지보수 등</li>
+                    </ul>
+                </div>
+                <div class="mb-2.5">
+                    <h4 class="font-bold text-blue-500">자사 홈페이지 개발 및 유지보수</h4>
+                    <ul class="list-none p-0 m-0">
+                        <li class="list-disc ml-5">백엔드 : PHP Legacy Code</li>
+                        <li class="list-disc ml-5">프론트 : JavaScript & JQuery</li>
+                        <li class="list-disc ml-5">DB : 클라우드호스팅(IDC) DB 서버 및 자체 DB 서버</li>
+                        <li class="list-disc ml-5">웹서버 : Apache</li>
+                        <li class="list-disc ml-5">서버 환경 : 클라우드호스팅(IDC) - CentOS</li>
+                        <li class="list-disc ml-5">업무 : 이슈 처리 및 유지보수, Legacy 코드 리팩토링 등</li>
+                        <li class="list-disc ml-5">기타 : 이지페이 결제모듈 연동</li>
+                    </ul>
+                </div>
+                `
+      },
+      {
         name: '더비즈',
         belong: '포털개발그룹',
         position: '매니저',
@@ -95,7 +140,7 @@ export default Object.freeze({
                         <li class="list-disc ml-5">DB : AWS RDS MariaDB</li>
                         <li class="list-disc ml-5">웹서버 : Nginx</li>
                         <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
-                        <li class="list-disc ml-5">담당업무 : CS 이슈 처리 , 통합회원 SSO 솔루션 연동, 통합회원으로 인한 기존 로그인/회원가입 변경 등</li>
+                        <li class="list-disc ml-5">업무 : CS 이슈 처리 , 통합회원 SSO 솔루션 연동, 통합회원으로 인한 기존 로그인/회원가입 변경 등</li>
                         <li class="list-disc ml-5"><a class="underline underline-offset-2" href="https://www.aipartner.com/" target="_blank">이실장 서비스 링크</a></li>
                     </ul>
                 </div>
@@ -118,8 +163,8 @@ export default Object.freeze({
                         <li class="list-disc ml-5">DB : AWS RDS MySQL</li>
                         <li class="list-disc ml-5">웹서버 : Apache</li>
                         <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
+                        <li class="list-disc ml-5">업무 : 회원가입,로그인,마이페이지,쿠폰,포인트,장바구니,기상/미세먼지 정보를 톨한 상품추천,고객센터 페이지 등</li>
                         <li class="list-disc ml-5">기타 : 공공데이터 포털 API(기상/미세먼지 정보), Batch(Crontab), 이니시스 결제 모듈 등</li>
-                        <li class="list-disc ml-5">담당업무 : 회원가입,로그인,마이페이지,쿠폰,포인트,장바구니,기상/미세먼지 정보를 톨한 상품추천,고객센터 페이지 등</li>
                         <li class="list-disc ml-5"><a class="underline underline-offset-2" href="https://store.oa-world.com/" target="_blank">오아스토어 링크</a></li>
                     </ul>
                 </div>
@@ -131,8 +176,8 @@ export default Object.freeze({
                         <li class="list-disc ml-5">DB : AWS RDS MySQL</li>
                         <li class="list-disc ml-5">웹서버 : Apache</li>
                         <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
+                        <li class="list-disc ml-5">업무 : 프로모션별 프론트-백엔드 연동, 백엔드 db 트랜잭션, db 설계 담당</li>
                         <li class="list-disc ml-5">기타 : single page 스크롤링, 랜덤쿠폰, withCredentials 를 통한 스토어 상품구매 연동 등</li>
-                        <li class="list-disc ml-5">담당업무 : 프로모션별 프론트-백엔드 연동, 백엔드 db 트랜잭션, db 설계 담당</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
@@ -143,8 +188,8 @@ export default Object.freeze({
                         <li class="list-disc ml-5">DB : AWS RDS MySQL</li>
                         <li class="list-disc ml-5">웹서버 : Apache</li>
                         <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
+                        <li class="list-disc ml-5">업무 : 스토어 관리자 기능인 쿠폰/포인트/회원내역/주문내역 등의 기능, 사내 주차관리 기능</li>
                         <li class="list-disc ml-5">기타 : 공공데이터 포털 API(공휴일 정보), 이니시스 결제 모듈 등</li>
-                        <li class="list-disc ml-5">담당업무 : 스토어 관리자 기능인 쿠폰/포인트/회원내역/주문내역 등의 기능, 사내 주차관리 기능</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
@@ -155,8 +200,8 @@ export default Object.freeze({
                         <li class="list-disc ml-5">DB : AWS RDS MySQL</li>
                         <li class="list-disc ml-5">웹서버 : Apache</li>
                         <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
+                        <li class="list-disc ml-5">업무 : 백엔드 API 개발, ERP 흐름에 대한 구조 및 DB 설계</li>
                         <li class="list-disc ml-5">기타 : 사방넷 솔루션, Batch(Crontab) 등</li>
-                        <li class="list-disc ml-5">담당업무 : 백엔드 API 개발, ERP 흐름에 대한 구조 및 DB 설계</li>
                     </ul>
                 </div>
                 `
@@ -178,7 +223,7 @@ export default Object.freeze({
                         <li class="list-disc ml-5">DB : AWS RDS MySQL</li>
                         <li class="list-disc ml-5">웹서버 : Nginx</li>
                         <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
-                        <li class="list-disc ml-5">담당업무 : 캠페인/슬롯/아이템/리포트/회원가입/로그인 등 백오피스 CRUD 개발, DB Dump 담당</li>
+                        <li class="list-disc ml-5">업무 : 캠페인/슬롯/아이템/리포트/회원가입/로그인 등 백오피스 CRUD 개발, DB Dump 담당</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
@@ -189,8 +234,8 @@ export default Object.freeze({
                         <li class="list-disc ml-5">DB : AWS RDS MySQL</li>
                         <li class="list-disc ml-5">웹서버 : Nginx</li>
                         <li class="list-disc ml-5">서버 환경 : 자사 서버 IDC 호스팅 (CentOs)</li>
+                        <li class="list-disc ml-5">업무 : 캠페인/슬롯/아이템/리포트/회원가입/로그인 등 백오피스 CRUD 개발, DB Dump 담당</li>
                         <li class="list-disc ml-5">기타 : Wecandeo CDN 서비스(API) 사용</li>
-                        <li class="list-disc ml-5">담당업무 : 캠페인/슬롯/아이템/리포트/회원가입/로그인 등 백오피스 CRUD 개발, DB Dump 담당</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
@@ -201,7 +246,7 @@ export default Object.freeze({
                         <li class="list-disc ml-5">DB : 자사 서버 IDC 호스팅(코로케이션) - MySQL</li>
                         <li class="list-disc ml-5">웹서버 : Nginx</li>
                         <li class="list-disc ml-5">서버 환경 : CentOS</li>
-                        <li class="list-disc ml-5">담당업무 : 전체 개발 담당(물리/vm 서버 관리, 기타장비 관리, 스냅샷 로그 관리 등)</li>
+                        <li class="list-disc ml-5">업무 : 전체 개발 담당(물리/vm 서버 관리, 기타장비 관리, 스냅샷 로그 관리 등)</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
@@ -212,8 +257,8 @@ export default Object.freeze({
                         <li class="list-disc ml-5">DB : 자사 서버 IDC 호스팅(코로케이션) - MySQL</li>
                         <li class="list-disc ml-5">웹서버 : Nginx</li>
                         <li class="list-disc ml-5">서버 환경 : CentOS</li>
+                        <li class="list-disc ml-5">업무 : 업체 서버 모니터링 페이지 개발</li>
                         <li class="list-disc ml-5">기타 : FusionCharts 라이브러리 사용</li>
-                        <li class="list-disc ml-5">담당업무 : 업체 서버 모니터링 페이지 개발</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
@@ -224,7 +269,7 @@ export default Object.freeze({
                         <li class="list-disc ml-5">DB : 자체 서버 IDC 호스팅(코로케이션) - MySQL</li>
                         <li class="list-disc ml-5">웹서버 : Nginx</li>
                         <li class="list-disc ml-5">서버 환경 : CentOS</li>
-                        <li class="list-disc ml-5">담당업무 : 거래처 요청에 따른 개발 및 유지보수</li>
+                        <li class="list-disc ml-5">업무 : 거래처 요청에 따른 개발 및 유지보수</li>
                         <li class="list-disc ml-5"><a class="underline underline-offset-2" href="https://www.gamey.kr/" target="_blank">게임와이 링크</a></li>
                     </ul>
                 </div>
