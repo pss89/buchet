@@ -107,6 +107,7 @@ export default Object.freeze({
                         <li class="list-disc ml-5">웹서버 : Apache</li>
                         <li class="list-disc ml-5">서버 환경 : 클라우드호스팅(IDC) - CentOS</li>
                         <li class="list-disc ml-5">업무 : 이슈 처리 및 유지보수 등</li>
+                        <li class="list-disc ml-5">기타 : PASS 연동 개발 진행</li>
                     </ul>
                 </div>
                 <div class="mb-2.5">
