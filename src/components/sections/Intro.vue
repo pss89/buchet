@@ -10,7 +10,7 @@
     </div>
 
     <!-- 자기소개 내용 영역 -->
-    <div class="w-full md:w-2/3 md:ml-8 mt-4 md:mt-0" v-html="constants.INTRO.description"></div>
+    <div class="w-full break-keep md:w-2/3 md:ml-8 mt-4 md:mt-0" v-html="constants.INTRO.description"></div>
   </div>
 </template>
 

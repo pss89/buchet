@@ -1,0 +1,1 @@
+import{_ as o,o as e,c as t,a as s}from"./index-CmhStfek.js";const c={},a={class:"not-found"},n=s("div",{class:"status"}," 404 ",-1),_=s("div",{class:"message"}," Page Not Found! ",-1),d=[n,_];function r(i,f){return e(),t("div",a,d)}const u=o(c,[["render",r]]);export{u as default};
