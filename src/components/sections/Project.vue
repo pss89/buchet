@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-4 text-slate-700" id="project">
+  <div class="container mx-auto px-4" id="project">
     <h2 class="text-3xl font-bold text-left mb-8">프로젝트</h2>
     <div class="w-full sm:w-3/3 md:w-2/2 lg:w-3/3 xl:w-4/4 mx-auto">
       <v-carousel
