@@ -6,11 +6,13 @@
         <p class="text-sm">Vue Version : {{ $vueVersion }}</p>
         <p class="text-sm">Device Info : {{ $isMobile ? 'Mobile' : 'PC' }}</p>
         <p class="text-sm">System Mode : {{ $isDarkMode ? 'DarkMode On' : 'DarkMode Off' }}</p>
+        <!-- <p class="text-sm">System Mode : <button @click="darkModeToggle()">DarkMode{{ isDarkMode ? ' On' : ' Off' }}</button></p> -->
         <p class="text-sm">© 2023 All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <!-- :class = "{ 'bg-slate-100' : !isDarkMode, 'dark:bg-slate-700' : isDarkMode }" -->
   <div>
     <!-- 스크롤 시 top, bottom 버튼 보이기 -->
     <button
@@ -24,8 +26,6 @@
       @click="scrollMoving('bottom')"
     >
       <font-awesome-icon :icon="['fas', 'arrow-down']" />
-      <!-- <font-awesome-icon v-if="isAtTop" :icon="['fas', 'arrow-down']" />
-      <font-awesome-icon v-else :icon="['fas', 'arrow-up']" /> -->
     </button>
   </div>
 </template>
@@ -35,13 +35,12 @@ export default {
   name: 'AppFooter',
   data() {
     return {
-      isAtTop: true
+      isAtTop: true,
+      isDarkMode: this.$isDarkMode
     }
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
-    // const vueVersion = this.$vueVersion;
-    // console.log('Vue.js 버전:', vueVersion);
   },
   unmounted() {
     window.removeEventListener('scroll', this.handleScroll)
@@ -53,15 +52,19 @@ export default {
       } else {
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
       }
-      // if (this.isAtTop) { // 탑일 경우 아래쪽으로 이동되어야 함
-      //   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-      // } else {
-      //   window.scrollTo({ top: 0, behavior: "smooth" });
-      // }
     },
     handleScroll() {
       this.isAtTop = window.scrollY === 0
+    },
+    darkModeToggle() {
+      // 다크 모드를 토글합니다.
+      this.isDarkMode = !this.isDarkMode;
+      // 전역 프로퍼티를 업데이트합니다.
+      this.$root.$isDarkMode = this.isDarkMode;
     }
+  },
+  watch: {
+
   }
 }
 </script>
