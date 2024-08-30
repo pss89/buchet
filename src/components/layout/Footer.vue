@@ -5,6 +5,7 @@
         <h3 class="text-2xl font-bold">Buchet Introduction WebSite</h3>
         <p class="text-sm">Vue Version : {{ $vueVersion }}</p>
         <p class="text-sm">Device Info : {{ $isMobile ? 'Mobile' : 'PC' }}</p>
+        <!-- DARK 모드를 토글, 시스템으로 할 지 정하는 걸로 가야함 -->
         <p class="text-sm">
           System Mode : 
           <button @click="toggleDarkMode">DarkMode

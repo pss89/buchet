@@ -93,7 +93,7 @@ darkModeMediaQuery.addEventListener('change', (e) => {
 })
 
 // 다크모드 여부
-app.config.globalProperties.$isDarkMode = app.isDarkMode
+app.config.globalProperties.$SystemDarkMode = app.isDarkMode
 // app.config.devtools = process.env.NODE_ENV === 'development'
 // app.config.devtools = false
 
