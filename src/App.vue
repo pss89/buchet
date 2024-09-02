@@ -1,5 +1,8 @@
 <template>
-  <div class="app dark:bg-slate-800 dark:text-white">
+  <div :class="{
+    'bg-slate-800 text-white' : isDarkMode,
+    'app' : true 
+  }">
     <AppHeader />
     <!-- router 처리 할 때 사용 -->
     <!-- <main class="app-main"> -->
@@ -25,6 +28,8 @@ import Project from './components/sections/Project.vue'
 import Hobby from './components/sections/Hobby.vue'
 import AppFooter from './components/layout/Footer.vue'
 
+import { isDarkMode } from './components/js/useDarkMode';
+
 // 컴포넌트 정의
 export default {
   name: 'App', // 컴포넌트 이름, 필수 항목 x
@@ -40,7 +45,9 @@ export default {
   },
   data() {
     // 컴포넌트 내부 데이터
-    return {}
+    return {
+      isDarkMode: isDarkMode
+    }
   },
   computed: {
     // 계산된 속성정보 ex) 기존 데이터를 기반으로 새로운 데이터 계산

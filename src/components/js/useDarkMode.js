@@ -1,9 +1,16 @@
 import { ref, computed, watch } from 'vue';
 
-const darkMode = ref(JSON.parse(sessionStorage.getItem('dark-mode')) || false);
+// const SystemDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const darkMode = ref(JSON.parse(localStorage.getItem('dark-mode')) || false);
+
+// console.log(SystemDarkMode);
+// console.log(darkMode.value);
+// if (SystemDarkMode && !darkMode.value) {
+//     darkMode.value = true;
+// }
 
 watch(darkMode, (newVal) => {
-    sessionStorage.setItem('dark-mode', JSON.stringify(newVal));
+    localStorage.setItem('dark-mode', JSON.stringify(newVal));
 });
 
 function toggleDarkMode() {

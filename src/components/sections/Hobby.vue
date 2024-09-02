@@ -6,8 +6,8 @@
       <div v-for="hobby in constants.HOBBY.list" :key="hobby.key" 
         :class="{
           'bg-white text-slate-950' : !isDarkMode, 
-          'bg-slate-700 text-white' : isDarkMode,
-          'dark:bg-slate-700 p-4 shadow-md' : true}"
+          'bg-slate-700 text-white dark:bg-slate-700' : isDarkMode,
+          'p-4 shadow-md' : true}"
         >
         <img v-lazy="hobby.img" :alt="hobby.title" class="w-full h-auto mb-4">
         <h3 class="text-xl font-semibold mt-2">{{ hobby.title }}</h3>

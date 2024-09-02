@@ -1,6 +1,7 @@
 <template>
   <header
-    class="sticky top-0 left-0 right-0 z-50 bg-slate-900 dark:bg-slate-900 flex items-center justify-between p-4"
+    class="bg-slate-900 sticky top-0 left-0 right-0 z-50 
+      flex items-center justify-between p-4"
   >
     <!-- 왼쪽 상단 로고 -->
     <a class="font-bold text-lg" href="/buchet">
@@ -41,7 +42,7 @@
     <!-- 모바일 메뉴 (작은 화면에서만 보임) -->
     <div
       v-show="showMenu"
-      class="bg-slate-900 md:hidden absolute top-16 right-0 text-white dark:bg-slate-900 rounded shadow-md p-6 space-y-2"
+      class="bg-slate-900 md:hidden absolute top-16 right-0 text-white rounded shadow-md p-6 space-y-2"
     >
       <a
         href="#"
