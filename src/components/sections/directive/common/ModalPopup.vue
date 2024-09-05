@@ -6,20 +6,23 @@
       :class="modalCode ? 'dark:bg-slate-700' : 'bg-white'"
     >-->
     <div
-      class="rounded-lg shadow-md p-4 opacity-100 z-50 w-full sm:w-3/4 md:w-3/4 lg:w-4/4 h-auto bg-slate-400"
+      class="rounded-lg shadow-md p-4 opacity-100 z-50 w-full 
+        sm:w-3/4 md:w-3/4 lg:w-4/4 h-auto bg-slate-400"
     >
       <slot></slot>
       <div class="flex float-right">
         <button
           v-if="page === 'tech'"
           @click="copyToClipboard"
-          class="mt-4 bg-lime-300 hover:bg-lime-400 text-gray-800 font-semibold py-2 px-4 rounded mr-2"
+          class="mt-4 bg-lime-300 hover:bg-lime-400 text-gray-800 
+            font-semibold py-2 px-4 rounded mr-2"
         >
           Copy
         </button>
         <button
           @click="closeModal"
-          class="mt-4 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded"
+          class="mt-4 bg-gray-300 hover:bg-gray-400 text-gray-800 
+            font-semibold py-2 px-4 rounded"
         >
           Close
         </button>

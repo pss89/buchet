@@ -15,8 +15,8 @@
           @click="openModal(project)"
         >
           <v-sheet height="100%">
-            <div
-              class="flex items-center justify-center cursor-pointer h-full bg-slate-600 hover:bg-slate-500 transition"
+            <div class="flex items-center justify-center cursor-pointer h-full
+               bg-slate-600 hover:bg-slate-500 transition"
             >
               <div class="text-3xl font-semibold text-white">
                 {{ project.title }}
@@ -48,6 +48,7 @@
 
 <script>
 import Modal from '@/components/sections/directive/common/ModalPopup.vue'
+import { isDarkMode } from '../js/useDarkMode';
 
 export default {
   name: 'ProjectCard',
@@ -66,7 +67,8 @@ export default {
   data() {
     return {
       isModalOpen: false,
-      modalCode: 'N'
+      modalCode: 'N',
+      isDarkMode: isDarkMode,
     }
   },
   methods: {

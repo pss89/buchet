@@ -4,7 +4,8 @@
       <h2 class="text-3xl font-bold text-left mb-8">경험 한 기술</h2>
       <!-- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> -->
       <div
-        class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 md:grid-cols-3 md:gap-10 lg:grid-cols-4 lg:gap-12"
+        class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 md:grid-cols-3 
+          md:gap-10 lg:grid-cols-4 lg:gap-12"
       >
         <LanguageItem
           v-for="tech in constants.TECH.list"

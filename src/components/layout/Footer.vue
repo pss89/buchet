@@ -7,7 +7,10 @@
         <p class="text-sm">Device Info : {{ isMobile ? 'Mobile' : 'PC' }}</p>
         <!-- DARK 모드를 토글, 시스템으로 할 지 정하는 걸로 가야함 -->
         <p class="text-sm">
-          System Mode : 
+          System Theme : 
+          <!-- <button>White</button>
+          <button>Dark</button>
+          <button>System</button> -->
           <button @click="toggleDarkMode">DarkMode
             <span :class="{
               'bg-stone-950' : isDarkMode, 
@@ -58,11 +61,21 @@ function scrollMoving(isType) {
 </script>
 <script>
 export default {
+<<<<<<< HEAD
   name: "AppFooter",
   data() {
     return {
       isMobile : this.$isMobile,
     }
+=======
+  name: 'AppFooter',
+  props: {
+    $vueVersion: String,
+    $isMobile: Boolean
+  },
+  setup() {
+    return { toggleDarkMode, isDarkMode }
+>>>>>>> d99cbad8778ab48ce2508e964596c978514723b8
   }
 }
 </script>

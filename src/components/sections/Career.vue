@@ -6,7 +6,8 @@
     <!-- 반응형 그리드 레이아웃 -->
     <div class="grid grid-cols-1 mb-10 md:grid-cols-2 gap-6">
       <!-- 학력 소개 영역 -->
-      <div v-for="s_career in constants.S_CAREER.list" :key="s_career.key" class="p-4 border rounded shadow-md">
+      <div v-for="s_career in constants.S_CAREER.list" :key="s_career.key" 
+        class="p-4 border rounded shadow-md">
         <h2 class="text-2xl font-bold">{{ s_career.name }}</h2>
         <p>{{ s_career.major }}</p>
         <p>{{ formatDate(s_career.period.startDate) }} ~ {{ formatDate(s_career.period.endDate) }}</p>
