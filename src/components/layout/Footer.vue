@@ -4,7 +4,7 @@
       <div class="text-center md:text-left mb-4 md:mb-0">
         <h3 class="text-2xl font-bold">Buchet Introduction WebSite</h3>
         <p class="text-sm">Vue Version : {{ $vueVersion }}</p>
-        <p class="text-sm">Device Info : {{ $isMobile ? 'Mobile' : 'PC' }}</p>
+        <p class="text-sm">Device Info : {{ isMobile ? 'Mobile' : 'PC' }}</p>
         <!-- DARK 모드를 토글, 시스템으로 할 지 정하는 걸로 가야함 -->
         <p class="text-sm">
           System Mode : 
@@ -53,6 +53,16 @@ function scrollMoving(isType) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }
+}
+</script>
+<script>
+export default {
+  name: "AppFooter",
+  data() {
+    return {
+      isMobile : this.$isMobile,
+    }
   }
 }
 </script>
