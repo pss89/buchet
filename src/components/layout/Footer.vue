@@ -3,7 +3,7 @@
     <div class="container mx-auto flex flex-col items-center">
       <div class="text-center md:text-left mb-4 md:mb-0">
         <h3 class="text-2xl font-bold">Buchet Introduction WebSite</h3>
-        <p class="text-sm">Vue Version : {{ $vueVersion }}</p>
+        <p class="text-sm">Vue Version : {{ vueVersion }}</p>
         <p class="text-sm">Device Info : {{ isMobile ? 'Mobile' : 'PC' }}</p>
         <!-- DARK 모드를 토글, 시스템으로 할 지 정하는 걸로 가야함 -->
         <p class="text-sm">
@@ -61,21 +61,12 @@ function scrollMoving(isType) {
 </script>
 <script>
 export default {
-<<<<<<< HEAD
   name: "AppFooter",
   data() {
     return {
+      vueVersion : this.$vueVersion,
       isMobile : this.$isMobile,
     }
-=======
-  name: 'AppFooter',
-  props: {
-    $vueVersion: String,
-    $isMobile: Boolean
-  },
-  setup() {
-    return { toggleDarkMode, isDarkMode }
->>>>>>> d99cbad8778ab48ce2508e964596c978514723b8
   }
 }
 </script>
