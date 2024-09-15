@@ -288,7 +288,7 @@ export default Object.freeze({
       { key: 'career', title: '경력' },
       { key: 'tech', title: '기술' },
       { key: 'project', title: '프로젝트' },
-      { key: 'hobby', title: '취미' }
+      // { key: 'hobby', title: '취미' }
     ]
   },
   SOCIAL: {
