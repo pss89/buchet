@@ -13,7 +13,7 @@
     <Career />
     <TechCard />
     <Project :device="$isMobile" />
-    <!-- <Hobby /> -->
+    <Hobby />
     <AppFooter />
   </div>
 </template>
@@ -25,7 +25,7 @@ import Intro from './components/sections/Intro.vue'
 import Career from './components/sections/Career.vue'
 import TechCard from './components/sections/Tech.vue'
 import Project from './components/sections/Project.vue'
-// import Hobby from './components/sections/Hobby.vue'
+import Hobby from './components/sections/Hobby.vue'
 import AppFooter from './components/layout/Footer.vue'
 
 import { isDarkMode } from './components/js/useDarkMode';
@@ -41,7 +41,7 @@ export default {
     Career,
     TechCard,
     Project,
-    // Hobby
+    Hobby
   },
   data() {
     // 컴포넌트 내부 데이터

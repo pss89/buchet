@@ -1,7 +1,9 @@
-import footballImage from '@/assets/img/main/football.png'
 
-import itMachine from '@/assets/img/main/it_machine.png'
-import movie from '@/assets/img/main/movie.png'
+// import footballImage from '@/assets/img/main/football.png'
+import footballImage from '@/assets/img/main/fooball.webp'
+// import itMachine from '@/assets/img/main/it_machine.png'
+// import movie from '@/assets/img/main/movie.png'
+import movie from '@/assets/img/main/new_movie.png'
 import login from '@/assets/img/capture/mall/login.png'
 import mypage from '@/assets/img/capture/mall/mypage.png'
 import customer from '@/assets/img/capture/mall/customer.png'
@@ -88,7 +90,7 @@ export default Object.freeze({
         position: '선임연구원',
         period: {
           startDate: '202310',
-          endDate: ''
+          endDate: '202410'
         },
         desc: `
               <div class="mb-2.5">
@@ -288,7 +290,7 @@ export default Object.freeze({
       { key: 'career', title: '경력' },
       { key: 'tech', title: '기술' },
       { key: 'project', title: '프로젝트' },
-      // { key: 'hobby', title: '취미' }
+      { key: 'hobby', title: '취미' }
     ]
   },
   SOCIAL: {
@@ -305,22 +307,22 @@ export default Object.freeze({
         img: footballImage,
         title: '축구',
         description: `
-                축구를 하는것도 좋아하지만 시청,직관 하는것을 더 좋아합니다.<br>업무를 하다 보면 필연적으로 스트레스가 쌓일 수 밖에 없는데 그 스트레스를 쌓아 두기 보단 빠르게 해소하는것을 지향합니다.
-                `
+          축구를 보는것,하는것 모두 좋아합니다.<br>특히 리버풀을 좋아하며, 리버풀 경기를 보면서 행복을 느낍니다.<br>축구를 하면서 스트레스를 풀기도 하고, 친구들과 함께 하면서 즐거움을 느낍니다.
+        `
       },
-      {
-        img: itMachine,
-        title: 'IT기기',
-        description: `
-                IT기기에 관심이 많습니다.<br>특히 애플기기에 관심이 많아 주변에서 흔히 말하는 '앱등이' 라고 불리곤합니다.<br>IT 관련 직종을 하다보면 사소하게나마 도움이 될 때도 있습니다.
-                `
-      },
+      // {
+      //   img: itMachine,
+      //   title: 'IT기기',
+      //   description: `
+      //           IT기기에 관심이 많습니다.<br>특히 애플기기에 관심이 많아 주변에서 흔히 말하는 '앱등이' 라고 불리곤합니다.<br>IT 관련 직종을 하다보면 사소하게나마 도움이 될 때도 있습니다.
+      //           `
+      // },
       {
         img: movie,
         title: '영화',
         description: `
-                축구와 함게 유이하게 즐기는 문화생활입니다.<br>영화를 보다 보면 인문학적으로도 도움이 되는 부분이 있어 업무에서 문서작업을 하거나 소통을 할 때 조금이나마 도움이 되곤 합니다.
-                `
+          새로운 영화를 보는것을 좋아합니다.<br>특히 영화를 보면서 영화의 감독, 배우, 스토리, 음악, 연출 등을 살펴보는것을 좋아합니다.<br>영화를 보면서 새로운 것을 배우는것을 좋아합니다.
+        `
       }
     ]
   },
