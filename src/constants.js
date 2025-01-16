@@ -49,9 +49,9 @@ export default Object.freeze({
         Front/BackEnd 가리지 않고 개발하였고 BootStrap, AngularJs, Codeigniter, Laravel 등 다양한 프레임워크를 경험하였습니다.<br>
         그 외 Git, GitHub, Docker, Python(특정 모듈), Atlassian(Jira, Confluence, Bitbucket), Svn, Mysql 등의 다양한 개발 관련 프로그램들을 사용하여 어떤 업무든 적응에 자신 있습니다.<br><br>
 
-        본 GitHub Pages는 Vue3 & vite 환경에서 작성되었습니다.<br>
-        개인적으로 PHP Laravel을 스터디중이며 다른 언어들도 팔로우하려고 합니다.<br>
-        
+        현재는 Laravel 11, React, NextJS/NestJS 를 공부하고 있씁니다.<br>
+
+        해당 GitHub Page는 Vue3 & vite 환경으로 개발되었습니다.<br>
         <br>
         
         잘 부탁드립니다.<br>
