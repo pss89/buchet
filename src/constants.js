@@ -49,7 +49,7 @@ export default Object.freeze({
         FrontEnd/BackEnd 모두 개발에 참여하였고 BootStrap, AngularJs, Codeigniter, Laravel 등 다양한 FronEnd/BackEnd Framework 를 경험하였습니다.<br>
         그 외 GitHub, Docker, Atlassian(Jira, Confluence, Bitbucket), Svn, Mysql 등의 다양한 개발 관련 프로그램들을 사용하여 어떤 업무든 적응에 자신 있습니다.<br><br>
 
-        현재는 개인적인 역량을 키우기 위해 Laravel 11, React, NextJS/NestJS 를 공부하고 있씁니다.<br><br>
+        현재는 개인 역량을 키우기 위해 Laravel 11, React, NextJS/NestJS 를 공부하고 있습니다.<br><br>
 
         현재 확인하고 있는 GitHub Page는 Vue3 & TailwindCSS & vite 환경으로 개발되었습니다.
         </p>
