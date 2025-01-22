@@ -16,7 +16,7 @@
     </div>
 
     <!-- 제목 -->
-    <h1 class="text-4xl font-bold mb-6">{{ constants.C_CAREER.subject }} {{ calcCareer(constants.C_CAREER.startDate) }}</h1>
+    <h1 class="text-4xl font-bold mb-6">{{ constants.C_CAREER.subject }} {{ calcCareer(constants.C_CAREER.list) }}</h1>
 
     <!-- <font-awesome-icon icon="arrow-right" class="text-gray-600" /> -->
     <!-- 반응형 그리드 레이아웃 -->
@@ -55,22 +55,39 @@ export default {
     },
 
     // 시작일을 기준으로 현재까지의 경력을 n년n월로 계산해주는 함수 ex) 7년10개월차
-    calcCareer: function(startDate){
-      const startYear = parseInt(startDate.slice(0, 4));
-      const startMonth = parseInt(startDate.slice(4, 6)) - 1; // JavaScript의 월은 0부터 시작합니다.
-
-      const start = new Date(startYear, startMonth);
-      const now = new Date();
-
-      let years = now.getFullYear() - start.getFullYear();
-      let months = now.getMonth() - start.getMonth();
-
-      if (months < 0) {
-          years--;
-          months += 12;
+    calcCareer: function(cList){
+      if (!Array.isArray(cList) || cList.length === 0) {
+        return '0년 0개월';
       }
 
-      return `(${years}년 ${months}개월차)`;
+      let totalMonths = 0;
+      const now = new Date();
+
+      cList.forEach(career => {
+        const startYear = Math.floor(career.period.startDate / 100);
+        const startMonth = (career.period.startDate % 100);
+
+        let endYear, endMonth;
+        if (career.period.endDate) {
+          endYear = Math.floor(career.period.endDate / 100);
+          endMonth = career.period.endDate % 100;
+        } else {
+          endYear = now.getFullYear();
+          endMonth = now.getMonth() + 1;
+        }
+
+        // 시작 월과 종료 월 모두 포함
+        totalMonths += (endYear - startYear) * 12 + (endMonth - startMonth + 1); // 조정된 부분
+      });
+
+      const years = Math.floor(totalMonths / 12);
+      const months = totalMonths % 12;
+
+      if (months == 0) {
+        return `(${years}년)`;
+      } else {
+        return `(${years}년 ${months}개월)`;
+      }
     }
   },
   inject: ['constants']

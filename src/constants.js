@@ -43,15 +43,15 @@ import docker from '@/assets/img/main/docker.png'
 export default Object.freeze({
   INTRO: {
     description: `
-        <h2 class="text-2xl font-bold mb-4">안녕하세요! 박성식입니다.</h2>
-        <p>저는 2015년부터 웹개발 경력을 이어가고 있습니다.<br><br>
-        광고솔루션 백오피스, 자사 쇼핑몰, 그룹웨어, ERP 등 다양한 솔루션에 대한 웹개발을 해왔습니다.<br>
-        Front/BackEnd 가리지 않고 개발하였고 BootStrap, AngularJs, Codeigniter, Laravel 등 다양한 프레임워크를 경험하였습니다.<br>
-        그 외 Git, GitHub, Docker, Python(특정 모듈), Atlassian(Jira, Confluence, Bitbucket), Svn, Mysql 등의 다양한 개발 관련 프로그램들을 사용하여 어떤 업무든 적응에 자신 있습니다.<br><br>
+        <h2 class="text-2xl font-bold mb-4">사용자 중심의 서비스 개발을 지향하는 개발자, 박성식입니다.</h2>
+        <br>
+        광고솔루션, 쇼핑몰, 그룹웨어, ERP, CSMS(전기차 충전관리시스템) 등 다양한 솔루션 개발에 대한 경험이 있습니다.<br>
+        FrontEnd/BackEnd 모두 개발에 참여하였고 BootStrap, AngularJs, Codeigniter, Laravel 등 다양한 FronEnd/BackEnd Framework 를 경험하였습니다.<br>
+        그 외 GitHub, Docker, Atlassian(Jira, Confluence, Bitbucket), Svn, Mysql 등의 다양한 개발 관련 프로그램들을 사용하여 어떤 업무든 적응에 자신 있습니다.<br><br>
 
-        현재는 Laravel 11, React, NextJS/NestJS 를 공부하고 있씁니다.<br>
+        현재는 개인적인 역량을 키우기 위해 Laravel 11, React, NextJS/NestJS 를 공부하고 있씁니다.<br>
 
-        해당 GitHub Page는 Vue3 & vite 환경으로 개발되었습니다.<br>
+        현재 보고계시는 GitHub Page는 Vue3 & TailwindCSS & vite 환경으로 개발되었습니다.<br>
         <br>
         
         잘 부탁드립니다.<br>
