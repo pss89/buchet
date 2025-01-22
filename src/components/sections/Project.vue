@@ -8,6 +8,7 @@
         progress="primary"
         prev-icon="mdi-arrow-left"
         next-icon="mdi-arrow-right"
+        class="text-slate-700"
       >
         <v-carousel-item
           v-for="(project, i) in filteredProjects"
@@ -16,8 +17,7 @@
         >
           <v-sheet height="100%">
             <div class="flex items-center justify-center cursor-pointer h-full
-               bg-slate-600 hover:bg-slate-500 transition"
-            >
+              bg-slate-600 hover:bg-slate-500 transition">
               <div class="text-3xl font-semibold text-white">
                 {{ project.title }}
               </div>
