@@ -9,6 +9,9 @@ import mypage from '@/assets/img/capture/mall/mypage.png'
 import customer from '@/assets/img/capture/mall/customer.png'
 import cart from '@/assets/img/capture/mall/cart.png'
 import membership_coupon from '@/assets/img/capture/mall/membership_coupon.png'
+import homepageJoin from '@/assets/img/capture/csms/kcharger_join_pass_1.png'
+import homepageOrder from '@/assets/img/capture/csms/kcharger_order_1.png'
+import csmsJoin from '@/assets/img/capture/csms/kcharger_app_join_1.png'
 
 import allOrder from '@/assets/img/capture/erp/all_order.png'
 import orderCollection from '@/assets/img/capture/erp/order_collection.png'
@@ -358,9 +361,28 @@ export default Object.freeze({
         code: 'monitoring',
         title: '모니터링 페이지',
         isUse: true
+      },
+      {
+        code: 'csms',
+        title: 'CSMS 관련 홈페이지 및 앱',
+        isUse: true
       }
     ],
     capture: {
+      csms: [
+        {
+          title: '홈페이지 회원가입',
+          img: homepageJoin
+        },
+        {
+          title: '홈페이지 주문 결제',
+          img: homepageOrder
+        },
+        {
+          title: 'CSMS 앱 회원가입',
+          img: csmsJoin
+        },
+      ],
       mall: [
         {
           title: '로그인',
