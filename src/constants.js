@@ -130,29 +130,6 @@ export default Object.freeze({
                 `
       },
       {
-        name: '더비즈',
-        belong: '포털개발그룹',
-        position: '매니저',
-        period: {
-          startDate: '202306',
-          endDate: '202310'
-        },
-        desc: `
-                <div class="mb-2.5">
-                    <h4 class="font-bold text-orange-400">자사 서비스 - 이실장</h4>
-                    <ul class="list-none p-0 m-0">
-                        <li class="list-disc ml-5">백엔드 : NestJS (API)</li>
-                        <li class="list-disc ml-5">프론트 : PHP Laravel (8.x)</li>
-                        <li class="list-disc ml-5">DB : AWS RDS MariaDB</li>
-                        <li class="list-disc ml-5">웹서버 : Nginx</li>
-                        <li class="list-disc ml-5">서버 환경 : AWS EC2 - CentOS</li>
-                        <li class="list-disc ml-5">업무 : CS 이슈 처리 , 통합회원 SSO 솔루션 연동, 통합회원으로 인한 기존 로그인/회원가입 변경 등</li>
-                        <li class="list-disc ml-5"><a class="underline underline-offset-2" href="https://www.aipartner.com/" target="_blank">이실장 서비스 링크</a></li>
-                    </ul>
-                </div>
-                `
-      },
-      {
         name: '오아',
         belong: '개발본부/서버개발팀',
         position: 'TL',
