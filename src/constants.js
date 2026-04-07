@@ -82,6 +82,28 @@ export default Object.freeze({
     subject: '경력 소개',
     list: [
       {
+        name: '지후소프트',
+        belong: '개발팀',
+        position: '엔지니어',
+        period: {
+          startDate: '202504',
+          endDate: ''
+        },
+        desc: `
+              <div class="mb-2.5">
+                    <h4 class="font-bold text-purple-600">PljecHR 서비스 개발 및 유지보수</h4>
+                    <ul class="list-none p-0 m-0">
+                        <li class="list-disc ml-5">백엔드 : PHP CI 3.x 기반 커스텀 프레임워크</li>
+                        <li class="list-disc ml-5">프론트 : IIFE(Immediately Invoked Function Expression) 패턴의 JavaScript & JQuery</li>
+                        <li class="list-disc ml-5">DB : NCP Cloud DB MSSQL 및 Stored Procedure 로직 작성</li>
+                        <li class="list-disc ml-5">웹서버 : Nginx</li>
+                        <li class="list-disc ml-5">서버 환경 : - </li>
+                        <li class="list-disc ml-5">업무 : 인사,근태,시스템설정,대시보드 등 HR에 관련 된 업무에 대한 고도화 및 이슈처리, 신규 프로젝트 개발</li>
+                    </ul>
+                </div>
+                `
+      },
+      {
         name: '클린일렉스',
         belong: '서버개발팀',
         position: '선임연구원',
